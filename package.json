@@ -1,7 +1,8 @@
 {
-  "name": "@jinya/cosmo",
+  "name": "@jinyacms/cosmo",
   "version": "0.1.0",
   "license": "MIT",
+  "private": false,
   "repository": {
     "url": "https://github.com/Jinya-CMS/cosmo-css/",
     "type": "git"
