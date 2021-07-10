@@ -71,7 +71,7 @@ body {
 
 .cosmo-menu-bar__back-button::after {
     display: block;
-    width: 28px;
+    width: 20px;
     height: 4px;
     background: var(--primary-color);
     top: 18px;
