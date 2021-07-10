@@ -45,6 +45,8 @@
     background: var(--white);
     color: var(--black);
     line-height: 19px;
+    text-decoration: none;
+    font-weight: normal;
 }
 
 .cosmo-button:disabled {
