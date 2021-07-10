@@ -52,6 +52,8 @@ body {
 .cosmo-menu-bar__back-button::before,
 .cosmo-menu-bar__back-button::after {
     content: '';
+    left: 10px;
+    position: absolute;
 }
 
 .cosmo-menu-bar__back-button::before {
@@ -72,6 +74,7 @@ body {
     width: 28px;
     height: 4px;
     background: var(--primary-color);
+    top: 18px;
 }
 
 .cosmo-menu-bar__back-button:hover {
