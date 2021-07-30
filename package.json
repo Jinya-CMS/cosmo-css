@@ -3,6 +3,7 @@
   "version": "0.6.0",
   "license": "MIT",
   "private": false,
+  "homepage": "https://cosmo.jinya.dev",
   "repository": {
     "url": "https://github.com/Jinya-CMS/cosmo-css/",
     "type": "git"
