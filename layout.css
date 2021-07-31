@@ -2,6 +2,14 @@ body {
     margin: 0;
     padding: 0;
     background: var(--white);
+    color: var(--black);
+}
+
+hr {
+    background: radial-gradient(circle, var(--primary-color) 0%, var(--white) 100%);
+    height: 2px;
+    border: 0;
+    margin: 32px 0;
 }
 
 .cosmo-page-layout {
