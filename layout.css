@@ -186,6 +186,10 @@ hr {
     content: unset;
 }
 
+.cosmo-top-bar__menu-item--right {
+    margin-left: 16px;
+}
+
 .cosmo-top-bar__menu {
     display: flex;
     justify-content: flex-end;

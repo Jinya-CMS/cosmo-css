@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cosmo CSS – About Cosmo</title>
+    <link href="normalize.css" rel="stylesheet">
+    <link href="variables.css" rel="stylesheet">
+    <link href="lato.css" rel="stylesheet">
+    <link href="scrollbars.css" rel="stylesheet">
+    <link href="layout.css" rel="stylesheet">
+    <link href="form.css" rel="stylesheet">
+    <link href="modal.css" rel="stylesheet">
+    <link href="progress.css" rel="stylesheet">
+    <link href="list.css" rel="stylesheet">
+    <link href="toolbar.css" rel="stylesheet">
+    <link href="typography.css" rel="stylesheet">
+    <link href="tab.css" rel="stylesheet">
+    <link href="table.css" rel="stylesheet">
+    <link href="key-value-list.css" rel="stylesheet">
+    <link rel="stylesheet" href="docs.css">
+    <link rel="stylesheet" href="mdi.css">
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.1.0/styles/stackoverflow-light.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.1.0/highlight.min.js"></script>
+</head>
+<body>
+<main class="cosmo-page-layout">
+    <div class="cosmo-top-bar">
+        <div class="cosmo-top-bar__menu">
+            <a href="#" class="cosmo-top-bar__menu-item">Topbar Link 1</a>
+            <a href="#" class="cosmo-top-bar__menu-item">Topbar Link 2</a>
+            <a href="#" class="cosmo-top-bar__menu-item">Topbar Link 3</a>
+        </div>
+        <div class="cosmo-profile-picture"></div>
+        <a href="#" class="cosmo-top-bar__menu-item cosmo-top-bar__menu-item--right">Logout</a>
+    </div>
+    <div class="cosmo-menu-bar">
+        <div class="cosmo-menu-bar__touch"></div>
+        <button class="cosmo-menu-bar__back-button" onclick="history.back()" type="button"></button>
+        <nav class="cosmo-menu-bar__menu-collection">
+            <div class="cosmo-menu-bar__main-menu">
+                <a class="cosmo-menu-bar__main-item" href="index.html">Cosmo</a>
+                <a class="cosmo-menu-bar__main-item cosmo-menu-bar__main-item--active" href="controls.html">Controls</a>
+                <a class="cosmo-menu-bar__main-item" href="layout.html">Layout</a>
+            </div>
+            <div class="cosmo-menu-bar__sub-menu">
+                <a href="controls.html" class="cosmo-menu-bar__sub-item">HTML controls</a>
+                <a href="side-list.html" class="cosmo-menu-bar__sub-item">Master-Detail list</a>
+                <a href="tab-control.html" class="cosmo-menu-bar__sub-item cosmo-menu-bar__sub-item--active">Tab control</a>
+                <a href="toolbar.html" class="cosmo-menu-bar__sub-item">Toolbar</a>
+                <a href="dialog.html" class="cosmo-menu-bar__sub-item">Dialog</a>
+            </div>
+        </nav>
+    </div>
+    <div class="cosmo-page-body">
+        <div class="cosmo-page-body__content">
+            <h1 class="cosmo-title">Tab control</h1>
+            <p>
+                The tab control is a basic control to add additional navigation layers into your application. It can be
+                nested inside a Master-Detail list.
+            </p>
+            <p>
+                Due to the fact that Cosmo CSS is a pure css framework you need to implement the tab logic yourself.
+            </p>
+            <div class="cosmo-docs-container">
+                <div class="cosmo-tab-control">
+                    <div class="cosmo-tab-control__tabs">
+                        <a class="cosmo-tab-control__tab-link cosmo-tab-control__tab-link--active">Page 1</a>
+                        <a class="cosmo-tab-control__tab-link">Page 2</a>
+                        <a class="cosmo-tab-control__tab-link">Page 3</a>
+                        <a class="cosmo-tab-control__tab-link">Page 4</a>
+                    </div>
+                    <div class="cosmo-tab-control__content">
+                        <h1>HTML Ipsum Presents</h1>
+                        <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames
+                            ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet,
+                            ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em>
+                            Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
+                            Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi.
+                            Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus
+                            lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.
+                        </p>
+                        <h2>Header Level 2</h2>
+                        <ol>
+                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                            <li>Aliquam tincidunt mauris eu risus.</li>
+                        </ol>
+                        <h3>Header Level 3</h3>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                            <li>Aliquam tincidunt mauris eu risus.</li>
+                        </ul>
+                        <pre><code>
+#header h1 a {
+  display: block;
+  width: 300px;
+  height: 80px;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <pre class="cosmo-docs-container">
+&lt;div class="cosmo-tab-control">
+    &lt;div class="cosmo-tab-control__tabs">
+        &lt;a class="cosmo-tab-control__tab-link cosmo-tab-control__tab-link--active">Page 1&lt;/a>
+        &lt;a class="cosmo-tab-control__tab-link">Page 2&lt;/a>
+        &lt;a class="cosmo-tab-control__tab-link">Page 3&lt;/a>
+        &lt;a class="cosmo-tab-control__tab-link">Page 4&lt;/a>
+    &lt;/div>
+    &lt;div class="cosmo-tab-control__content">
+    &lt;/div>
+&lt;/div></pre>
+        </div>
+    </div>
+</main>
+<script src="./docs.js"></script>
+</body>
+</html>

@@ -31,3 +31,7 @@ pre.cosmo-docs-container::before {
     top: 0;
     padding: 4px 8px;
 }
+
+.cosmo-debug * {
+    border: 1px dashed var(--primary-color);
+}

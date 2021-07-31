@@ -25,20 +25,28 @@
 <body>
 <main class="cosmo-page-layout">
     <div class="cosmo-top-bar">
+        <div class="cosmo-top-bar__menu">
+            <a href="#" class="cosmo-top-bar__menu-item">Topbar Link 1</a>
+            <a href="#" class="cosmo-top-bar__menu-item">Topbar Link 2</a>
+            <a href="#" class="cosmo-top-bar__menu-item">Topbar Link 3</a>
+        </div>
         <div class="cosmo-profile-picture"></div>
+        <a href="#" class="cosmo-top-bar__menu-item cosmo-top-bar__menu-item--right">Logout</a>
     </div>
     <div class="cosmo-menu-bar">
         <div class="cosmo-menu-bar__touch"></div>
         <button class="cosmo-menu-bar__back-button" onclick="history.back()" type="button"></button>
         <nav class="cosmo-menu-bar__menu-collection">
             <div class="cosmo-menu-bar__main-menu">
-                <a class="cosmo-menu-bar__main-item cosmo-menu-bar__main-item--active" href="index.html">Cosmo</a>
-                <a class="cosmo-menu-bar__main-item" href="controls.html">Controls</a>
+                <a class="cosmo-menu-bar__main-item" href="index.html">Cosmo</a>
+                <a class="cosmo-menu-bar__main-item cosmo-menu-bar__main-item--active" href="controls.html">Controls</a>
                 <a class="cosmo-menu-bar__main-item" href="layout.html">Layout</a>
             </div>
             <div class="cosmo-menu-bar__sub-menu">
                 <span class="cosmo-menu-bar__sub-item cosmo-menu-bar__sub-item--active">HTML controls</span>
-                <a href="modern-controls.html" class="cosmo-menu-bar__sub-item">Modern controls</a>
+                <a href="side-list.html" class="cosmo-menu-bar__sub-item">Master-Detail list</a>
+                <a href="tab-control.html" class="cosmo-menu-bar__sub-item">Tab control</a>
+                <a href="toolbar.html" class="cosmo-menu-bar__sub-item">Toolbar</a>
                 <a href="dialog.html" class="cosmo-menu-bar__sub-item">Dialog</a>
             </div>
         </nav>
@@ -123,6 +131,14 @@ document.querySelectorAll('input[type=file]').forEach(elem => elem.addEventListe
         &lt;input style="display: none" type="file" id="filePicker">
     &lt;/div>
 &lt;/div></pre>
+            <h2>Buttons</h2>
+            <p>
+                Cosmo CSS consists of only one type of button. Currently, there are no plans to add additional styles
+            </p>
+            <div class="cosmo-docs-container">
+                <button class="cosmo-button">Button</button>
+            </div>
+            <pre class="cosmo-docs-container">&lt;button class="cosmo-button">Button&lt;/button></pre>
         </div>
     </div>
 </main>
