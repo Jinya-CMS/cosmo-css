@@ -55,3 +55,8 @@ code,
 pre {
     color: var(--information-color);
 }
+
+*::selection {
+    background: var(--primary-color);
+    color: var(--white);
+}

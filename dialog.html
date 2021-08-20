@@ -19,7 +19,7 @@
     <link href="key-value-list.css" rel="stylesheet">
     <link rel="stylesheet" href="docs.css">
     <link rel="stylesheet" href="mdi.css">
-    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.1.0/styles/stackoverflow-light.min.css">
+    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.1.0/styles/stackoverflow-dark.min.css">
     <script src="//unpkg.com/@highlightjs/cdn-assets@11.1.0/highlight.min.js"></script>
 </head>
 <body>
@@ -63,17 +63,14 @@
             <pre class="cosmo-docs-container">
 document.getElementById('openModal').addEventListener('click', (e) => {
     e.preventDefault();
-    document.querySelector('.cosmo-modal__backdrop').removeAttribute('style');
     document.querySelector('.cosmo-modal__container').removeAttribute('style');
 });
 document.getElementById('cancel').addEventListener('click', (e) => {
     e.preventDefault();
-    document.querySelector('.cosmo-modal__backdrop').style.display = 'none';
     document.querySelector('.cosmo-modal__container').style.display = 'none';
 });
 document.getElementById('save').addEventListener('click', (e) => {
     e.preventDefault();
-    document.querySelector('.cosmo-modal__backdrop').style.display = 'none';
     document.querySelector('.cosmo-modal__container').style.display = 'none';
 });</pre>
             <div class="cosmo-docs-container">
@@ -108,7 +105,6 @@ document.getElementById('save').addEventListener('click', (e) => {
                 </div>
             </div>
             <pre class="cosmo-docs-container">
-&lt;div class="cosmo-modal__backdrop">&lt;/div>
 &lt;div class="cosmo-modal__container">
     &lt;div class="cosmo-modal">
         &lt;h1 class="cosmo-modal__title">Modal title&lt;/h1>
@@ -141,7 +137,6 @@ document.getElementById('save').addEventListener('click', (e) => {
     </div>
 </main>
 
-<div class="cosmo-modal__backdrop" style="display: none"></div>
 <div class="cosmo-modal__container" style="display: none">
     <div class="cosmo-modal">
         <h1 class="cosmo-modal__title">Modal title</h1>
@@ -174,17 +169,14 @@ document.getElementById('save').addEventListener('click', (e) => {
 <script>
     document.getElementById('openModal').addEventListener('click', (e) => {
         e.preventDefault();
-        document.querySelector('.cosmo-modal__backdrop').removeAttribute('style');
         document.querySelector('.cosmo-modal__container').removeAttribute('style');
     });
     document.getElementById('cancel').addEventListener('click', (e) => {
         e.preventDefault();
-        document.querySelector('.cosmo-modal__backdrop').style.display = 'none';
         document.querySelector('.cosmo-modal__container').style.display = 'none';
     });
     document.getElementById('save').addEventListener('click', (e) => {
         e.preventDefault();
-        document.querySelector('.cosmo-modal__backdrop').style.display = 'none';
         document.querySelector('.cosmo-modal__container').style.display = 'none';
     });
 </script>

@@ -11,8 +11,7 @@
     --information-color: #182B70;
     --gradient-top-color: #EDEDEE;
     --gradient-bottom-color: var(--white);
-
-    --top-gradient: linear-gradient(to top, var(--gradient-bottom-color) 0%, var(--gradient-top-color) 100%);
+    --modal-backdrop: #FFFFFF4D;
 
     --font-weight-bold: bold;
     --font-weight-normal: normal;
@@ -20,4 +19,22 @@
     --font-family: Lato, sans-serif;
 
     font-family: var(--font-family);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --control-border-color: #333333;
+        --primary-color: #966554;
+        --white: #000000;
+        --black: #cccccc;
+        --menu-text-selected-color: var(--black);
+        --menu-text-color: #ffffff40;
+        --disabled-color: var(--menu-text-color);
+        --negative-color: #e2180d;
+        --positive-color: #146621;
+        --information-color: #1e368f;
+        --gradient-top-color: #121212;
+        --gradient-bottom-color: var(--white);
+        --modal-backdrop: rgba(0, 0, 0, 0.3);
+    }
 }

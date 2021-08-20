@@ -12,5 +12,6 @@
     <orderEntry type="library" name="highlight" level="application" />
     <orderEntry type="library" name="idea" level="application" />
     <orderEntry type="library" name="stackoverflow-light" level="application" />
+    <orderEntry type="library" name="stackoverflow-dark" level="application" />
   </component>
 </module>

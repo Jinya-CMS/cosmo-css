@@ -1,6 +1,6 @@
 pre.cosmo-docs-container {
     border: 1px solid var(--primary-color);
-    background: var(--gradient-top-color);
+    /*background: var(--gradient-top-color);*/
     position: relative;
     padding: 32px 16px 16px;
 }
