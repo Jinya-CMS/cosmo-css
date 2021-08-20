@@ -53,7 +53,7 @@ a {
 
 code,
 pre {
-    color: var(--information-color);
+    color: var(--code-color);
 }
 
 *::selection {
