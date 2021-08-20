@@ -64,6 +64,11 @@
                 it is used to toggle between the frontstage, where the artist manages their content and the backstage,
                 where the Jinya CMS installation can be administered.
             </p>
+            <p>
+                To display status information, for example during file upload, Cosmo CSS features a bottom bar. Even
+                though the main usage of the bottom bar is to show progress, it can also be used to display buttons that
+                should work on all pages the same.
+            </p>
             <pre class="cosmo-docs-container">
 &lt;main class="cosmo-page-layout">
     &lt;div class="cosmo-top-bar">
@@ -95,8 +100,18 @@
             &lt;h1 class="cosmo-title">Some title&lt;/h1>
         &lt;/div>
     &lt;/div>
+    &lt;div class="cosmo-bottom-bar">
+        &lt;span class="cosmo-progress-bar__top-label">Top label&lt;/span>
+        &lt;progress class="cosmo-progress-bar" value="19" max="100">&lt;/progress>
+        &lt;span class="cosmo-progress-bar__bottom-label">Bottom label&lt;/span>
+    &lt;/div>
 &lt;/main></pre>
         </div>
+    </div>
+    <div class="cosmo-bottom-bar">
+        <span class="cosmo-progress-bar__top-label">Top label</span>
+        <progress class="cosmo-progress-bar" value="19" max="100"></progress>
+        <span class="cosmo-progress-bar__bottom-label">Bottom label</span>
     </div>
 </main>
 <script src="./docs.js"></script>
