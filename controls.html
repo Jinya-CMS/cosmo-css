@@ -145,6 +145,7 @@ document.querySelectorAll('input[type=file]').forEach(elem => elem.addEventListe
         &lt;input style="display: none" type="file" id="filePicker">
     &lt;/div>
 &lt;/div></pre>
+            <hr>
             <h2>Buttons</h2>
             <p>
                 Cosmo CSS consists of only one type of button. Currently, there are no plans to add additional styles
@@ -153,6 +154,17 @@ document.querySelectorAll('input[type=file]').forEach(elem => elem.addEventListe
                 <button class="cosmo-button">Button</button>
             </div>
             <pre class="cosmo-docs-container">&lt;button class="cosmo-button">Button&lt;/button></pre>
+            <hr>
+            <h2>Progress</h2>
+            <p>
+                The HTML 5 progress tag can be used to display a progress bar on the web. Currently, only determinate
+                progress bars are supported by Cosmo CSS. If you wish to use an indeterminate progress bar you can
+                fallback to the default styling of the browsers.
+            </p>
+            <div class="cosmo-docs-container">
+                <progress class="cosmo-progress-bar" value="13" max="100"></progress>
+            </div>
+            <pre class="cosmo-docs-container">&lt;progress class="cosmo-progress-bar" value="13" max="100">&lt;/progress></pre>
         </div>
     </div>
 </main>
