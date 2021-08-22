@@ -38,6 +38,12 @@
     font-weight: var(--font-weight-bold);
 }
 
+.cosmo-list__item--active::selection,
+.cosmo-list__item--active:hover::selection {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
 .cosmo-list__content {
     grid-column: content;
     height: 100%;
