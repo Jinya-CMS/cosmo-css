@@ -36,13 +36,12 @@ hr {
 .cosmo-menu-bar {
     grid-row: main-menu;
     display: grid;
-    grid-template-columns: [left-column] 24px [spacing1] 18px [backbutton] 48px [spacing2] 74px [content] 1fr;
+    grid-template-columns: [spacing1] 18px [backbutton] 48px [spacing2] 74px [content] 1fr;
+    border-left: 24px solid var(--primary-color);
 }
 
 .cosmo-menu-bar__touch {
     grid-column: left-column;
-    background: var(--primary-color);
-    grid-row: span 2;
 }
 
 .cosmo-menu-bar__back-button {
