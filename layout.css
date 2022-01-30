@@ -202,3 +202,30 @@ hr {
     flex-flow: column wrap;
     align-items: center;
 }
+
+.cosmo-bottom-bar--three-column {
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: [left] 1fr [center] 1fr [right] 1fr;
+    gap: 1rem;
+    padding-left: 164px;
+    padding-right: 164px;
+}
+
+.cosmo-bottom-bar__item {
+}
+
+.cosmo-bottom-bar__item--left {
+    justify-self: left;
+    grid-column: left;
+}
+
+.cosmo-bottom-bar__item--center {
+    justify-self: center;
+    grid-column: center;
+}
+
+.cosmo-bottom-bar__item--right {
+    justify-self: right;
+    grid-column: right;
+}
