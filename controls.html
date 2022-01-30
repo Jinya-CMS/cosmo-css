@@ -175,16 +175,26 @@ document.querySelectorAll('input[type=file]').forEach(elem => elem.addEventListe
             <h2>Progress</h2>
             <p>
                 The HTML 5 progress tag can be used to display a progress bar on the web. Currently, only determinate
-                progress bars are supported by Cosmo CSS. If you wish to use an indeterminate progress bar you can
-                fallback to the default styling of the browsers.
+                progress bars are supported by Cosmo CSS.
             </p>
             <div class="cosmo-docs-container">
                 <progress class="cosmo-progress-bar" value="13" max="100"></progress>
             </div>
             <pre class="cosmo-docs-container">&lt;progress class="cosmo-progress-bar" value="13" max="100">&lt;/progress></pre>
+            <h3>Indeterminate state</h3>
+            <p>
+                As of version 0.12.0 Cosmo supports the indeterminate state of progress bars.
+            </p>
+            <div class="cosmo-docs-container">
+                <progress data-indeterminate="true" class="cosmo-progress-bar"></progress>
+            </div>
+            <pre class="cosmo-docs-container">&lt;progress class="cosmo-progress-bar">&lt;/progress></pre>
         </div>
     </div>
 </main>
 <script src="./docs.js"></script>
+<script>
+    document.querySelector('[data-indeterminate=true]').indeterminate = true;
+</script>
 </body>
 </html>
