@@ -229,10 +229,20 @@
     margin-right: 8px;
 }
 
+.cosmo-checkbox:checked + label::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 8px;
+    border-right: 1px solid var(--white);
+    border-top: 1px solid var(--white);
+    transform: rotate(135deg);
+    top: 7px;
+    left: 5px;
+}
+
 .cosmo-checkbox:checked + label::before {
-    /*noinspection CssNoGenericFontName*/
-    font-family: mdi;
-    content: "\F012C";
     background: var(--primary-color);
     color: var(--white);
 }
