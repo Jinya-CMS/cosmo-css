@@ -37,7 +37,9 @@
     margin-right: 10px;
 }
 
-.cosmo-button {
+.cosmo-button,
+.cosmo-input[type=file]::file-selector-button,
+.cosmo-input[type=file]::-webkit-file-upload-button {
     cursor: pointer;
     font-family: var(--font-family);
     font-size: 16px;
@@ -51,7 +53,9 @@
     font-weight: normal;
 }
 
-.cosmo-button:disabled {
+.cosmo-button:disabled,
+.cosmo-input[type=file]:disabled::file-selector-button,
+.cosmo-input[type=file]:disabled::-webkit-file-upload-button {
     cursor: not-allowed;
     border: 1px solid var(--control-border-color);
     background: var(--white);
@@ -64,21 +68,27 @@
     border-left-width: 0;
 }
 
-.cosmo-button:hover {
+.cosmo-button:hover,
+.cosmo-input[type=file]:hover::file-selector-button,
+.cosmo-input[type=file]:hover::-webkit-file-upload-button {
     background: var(--primary-color);
     color: var(--white);
     outline: none;
     box-shadow: none;
 }
 
-.cosmo-button:disabled:hover {
+.cosmo-button:disabled:hover,
+.cosmo-input[type=file]:disabled:hover::file-selector-button,
+.cosmo-input[type=file]:disabled:hover::-webkit-file-upload-button {
     background: var(--white);
     color: var(--control-border-color);
     outline: none;
     box-shadow: none;
 }
 
-.cosmo-button:focus {
+.cosmo-button:focus,
+.cosmo-input[type=file]:focus::file-selector-button,
+.cosmo-input[type=file]:focus::-webkit-file-upload-button {
     border-color: var(--primary-color);
     outline: none;
     box-shadow: none;
@@ -128,6 +138,18 @@
 .cosmo-picker__button:hover {
     background: var(--black);
     color: var(--white);
+}
+
+.cosmo-input[type=file] {
+    padding: 0;
+}
+
+.cosmo-input[type=file]::file-selector-button,
+.cosmo-input[type=file]::-webkit-file-upload-button {
+    border-top: 0;
+    border-left: 0;
+    border-bottom: 0;
+    padding-top: 4px;
 }
 
 .cosmo-textarea {

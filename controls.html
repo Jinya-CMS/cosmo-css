@@ -111,9 +111,26 @@
 &lt;/div></pre>
             <hr>
             <h2>File upload</h2>
+            <h3>Native browser styling</h3>
             <p>
-                Due to the limitations of CSS you currently need to set the filename by hand. This snippet of JavaScript
-                should do the trick. We plan to utilize native file picker CSS at some point.
+                Since version 0.12.0 there is a class available for the native browser styling, which eradicates the
+                need for several elements and JavaScript. Due to browser limitations the look and feel is different.
+            </p>
+            <div class="cosmo-docs-container">
+                <div class="cosmo-input__group">
+                    <label for="filePicker" class="cosmo-label">Pick file</label>
+                    <input type="file" class="cosmo-input">
+                </div>
+            </div>
+            <pre class="cosmo-docs-container">
+&lt;div class="cosmo-input__group">
+    &lt;label for="filePicker" class="cosmo-label">Pick file&lt/label>
+                &lt;input type="file" class="cosmo-input">
+&lt;/div></pre>
+            <h3>Custom classes</h3>
+            <p>
+                CSS only allows a bit of styling for file pickers. If you want the button to have an icon and the button
+                on the end of the input, you should take the code below.
             </p>
             <pre class="cosmo-docs-container">
 document.querySelectorAll('input[type=file]').forEach(elem => elem.addEventListener('change', (e) => {
