@@ -17,6 +17,7 @@
     <link href="tab.css" rel="stylesheet">
     <link href="table.css" rel="stylesheet">
     <link href="key-value-list.css" rel="stylesheet">
+    <link href="buttons.css" rel="stylesheet">
     <link rel="stylesheet" href="docs.css">
     <link rel="stylesheet" href="mdi.css">
     <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.1.0/styles/stackoverflow-dark.min.css">
@@ -164,12 +165,39 @@ document.querySelectorAll('input[type=file]').forEach(elem => elem.addEventListe
             <hr>
             <h2>Buttons</h2>
             <p>
-                Cosmo CSS consists of only one type of button. Currently, there are no plans to add additional styles
+                Cosmo CSS consists of only two types of buttons. The first type is a classical button just like you
+                know it from your operating system or other frameworks.
             </p>
             <div class="cosmo-docs-container">
                 <button class="cosmo-button">Button</button>
             </div>
             <pre class="cosmo-docs-container">&lt;button class="cosmo-button">Button&lt;/button></pre>
+            <h3>Circular button</h3>
+            <p>
+                The other button type are circular buttons, they come in three sizes, small, medium and large. Medium is
+                the default size and doesn't require any extra classes. They are best combined with an icon, just as
+                seen in the example below.
+            </p>
+            <div class="cosmo-docs-container">
+                <button class="cosmo-circular-button cosmo-circular-button--small">
+                    <span class="mdi mdi-theme-light-dark"></span>
+                </button>
+                <button class="cosmo-circular-button">
+                    <span class="mdi mdi-theme-light-dark"></span>
+                </button>
+                <button class="cosmo-circular-button cosmo-circular-button--large">
+                    <span class="mdi mdi-theme-light-dark"></span>
+                </button>
+            </div>
+            <pre class="cosmo-docs-container">&lt;button class="cosmo-circular-button cosmo-circular-button--small">
+    &lt;span class="mdi mdi-theme-light-dark">&lt;/span>
+&lt;/button>
+&lt;button class="cosmo-circular-button">
+    &lt;span class="mdi mdi-theme-light-dark">&lt;/span>
+&lt;/button>
+&lt;button class="cosmo-circular-button cosmo-circular-button--large">
+    &lt;span class="mdi mdi-theme-light-dark">&lt;/span>
+&lt;/button></pre>
             <hr>
             <h2>Progress</h2>
             <p>
