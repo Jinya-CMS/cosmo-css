@@ -1,75 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Cosmo CSS – About Cosmo</title>
-    <link href="normalize.css" rel="stylesheet">
-    <link href="variables.css" rel="stylesheet">
-    <link href="lato.css" rel="stylesheet">
-    <link href="scrollbars.css" rel="stylesheet">
-    <link href="layout.css" rel="stylesheet">
-    <link href="form.css" rel="stylesheet">
-    <link href="modal.css" rel="stylesheet">
-    <link href="progress.css" rel="stylesheet">
-    <link href="list.css" rel="stylesheet">
-    <link href="toolbar.css" rel="stylesheet">
-    <link href="typography.css" rel="stylesheet">
-    <link href="tab.css" rel="stylesheet">
-    <link href="table.css" rel="stylesheet">
-    <link href="key-value-list.css" rel="stylesheet">
-    <link rel="stylesheet" href="docs.css">
-    <link rel="stylesheet" href="mdi.css">
-    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.1.0/styles/stackoverflow-dark.min.css">
-    <script src="//unpkg.com/@highlightjs/cdn-assets@11.1.0/highlight.min.js"></script>
-</head>
-<body>
-<main class="cosmo-page-layout">
-    <div class="cosmo-top-bar">
-        <div class="cosmo-top-bar__menu">
-            <a href="#" class="cosmo-top-bar__menu-item">Topbar Link 1</a>
-            <a href="#" class="cosmo-top-bar__menu-item">Topbar Link 2</a>
-            <a href="#" class="cosmo-top-bar__menu-item">Topbar Link 3</a>
-        </div>
-        <div class="cosmo-profile-picture"></div>
-        <a href="#" class="cosmo-top-bar__menu-item cosmo-top-bar__menu-item--right">Logout</a>
-    </div>
-    <div class="cosmo-menu-bar">
-        <button class="cosmo-menu-bar__back-button" onclick="history.back()" type="button"></button>
-        <nav class="cosmo-menu-bar__menu-collection">
-            <div class="cosmo-menu-bar__main-menu">
-                <a class="cosmo-menu-bar__main-item" href="index.html">Cosmo</a>
-                <a class="cosmo-menu-bar__main-item" href="controls.html">Controls</a>
-                <a class="cosmo-menu-bar__main-item cosmo-menu-bar__main-item--active" href="layout.html">Layout</a>
-            </div>
-            <div class="cosmo-menu-bar__sub-menu">
-                <span class="cosmo-menu-bar__sub-item cosmo-menu-bar__sub-item--active">Base layout and menu</span>
-                <a href="layout-bottom-bar-three-column.html" class="cosmo-menu-bar__sub-item">Three column bottom bar</a>
-                <a href="layout-showcase.html" class="cosmo-menu-bar__sub-item">Layout showcase</a>
-            </div>
-        </nav>
-    </div>
-    <div class="cosmo-page-body">
-        <div class="cosmo-page-body__content">
-            <h1 class="cosmo-title">Base layout and menu</h1>
-            <p>
-                Cosmo CSS has a very opinionated layout and to fully use its menu structure you need to follow it.
-            </p>
-            <p>
-                The menu consists of two levels of navigation and allows for a "backstage" menu. The top level
-                navigation should navigate between your applications areas whereas the second level navigation should
-                navigate between your actual pages.
-            </p>
-            <p>
-                The top bar navigation, left from the square, can be used to send you users into settings. In Jinya CMS
-                it is used to toggle between the frontstage, where the artist manages their content and the backstage,
-                where the Jinya CMS installation can be administered.
-            </p>
-            <p>
-                To display status information, for example during file upload, Cosmo CSS features a bottom bar. Even
-                though the main usage of the bottom bar is to show progress, it can also be used to display buttons that
-                should work on all pages the same.
-            </p>
-            <pre class="cosmo-docs-container">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Cosmo CSS – About Cosmo</title>
+		<link href="normalize.css" rel="stylesheet" />
+		<link href="variables.css" rel="stylesheet" />
+		<link href="lato.css" rel="stylesheet" />
+		<link href="scrollbars.css" rel="stylesheet" />
+		<link href="layout.css" rel="stylesheet" />
+		<link href="form.css" rel="stylesheet" />
+		<link href="modal.css" rel="stylesheet" />
+		<link href="progress.css" rel="stylesheet" />
+		<link href="list.css" rel="stylesheet" />
+		<link href="toolbar.css" rel="stylesheet" />
+		<link href="typography.css" rel="stylesheet" />
+		<link href="tab.css" rel="stylesheet" />
+		<link href="table.css" rel="stylesheet" />
+		<link href="key-value-list.css" rel="stylesheet" />
+		<link rel="stylesheet" href="docs.css" />
+		<link rel="stylesheet" href="mdi.css" />
+		<link
+			rel="stylesheet"
+			href="//unpkg.com/@highlightjs/cdn-assets@11.1.0/styles/stackoverflow-dark.min.css"
+		/>
+		<script src="//unpkg.com/@highlightjs/cdn-assets@11.1.0/highlight.min.js"></script>
+	</head>
+	<body>
+		<main class="cosmo-page-layout">
+			<div class="cosmo-top-bar">
+				<div class="cosmo-top-bar__menu">
+					<a href="#" class="cosmo-top-bar__menu-item">Topbar Link 1</a>
+					<a href="#" class="cosmo-top-bar__menu-item">Topbar Link 2</a>
+					<a href="#" class="cosmo-top-bar__menu-item">Topbar Link 3</a>
+				</div>
+				<div class="cosmo-profile-picture"></div>
+				<a href="#" class="cosmo-top-bar__menu-item cosmo-top-bar__menu-item--right">Logout</a>
+			</div>
+			<div class="cosmo-menu-bar">
+				<button class="cosmo-menu-bar__back-button" onclick="history.back()" type="button"></button>
+				<nav class="cosmo-menu-bar__menu-collection">
+					<div class="cosmo-menu-bar__main-menu">
+						<a class="cosmo-menu-bar__main-item" href="index.html">Cosmo</a>
+						<a class="cosmo-menu-bar__main-item" href="controls.html">Controls</a>
+						<a
+							class="cosmo-menu-bar__main-item cosmo-menu-bar__main-item--active"
+							href="layout.html"
+							>Layout</a
+						>
+					</div>
+					<div class="cosmo-menu-bar__sub-menu">
+						<span class="cosmo-menu-bar__sub-item cosmo-menu-bar__sub-item--active"
+							>Base layout and menu</span
+						>
+						<a href="layout-bottom-bar-three-column.html" class="cosmo-menu-bar__sub-item"
+							>Three column bottom bar</a
+						>
+						<a href="layout-showcase.html" class="cosmo-menu-bar__sub-item">Layout showcase</a>
+					</div>
+				</nav>
+			</div>
+			<div class="cosmo-page-body">
+				<div class="cosmo-page-body__content">
+					<h1 class="cosmo-title">Base layout and menu</h1>
+					<p>
+						Cosmo CSS has a very opinionated layout and to fully use its menu structure you need to
+						follow it.
+					</p>
+					<p>
+						The menu consists of two levels of navigation and allows for a "backstage" menu. The top
+						level navigation should navigate between your applications areas whereas the second
+						level navigation should navigate between your actual pages.
+					</p>
+					<p>
+						The top bar navigation, left from the square, can be used to send you users into
+						settings. In Jinya CMS it is used to toggle between the frontstage, where the artist
+						manages their content and the backstage, where the Jinya CMS installation can be
+						administered.
+					</p>
+					<p>
+						To display status information, for example during file upload, Cosmo CSS features a
+						bottom bar. Even though the main usage of the bottom bar is to show progress, it can
+						also be used to display buttons that should work on all pages the same.
+					</p>
+					<pre class="cosmo-docs-container">
 &lt;main class="cosmo-page-layout">
     &lt;div class="cosmo-top-bar">
         &lt;div class="cosmo-top-bar__menu">
@@ -105,15 +118,16 @@
         &lt;progress class="cosmo-progress-bar" value="19" max="100">&lt;/progress>
         &lt;span class="cosmo-progress-bar__bottom-label">Bottom label&lt;/span>
     &lt;/div>
-&lt;/main></pre>
-        </div>
-    </div>
-    <div class="cosmo-bottom-bar">
-        <span class="cosmo-progress-bar__top-label">Top label</span>
-        <progress class="cosmo-progress-bar" value="19" max="100"></progress>
-        <span class="cosmo-progress-bar__bottom-label">Bottom label</span>
-    </div>
-</main>
-<script src="./docs.js"></script>
-</body>
+&lt;/main></pre
+					>
+				</div>
+			</div>
+			<div class="cosmo-bottom-bar">
+				<span class="cosmo-progress-bar__top-label">Top label</span>
+				<progress class="cosmo-progress-bar" value="19" max="100"></progress>
+				<span class="cosmo-progress-bar__bottom-label">Bottom label</span>
+			</div>
+		</main>
+		<script src="./docs.js"></script>
+	</body>
 </html>

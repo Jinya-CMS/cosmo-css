@@ -1,0 +1,19 @@
+stages:
+  - build
+
+docker-build:
+  image: quay.imanuel.dev/dockerhub/library---docker:stable
+  stage: build
+  services:
+    - docker:dind
+  before_script:
+    - docker login -u "$QUAY_USER" -p "$QUAY_PASSWORD" quay.imanuel.dev
+  script:
+    - docker build --pull -t "quay.imanuel.dev/jinya/cosmo-css-docs:${CI_COMMIT_TAG}" -f ./Dockerfile .
+    - docker tag "quay.imanuel.dev/jinya/cosmo-css-docs:${CI_COMMIT_TAG}" "quay.imanuel.dev/jinya/cosmo-css-docs:latest"
+    - docker push "quay.imanuel.dev/jinya/cosmo-css-docs:${CI_COMMIT_TAG}"
+    - docker push "quay.imanuel.dev/jinya/cosmo-css-docs:latest"
+  rules:
+    - if: $CI_COMMIT_TAG
+      exists:
+        - Dockerfile

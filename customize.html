@@ -1,66 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Cosmo CSS – Customize</title>
-    <link href="normalize.css" rel="stylesheet">
-    <link href="variables.css" rel="stylesheet">
-    <link href="lato.css" rel="stylesheet">
-    <link href="scrollbars.css" rel="stylesheet">
-    <link href="layout.css" rel="stylesheet">
-    <link href="form.css" rel="stylesheet">
-    <link href="modal.css" rel="stylesheet">
-    <link href="progress.css" rel="stylesheet">
-    <link href="list.css" rel="stylesheet">
-    <link href="toolbar.css" rel="stylesheet">
-    <link href="typography.css" rel="stylesheet">
-    <link href="tab.css" rel="stylesheet">
-    <link href="table.css" rel="stylesheet">
-    <link href="key-value-list.css" rel="stylesheet">
-    <link rel="stylesheet" href="docs.css">
-    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.1.0/styles/stackoverflow-dark.min.css">
-    <script src="//unpkg.com/@highlightjs/cdn-assets@11.1.0/highlight.min.js"></script>
-</head>
-<body>
-<main class="cosmo-page-layout">
-    <div class="cosmo-top-bar">
-        <div class="cosmo-top-bar__menu">
-            <a href="#" class="cosmo-top-bar__menu-item">Topbar Link 1</a>
-            <a href="#" class="cosmo-top-bar__menu-item">Topbar Link 2</a>
-            <a href="#" class="cosmo-top-bar__menu-item">Topbar Link 3</a>
-        </div>
-        <div class="cosmo-profile-picture"></div>
-        <a href="#" class="cosmo-top-bar__menu-item cosmo-top-bar__menu-item--right">Logout</a>
-    </div>
-    <div class="cosmo-menu-bar">
-        <button class="cosmo-menu-bar__back-button" onclick="history.back()" type="button"></button>
-        <nav class="cosmo-menu-bar__menu-collection">
-            <div class="cosmo-menu-bar__main-menu">
-                <a class="cosmo-menu-bar__main-item cosmo-menu-bar__main-item--active" href="index.html">Cosmo</a>
-                <a class="cosmo-menu-bar__main-item" href="controls.html">Controls</a>
-                <a class="cosmo-menu-bar__main-item" href="layout.html">Layout</a>
-            </div>
-            <div class="cosmo-menu-bar__sub-menu">
-                <a class="cosmo-menu-bar__sub-item" href="index.html">About Cosmo</a>
-                <a class="cosmo-menu-bar__sub-item" href="typography.html">Typography</a>
-                <span class="cosmo-menu-bar__sub-item cosmo-menu-bar__sub-item--active">Customize</span>
-            </div>
-        </nav>
-    </div>
-    <div class="cosmo-page-body">
-        <div class="cosmo-page-body__content">
-            <h1 class="cosmo-title">Customize</h1>
-            <p>
-                Customizing the colors and fonts of cosmo is really easy, you only need to overwrite two CSS
-                variables, to get your own color scheme. Apart from the two main colors there are nine other colors you
-                can change. And one property to change the font family.
-            </p>
-            <p>
-                For the customized variables to take effect they need to be applied on the body element in your custom
-                CSS file.
-            </p>
-            <h2>Cosmo variables</h2>
-            <pre class="cosmo-docs-container">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Cosmo CSS – Customize</title>
+		<link href="normalize.css" rel="stylesheet" />
+		<link href="variables.css" rel="stylesheet" />
+		<link href="lato.css" rel="stylesheet" />
+		<link href="scrollbars.css" rel="stylesheet" />
+		<link href="layout.css" rel="stylesheet" />
+		<link href="form.css" rel="stylesheet" />
+		<link href="modal.css" rel="stylesheet" />
+		<link href="progress.css" rel="stylesheet" />
+		<link href="list.css" rel="stylesheet" />
+		<link href="toolbar.css" rel="stylesheet" />
+		<link href="typography.css" rel="stylesheet" />
+		<link href="tab.css" rel="stylesheet" />
+		<link href="table.css" rel="stylesheet" />
+		<link href="key-value-list.css" rel="stylesheet" />
+		<link rel="stylesheet" href="docs.css" />
+		<link
+			rel="stylesheet"
+			href="//unpkg.com/@highlightjs/cdn-assets@11.1.0/styles/stackoverflow-dark.min.css"
+		/>
+		<script src="//unpkg.com/@highlightjs/cdn-assets@11.1.0/highlight.min.js"></script>
+	</head>
+	<body>
+		<main class="cosmo-page-layout">
+			<div class="cosmo-top-bar">
+				<div class="cosmo-top-bar__menu">
+					<a href="#" class="cosmo-top-bar__menu-item">Topbar Link 1</a>
+					<a href="#" class="cosmo-top-bar__menu-item">Topbar Link 2</a>
+					<a href="#" class="cosmo-top-bar__menu-item">Topbar Link 3</a>
+				</div>
+				<div class="cosmo-profile-picture"></div>
+				<a href="#" class="cosmo-top-bar__menu-item cosmo-top-bar__menu-item--right">Logout</a>
+			</div>
+			<div class="cosmo-menu-bar">
+				<button class="cosmo-menu-bar__back-button" onclick="history.back()" type="button"></button>
+				<nav class="cosmo-menu-bar__menu-collection">
+					<div class="cosmo-menu-bar__main-menu">
+						<a class="cosmo-menu-bar__main-item cosmo-menu-bar__main-item--active" href="index.html"
+							>Cosmo</a
+						>
+						<a class="cosmo-menu-bar__main-item" href="controls.html">Controls</a>
+						<a class="cosmo-menu-bar__main-item" href="layout.html">Layout</a>
+					</div>
+					<div class="cosmo-menu-bar__sub-menu">
+						<a class="cosmo-menu-bar__sub-item" href="index.html">About Cosmo</a>
+						<a class="cosmo-menu-bar__sub-item" href="typography.html">Typography</a>
+						<span class="cosmo-menu-bar__sub-item cosmo-menu-bar__sub-item--active">Customize</span>
+					</div>
+				</nav>
+			</div>
+			<div class="cosmo-page-body">
+				<div class="cosmo-page-body__content">
+					<h1 class="cosmo-title">Customize</h1>
+					<p>
+						Customizing the colors and fonts of cosmo is really easy, you only need to overwrite two
+						CSS variables, to get your own color scheme. Apart from the two main colors there are
+						nine other colors you can change. And one property to change the font family.
+					</p>
+					<p>
+						For the customized variables to take effect they need to be applied on the body element
+						in your custom CSS file.
+					</p>
+					<h2>Cosmo variables</h2>
+					<pre class="cosmo-docs-container">
 --control-border-color: #CCCCCC;            /** The border color for input and button controls **/
 --primary-color: #514B57;                   /** The primary color used for the highlights and accents **/
 --white: #FFFFFF;                           /** The color that represents white, for dark mode setups this needs to be the darkest color **/
@@ -73,44 +78,48 @@
 --gradient-bottom-color: var(--white);      /** The color of the lower part of the gradient that is above the menu and on the top border of modals **/
 --modal-backdrop: #FFFFFF4D;                /** The backdrop color for modals **/
 
---font-family: Lato, sans-serif;            /** The font family used across the application **/</pre>
-            <div class="cosmo-toolbar">
-                <div class="cosmo-toolbar__group">
-                    <button id="change-primary-color" class="cosmo-button">Random primary color</button>
-                    <button id="change-top-gradient-color" class="cosmo-button">Random top gradient color</button>
-                </div>
-                <div class="cosmo-toolbar__group">
-                    <button id="change-font-family" class="cosmo-button">Random font family</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
-<script src="./docs.js"></script>
-<script>
-    function getRandomColor() {
-        const letters = '0123456789ABCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
+--font-family: Lato, sans-serif;            /** The font family used across the application **/</pre
+					>
+					<div class="cosmo-toolbar">
+						<div class="cosmo-toolbar__group">
+							<button id="change-primary-color" class="cosmo-button">Random primary color</button>
+							<button id="change-top-gradient-color" class="cosmo-button">
+								Random top gradient color
+							</button>
+						</div>
+						<div class="cosmo-toolbar__group">
+							<button id="change-font-family" class="cosmo-button">Random font family</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="./docs.js"></script>
+		<script>
+			function getRandomColor() {
+				const letters = '0123456789ABCDEF';
+				let color = '#';
+				for (let i = 0; i < 6; i++) {
+					color += letters[Math.floor(Math.random() * 16)];
+				}
 
-        return color;
-    }
+				return color;
+			}
 
-    document.getElementById('change-primary-color').addEventListener('click', () => {
-        document.body.style.setProperty('--primary-color', getRandomColor());
-    });
-    document.getElementById('change-top-gradient-color').addEventListener('click', () => {
-        document.body.style.setProperty('--gradient-top-color', getRandomColor());
-    });
-    document.getElementById('change-font-family').addEventListener('click', async () => {
-        const link = document.createElement('link');
-        link.href = 'https://fonts.googleapis.com/css2?family=Tourney:wght@300;400;700&display=swap';
-        link.rel = 'stylesheet';
-        document.head.appendChild(link);
-        document.body.style.setProperty('--font-family', 'Tourney');
-    });
-</script>
-</body>
+			document.getElementById('change-primary-color').addEventListener('click', () => {
+				document.body.style.setProperty('--primary-color', getRandomColor());
+			});
+			document.getElementById('change-top-gradient-color').addEventListener('click', () => {
+				document.body.style.setProperty('--gradient-top-color', getRandomColor());
+			});
+			document.getElementById('change-font-family').addEventListener('click', async () => {
+				const link = document.createElement('link');
+				link.href =
+					'https://fonts.googleapis.com/css2?family=Tourney:wght@300;400;700&display=swap';
+				link.rel = 'stylesheet';
+				document.head.appendChild(link);
+				document.body.style.setProperty('--font-family', 'Tourney');
+			});
+		</script>
+	</body>
 </html>

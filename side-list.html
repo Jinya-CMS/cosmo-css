@@ -1,75 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Cosmo CSS – Side list</title>
-    <link href="normalize.css" rel="stylesheet">
-    <link href="variables.css" rel="stylesheet">
-    <link href="lato.css" rel="stylesheet">
-    <link href="scrollbars.css" rel="stylesheet">
-    <link href="layout.css" rel="stylesheet">
-    <link href="form.css" rel="stylesheet">
-    <link href="modal.css" rel="stylesheet">
-    <link href="progress.css" rel="stylesheet">
-    <link href="list.css" rel="stylesheet">
-    <link href="toolbar.css" rel="stylesheet">
-    <link href="typography.css" rel="stylesheet">
-    <link href="tab.css" rel="stylesheet">
-    <link href="table.css" rel="stylesheet">
-    <link href="key-value-list.css" rel="stylesheet">
-    <link rel="stylesheet" href="docs.css">
-    <link rel="stylesheet" href="mdi.css">
-    <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.1.0/styles/stackoverflow-dark.min.css">
-    <script src="//unpkg.com/@highlightjs/cdn-assets@11.1.0/highlight.min.js"></script>
-</head>
-<body>
-<main class="cosmo-page-layout">
-    <div class="cosmo-top-bar">
-        <div class="cosmo-top-bar__menu">
-            <a href="#" class="cosmo-top-bar__menu-item">Topbar Link 1</a>
-            <a href="#" class="cosmo-top-bar__menu-item">Topbar Link 2</a>
-            <a href="#" class="cosmo-top-bar__menu-item">Topbar Link 3</a>
-        </div>
-        <div class="cosmo-profile-picture"></div>
-        <a href="#" class="cosmo-top-bar__menu-item cosmo-top-bar__menu-item--right">Logout</a>
-    </div>
-    <div class="cosmo-menu-bar">
-        <button class="cosmo-menu-bar__back-button" onclick="history.back()" type="button"></button>
-        <nav class="cosmo-menu-bar__menu-collection">
-            <div class="cosmo-menu-bar__main-menu">
-                <a class="cosmo-menu-bar__main-item" href="index.html">Cosmo</a>
-                <a class="cosmo-menu-bar__main-item cosmo-menu-bar__main-item--active" href="controls.html">Controls</a>
-                <a class="cosmo-menu-bar__main-item" href="layout.html">Layout</a>
-            </div>
-            <div class="cosmo-menu-bar__sub-menu">
-                <a href="controls.html" class="cosmo-menu-bar__sub-item">HTML controls</a>
-                <a href="side-list.html" class="cosmo-menu-bar__sub-item cosmo-menu-bar__sub-item--active">Master-Detail list</a>
-                <a href="tab-control.html" class="cosmo-menu-bar__sub-item">Tab control</a>
-                <a href="toolbar.html" class="cosmo-menu-bar__sub-item">Toolbar</a>
-                <a href="dialog.html" class="cosmo-menu-bar__sub-item">Dialog</a>
-            </div>
-        </nav>
-    </div>
-    <div class="cosmo-page-body">
-        <div class="cosmo-page-body__content">
-            <div class="cosmo-list">
-                <nav class="cosmo-list__items">
-                    <a class="cosmo-list__item cosmo-list__item--active">Side entry 1</a>
-                    <a class="cosmo-list__item">Side entry 2</a>
-                    <a class="cosmo-list__item">Side entry 3</a>
-                    <button class="cosmo-button cosmo-button--full-width">Add entry to list</button>
-                </nav>
-                <div class="cosmo-list__content">
-                    <h1 class="cosmo-title">Master-Detail list</h1>
-                    <p>
-                        The Master-Detail list is a control to create a basic master detail view. At the bottom of the list you
-                        can add a button to give your users the option to create a new entry.
-                    </p>
-                    <p>
-                        The Master-Detail list is a top level component and can not be put inside a tab control. Due to the fact
-                        that Cosmo CSS is a pure CSS library you need to implement the master detail logic yourself.
-                    </p>
-                    <pre class="cosmo-docs-container">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Cosmo CSS – Side list</title>
+		<link href="normalize.css" rel="stylesheet" />
+		<link href="variables.css" rel="stylesheet" />
+		<link href="lato.css" rel="stylesheet" />
+		<link href="scrollbars.css" rel="stylesheet" />
+		<link href="layout.css" rel="stylesheet" />
+		<link href="form.css" rel="stylesheet" />
+		<link href="modal.css" rel="stylesheet" />
+		<link href="progress.css" rel="stylesheet" />
+		<link href="list.css" rel="stylesheet" />
+		<link href="toolbar.css" rel="stylesheet" />
+		<link href="typography.css" rel="stylesheet" />
+		<link href="tab.css" rel="stylesheet" />
+		<link href="table.css" rel="stylesheet" />
+		<link href="key-value-list.css" rel="stylesheet" />
+		<link rel="stylesheet" href="docs.css" />
+		<link rel="stylesheet" href="mdi.css" />
+		<link
+			rel="stylesheet"
+			href="//unpkg.com/@highlightjs/cdn-assets@11.1.0/styles/stackoverflow-dark.min.css"
+		/>
+		<script src="//unpkg.com/@highlightjs/cdn-assets@11.1.0/highlight.min.js"></script>
+	</head>
+	<body>
+		<main class="cosmo-page-layout">
+			<div class="cosmo-top-bar">
+				<div class="cosmo-top-bar__menu">
+					<a href="#" class="cosmo-top-bar__menu-item">Topbar Link 1</a>
+					<a href="#" class="cosmo-top-bar__menu-item">Topbar Link 2</a>
+					<a href="#" class="cosmo-top-bar__menu-item">Topbar Link 3</a>
+				</div>
+				<div class="cosmo-profile-picture"></div>
+				<a href="#" class="cosmo-top-bar__menu-item cosmo-top-bar__menu-item--right">Logout</a>
+			</div>
+			<div class="cosmo-menu-bar">
+				<button class="cosmo-menu-bar__back-button" onclick="history.back()" type="button"></button>
+				<nav class="cosmo-menu-bar__menu-collection">
+					<div class="cosmo-menu-bar__main-menu">
+						<a class="cosmo-menu-bar__main-item" href="index.html">Cosmo</a>
+						<a
+							class="cosmo-menu-bar__main-item cosmo-menu-bar__main-item--active"
+							href="controls.html"
+							>Controls</a
+						>
+						<a class="cosmo-menu-bar__main-item" href="layout.html">Layout</a>
+					</div>
+					<div class="cosmo-menu-bar__sub-menu">
+						<a href="controls.html" class="cosmo-menu-bar__sub-item">HTML controls</a>
+						<a
+							href="side-list.html"
+							class="cosmo-menu-bar__sub-item cosmo-menu-bar__sub-item--active"
+							>Master-Detail list</a
+						>
+						<a href="tab-control.html" class="cosmo-menu-bar__sub-item">Tab control</a>
+						<a href="toolbar.html" class="cosmo-menu-bar__sub-item">Toolbar</a>
+						<a href="dialog.html" class="cosmo-menu-bar__sub-item">Dialog</a>
+					</div>
+				</nav>
+			</div>
+			<div class="cosmo-page-body">
+				<div class="cosmo-page-body__content">
+					<div class="cosmo-list">
+						<nav class="cosmo-list__items">
+							<a class="cosmo-list__item cosmo-list__item--active">Side entry 1</a>
+							<a class="cosmo-list__item">Side entry 2</a>
+							<a class="cosmo-list__item">Side entry 3</a>
+							<button class="cosmo-button cosmo-button--full-width">Add entry to list</button>
+						</nav>
+						<div class="cosmo-list__content">
+							<h1 class="cosmo-title">Master-Detail list</h1>
+							<p>
+								The Master-Detail list is a control to create a basic master detail view. At the
+								bottom of the list you can add a button to give your users the option to create a
+								new entry.
+							</p>
+							<p>
+								The Master-Detail list is a top level component and can not be put inside a tab
+								control. Due to the fact that Cosmo CSS is a pure CSS library you need to implement
+								the master detail logic yourself.
+							</p>
+							<pre class="cosmo-docs-container">
 &lt;div class="cosmo-list">
     &lt;nav class="cosmo-list__items">
         &lt;a class="cosmo-list__item cosmo-list__item--active">Side entry 1&lt;/a>
@@ -84,12 +97,13 @@
             can add a button to give your users the option to create a new entry.
         &lt;/p>
     &lt;/div>
-&lt;/div></pre>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
-<script src="./docs.js"></script>
-</body>
+&lt;/div></pre
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="./docs.js"></script>
+	</body>
 </html>

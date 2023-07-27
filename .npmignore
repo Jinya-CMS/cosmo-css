@@ -3,3 +3,8 @@
 docs.js
 CNAME
 docs.css
+.gitignore
+.gitlab-ci.yml
+Dockerfile
+.prettierignore
+.prettierrc

@@ -1,0 +1,12 @@
+.gitignore
+.idea
+.dockerignore
+.npmignore
+package.json
+README.md
+LICENSE
+.git
+.prettierignore
+.prettierrc
+node_modules
+package-lock.json
