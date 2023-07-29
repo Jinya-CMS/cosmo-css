@@ -135,61 +135,20 @@
 					>
 					<hr />
 					<h2>File upload</h2>
-					<h3>Native browser styling</h3>
 					<p>
-						Since version 0.12.0 there is a class available for the native browser styling, which
-						eradicates the need for several elements and JavaScript. Due to browser limitations the
-						look and feel is different.
+						Cosmo CSS supports custom styling for file inputs, which makes it super easy by only applying the <code>cosmo-input</code> class to the file input.
 					</p>
 					<div class="cosmo-docs-container">
 						<div class="cosmo-input__group">
 							<label for="filePicker" class="cosmo-label">Pick file</label>
-							<input type="file" class="cosmo-input" />
+							<input id="filePicker" type="file" class="cosmo-input" />
 						</div>
 					</div>
 					<pre class="cosmo-docs-container">
 &lt;div class="cosmo-input__group">
     &lt;label for="filePicker" class="cosmo-label">Pick file&lt/label>
                 &lt;input type="file" class="cosmo-input">
-&lt;/div></pre
-					>
-					<h3>Custom classes</h3>
-					<p>
-						CSS only allows a bit of styling for file pickers. If you want the button to have an
-						icon and the button on the end of the input, you should take the code below.
-					</p>
-					<pre class="cosmo-docs-container">
-document.querySelectorAll('input[type=file]').forEach(elem => elem.addEventListener('change', (e) => {
-    const id = e.currentTarget.getAttribute('id');
-    const element = document.querySelector(`.cosmo-picker__name[for=${e.currentTarget.getAttribute('id')}]`);
-    element.textContent = e.currentTarget.value;
-}))
-</pre
-					>
-					<div class="cosmo-docs-container">
-						<div class="cosmo-input__group">
-							<label for="filePicker" class="cosmo-label">Pick file</label>
-							<div class="cosmo-input cosmo-input--picker">
-								<label class="cosmo-picker__name" for="filePicker">Filename</label>
-								<label class="cosmo-picker__button" for="filePicker">
-									<span class="mdi mdi-upload mdi-24px"></span>
-								</label>
-								<input style="display: none" type="file" id="filePicker" />
-							</div>
-						</div>
-					</div>
-					<pre class="cosmo-docs-container">
-&lt;div class="cosmo-input__group">
-    &lt;label for="filePicker" class="cosmo-label">Pick file&lt;/label>
-    &lt;div class="cosmo-input cosmo-input--picker">
-        &lt;label class="cosmo-picker__name" for="filePicker">Filename&lt;/label>
-        &lt;label class="cosmo-picker__button" for="filePicker">
-            &lt;span class="mdi mdi-upload mdi-24px">&lt;/span>
-        &lt;/label>
-        &lt;input style="display: none" type="file" id="filePicker">
-    &lt;/div>
-&lt;/div></pre
-					>
+&lt;/div></pre>
 					<hr />
 					<h2>Buttons</h2>
 					<p>
