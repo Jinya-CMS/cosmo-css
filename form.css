@@ -364,15 +364,13 @@
     background: var(--primary-color);
     margin-top: 2px;
     margin-left: 2px;
-    transition: margin-left 0.1s;
+    transition: all 0.1s;
 }
 
 .cosmo-switch + label::before {
     content: '';
     display: inline-block;
-}
-
-.cosmo-switch + label::before {
+    transition: all 0.1s;
     border: 1px solid var(--control-border-color);
     height: 16px;
     width: 32px;
@@ -381,4 +379,9 @@
 
 .cosmo-switch:checked + label::after {
     margin-left: 18px;
+    background: var(--white);
+}
+
+.cosmo-switch:checked + label::before {
+    background: var(--primary-color);
 }
