@@ -313,8 +313,8 @@
 
 .cosmo-input[type=range]::-moz-range-thumb {
     -webkit-appearance: none;
-    width: 4px;
-    height: 16px;
+    width: 6px;
+    height: 24px;
     border: 1px solid var(--primary-color);
     border-radius: 0;
     background-color: var(--range-thumb-color);
@@ -323,16 +323,62 @@
 
 .cosmo-input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 4px;
-    height: 16px;
+    width: 6px;
+    height: 24px;
     border: 1px solid var(--primary-color);
     border-radius: 0;
     background-color: var(--range-thumb-color);
     cursor: pointer;
+    margin-top: -10px;
 }
 
 .cosmo-input[type=range]:hover,
 .cosmo-input[type=range]:focus,
 .cosmo-input[type=range]:active {
     --range-thumb-color: var(--primary-color);
+}
+
+.cosmo-switch__group {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    grid-column: 2/3;
+}
+
+.cosmo-switch {
+    appearance: none;
+    margin: 0;
+}
+
+.cosmo-switch + label {
+    display: flex;
+    position: relative;
+}
+
+.cosmo-switch + label::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    background: var(--primary-color);
+    margin-top: 2px;
+    margin-left: 2px;
+    transition: margin-left 0.1s;
+}
+
+.cosmo-switch + label::before {
+    content: '';
+    display: inline-block;
+}
+
+.cosmo-switch + label::before {
+    border: 1px solid var(--control-border-color);
+    height: 16px;
+    width: 32px;
+    margin-right: 8px;
+}
+
+.cosmo-switch:checked + label::after {
+    margin-left: 18px;
 }
