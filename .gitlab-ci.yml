@@ -30,6 +30,7 @@ publish:
   image: quay.imanuel.dev/dockerhub/library---node:latest
   stage: deploy
   script:
+    - npm config set registry=https://registry.npmjs.org
     - npm config set '//registry.npmjs.org/:_authToken' "${NPM_AUTH_TOKEN}"
     - npm publish --verbose
   rules:
