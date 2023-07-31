@@ -35,7 +35,7 @@
 		--gradient-top-color: #121212;
 		--gradient-bottom-color: var(--white);
 		--modal-backdrop: rgba(0, 0, 0, 0.3);
-		--table-stripe-color: #EEEEEE;
+		--table-stripe-color: #eeeeee;
 	}
 }
 
@@ -73,7 +73,7 @@
 	--gradient-top-color: #121212;
 	--gradient-bottom-color: var(--white);
 	--modal-backdrop: rgba(0, 0, 0, 0.3);
-	--table-stripe-color: #EEEEEE;
+	--table-stripe-color: #eeeeee;
 
 	background: var(--white);
 	color: var(--black);
