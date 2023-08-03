@@ -18,7 +18,7 @@
 	--gradient-top-color: #ededee;
 	--gradient-bottom-color: var(--white);
 	--modal-backdrop: #ffffff4d;
-	--table-stripe-color: #1c1b1b;
+	--table-stripe-color: #eeeeee;
 
 	--font-weight-bold: bold;
 	--font-weight-normal: normal;
@@ -47,7 +47,7 @@
 		--gradient-top-color: #121212;
 		--gradient-bottom-color: var(--white);
 		--modal-backdrop: rgba(0, 0, 0, 0.3);
-		--table-stripe-color: #eeeeee;
+		--table-stripe-color: #1c1b1b;
 	}
 }
 
@@ -71,7 +71,7 @@
 	--gradient-top-color: #ededee;
 	--gradient-bottom-color: var(--white);
 	--modal-backdrop: #ffffff4d;
-	--table-stripe-color: #1c1b1b;
+	--table-stripe-color: #eeeeee;
 
 	background: var(--white);
 	color: var(--black);
@@ -97,7 +97,7 @@
 	--gradient-top-color: #121212;
 	--gradient-bottom-color: var(--white);
 	--modal-backdrop: rgba(0, 0, 0, 0.3);
-	--table-stripe-color: #eeeeee;
+	--table-stripe-color: #1c1b1b;
 
 	background: var(--white);
 	color: var(--black);
