@@ -33,5 +33,5 @@ pre.cosmo-docs-container::before {
 }
 
 .cosmo-debug * {
-	border: 1px dashed var(--primary-color);
+	outline: 1px dashed var(--primary-color);
 }
