@@ -1,8 +1,9 @@
 pre.cosmo-docs-container {
 	border: 1px solid var(--primary-color);
-	/*background: var(--gradient-top-color);*/
 	position: relative;
 	padding: 32px 16px 16px;
+	border-radius: var(--border-radius);
+	overflow: auto;
 }
 
 pre.cosmo-docs-container::before {
@@ -13,6 +14,7 @@ pre.cosmo-docs-container::before {
 	left: 0;
 	top: 0;
 	padding: 4px 8px;
+	border-bottom-right-radius: var(--border-radius);
 }
 
 .cosmo-docs-container {
@@ -20,6 +22,7 @@ pre.cosmo-docs-container::before {
 	padding: 32px 16px 16px;
 	position: relative;
 	margin: 16px 0;
+	border-radius: var(--border-radius);
 }
 
 .cosmo-docs-container::before {
@@ -30,6 +33,7 @@ pre.cosmo-docs-container::before {
 	left: 0;
 	top: 0;
 	padding: 4px 8px;
+	border-bottom-right-radius: var(--border-radius);
 }
 
 .cosmo-debug * {

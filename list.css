@@ -25,6 +25,7 @@
 	box-sizing: border-box;
 	cursor: pointer;
 	min-height: 29px;
+	border-radius: var(--border-radius);
 }
 
 .cosmo-list__item:hover {

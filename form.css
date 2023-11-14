@@ -8,14 +8,17 @@
 .cosmo-input,
 .cosmo-textarea {
 	min-width: 240px;
-	height: 28px;
+	height: 30px;
 	padding: 4px 8px;
 	box-sizing: border-box;
 	font-family: var(--font-family);
-	font-size: 16px;
+	font-size: var(--font-size);
 	border: 1px solid var(--control-border-color);
 	background: var(--white);
 	color: var(--black);
+	border-radius: var(--border-radius);
+	border-bottom: 2px solid var(--primary-color);
+	line-height: 1.15;
 }
 
 .cosmo-input:focus,
@@ -33,82 +36,8 @@
 }
 
 .cosmo-label {
-	font-size: 16px;
+	font-size: var(--font-size);
 	margin-right: 10px;
-}
-
-.cosmo-button,
-.cosmo-input[type='file']::file-selector-button,
-.cosmo-input[type='file']::-webkit-file-upload-button {
-	cursor: pointer;
-	font-family: var(--font-family);
-	font-size: 16px;
-	padding: 3px 16px;
-	box-sizing: border-box;
-	border: 1px solid var(--control-border-color);
-	background: var(--white);
-	color: var(--black);
-	line-height: 19px;
-	text-decoration: none;
-	font-weight: normal;
-}
-
-.cosmo-button:disabled,
-.cosmo-input[type='file']:disabled::file-selector-button,
-.cosmo-input[type='file']:disabled::-webkit-file-upload-button {
-	cursor: not-allowed;
-	border: 1px solid var(--control-border-color);
-	background: var(--white);
-	color: var(--disabled-color);
-}
-
-.cosmo-button:disabled + .cosmo-button,
-.cosmo-button:disabled + .cosmo-button:disabled,
-.cosmo-button + .cosmo-button {
-	border-left-width: 0;
-}
-
-.cosmo-button:hover,
-.cosmo-input[type='file']:hover::file-selector-button,
-.cosmo-input[type='file']:hover::-webkit-file-upload-button {
-	background: var(--primary-color);
-	color: var(--white);
-	outline: none;
-	box-shadow: none;
-}
-
-.cosmo-button:disabled:hover,
-.cosmo-input[type='file']:disabled:hover::file-selector-button,
-.cosmo-input[type='file']:disabled:hover::-webkit-file-upload-button {
-	background: var(--white);
-	color: var(--control-border-color);
-	outline: none;
-	box-shadow: none;
-}
-
-.cosmo-button:focus,
-.cosmo-input[type='file']:focus::file-selector-button,
-.cosmo-input[type='file']:focus::-webkit-file-upload-button {
-	border-color: var(--primary-color);
-	outline: none;
-	box-shadow: none;
-}
-
-.cosmo-button--full-width {
-	width: 100%;
-	text-align: center;
-	margin-top: auto;
-}
-
-.cosmo-button__container {
-	display: flex;
-	justify-content: flex-end;
-	margin-top: 10px;
-	gap: 16px;
-}
-
-.cosmo-button__container > .cosmo-button + .cosmo-button {
-	border-left-width: 1px;
 }
 
 .cosmo-input--picker {
@@ -170,34 +99,39 @@
 .cosmo-radio {
 	appearance: none;
 	margin: 0;
-}
-
-.cosmo-radio + label {
 	display: flex;
 	position: relative;
 }
 
-.cosmo-radio + label::before,
-.cosmo-radio + label::after {
+.cosmo-radio::before,
+.cosmo-radio::after {
 	content: '';
 	border-radius: 50%;
 	display: inline-block;
 }
 
-.cosmo-radio + label::before {
+.cosmo-radio::before {
+	background: var(--white);
+}
+
+.cosmo-radio::before {
 	border: 1px solid var(--control-border-color);
 	height: 16px;
 	width: 16px;
 	margin-right: 8px;
 }
 
-.cosmo-radio:checked + label::after {
+.cosmo-radio:checked::after {
 	position: absolute;
 	background: var(--primary-color);
-	height: 10px;
-	width: 10px;
+	height: 8px;
+	width: 8px;
 	left: 4px;
 	top: 4px;
+}
+
+.cosmo-radio:active::before {
+	border-color: var(--primary-color);
 }
 
 .cosmo-checkbox__group {
@@ -210,26 +144,22 @@
 .cosmo-checkbox {
 	appearance: none;
 	margin: 0;
-}
-
-.cosmo-checkbox + label {
 	display: flex;
 	position: relative;
 }
 
-.cosmo-checkbox + label::before {
+.cosmo-checkbox::before {
 	content: '';
 	display: inline-block;
-}
-
-.cosmo-checkbox + label::before {
 	border: 1px solid var(--control-border-color);
 	height: 16px;
 	width: 16px;
 	margin-right: 8px;
+	border-radius: var(--border-radius);
+	background: var(--white);
 }
 
-.cosmo-checkbox:checked + label::after {
+.cosmo-checkbox:checked::after {
 	content: '';
 	position: absolute;
 	display: block;
@@ -238,22 +168,23 @@
 	border-right: 1px solid var(--white);
 	border-top: 1px solid var(--white);
 	transform: rotate(135deg);
-	top: 7px;
-	left: 5px;
+	top: 6px;
+	left: 4px;
+	box-sizing: content-box;
 }
 
-.cosmo-checkbox:checked + label::before {
+.cosmo-checkbox:checked::before {
 	background: var(--primary-color);
 	color: var(--white);
+	border-color: var(--primary-color);
 }
 
 .cosmo-select {
 	min-width: 240px;
-	font-size: 16px;
+	font-size: var(--font-size);
 	border: 1px solid var(--control-border-color);
 	background: var(--white);
 	padding: 4px 32px 4px 8px;
-	height: 28px;
 	appearance: none;
 	color: var(--black);
 	position: relative;
@@ -261,6 +192,8 @@
 	background-repeat: no-repeat;
 	background-position-x: right;
 	background-position-y: center;
+	border-radius: var(--border-radius);
+	height: 30px;
 }
 
 .cosmo-select:focus {
@@ -279,8 +212,8 @@
 }
 
 .cosmo-input[type='range'] {
-	--range-border-color: #cccccc;
-	--range-thumb-color: #cccccc;
+	--range-border-color: var(--control-border-color);
+	--range-thumb-color: var(--control-border-color);
 	padding: 0;
 	border: none;
 	margin: 0;
@@ -291,18 +224,21 @@
 	appearance: none;
 	min-width: 240px;
 	background: transparent;
+	border-radius: var(--border-radius);
 }
 
 .cosmo-input[type='range']::-moz-range-track {
 	min-width: 100%;
 	height: 4px;
 	background-color: var(--range-border-color);
+	border-radius: var(--border-radius);
 }
 
 .cosmo-input[type='range']::-webkit-slider-runnable-track {
 	min-width: 100%;
 	height: 4px;
 	background-color: var(--range-border-color);
+	border-radius: var(--border-radius);
 }
 
 .cosmo-input[type='range']::-moz-range-thumb {
@@ -310,8 +246,8 @@
 	width: 6px;
 	height: 24px;
 	border: 1px solid var(--primary-color);
-	border-radius: 0;
 	background-color: var(--range-thumb-color);
+	border-radius: var(--border-radius);
 	cursor: pointer;
 }
 
@@ -320,7 +256,7 @@
 	width: 6px;
 	height: 24px;
 	border: 1px solid var(--primary-color);
-	border-radius: 0;
+	border-radius: var(--border-radius);
 	background-color: var(--range-thumb-color);
 	cursor: pointer;
 	margin-top: -10px;
@@ -342,26 +278,24 @@
 .cosmo-switch {
 	appearance: none;
 	margin: 0;
-}
-
-.cosmo-switch + label {
 	display: flex;
 	position: relative;
 }
 
-.cosmo-switch + label::after {
+.cosmo-switch::after {
 	content: '';
 	position: absolute;
 	display: inline-block;
-	height: 14px;
-	width: 14px;
+	height: 12px;
+	width: 12px;
 	background: var(--primary-color);
 	margin-top: 2px;
 	margin-left: 2px;
 	transition: all 0.1s;
+	border-radius: var(--border-radius);
 }
 
-.cosmo-switch + label::before {
+.cosmo-switch::before {
 	content: '';
 	display: inline-block;
 	transition: all 0.1s;
@@ -369,13 +303,15 @@
 	height: 16px;
 	width: 32px;
 	margin-right: 8px;
+	border-radius: var(--border-radius);
 }
 
-.cosmo-switch:checked + label::after {
+.cosmo-switch:checked::after {
 	margin-left: 18px;
 	background: var(--white);
 }
 
-.cosmo-switch:checked + label::before {
+.cosmo-switch:checked::before {
 	background: var(--primary-color);
+	border-color: var(--primary-color);
 }

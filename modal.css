@@ -7,6 +7,7 @@
 	background: var(--modal-backdrop);
 	height: 100vh;
 	width: 100vw;
+	backdrop-filter: blur(4px) saturate(90%);
 }
 
 .cosmo-modal__container {
@@ -18,15 +19,12 @@
 
 .cosmo-modal {
 	border: 1px solid var(--primary-color);
-	background: linear-gradient(
-		to top,
-		var(--white) 0%,
-		var(--white) 80%,
-		var(--gradient-top-color) 100%
-	);
 	padding: 24px 32px;
 	min-width: 274px;
 	box-sizing: border-box;
+	border-radius: var(--border-radius);
+	backdrop-filter: blur(24px) saturate(90%);
+	background: var(--modal-background);
 }
 
 .cosmo-modal::before {
@@ -35,6 +33,7 @@
 	width: 208px;
 	height: 8px;
 	background: var(--primary-color);
+	border-radius: var(--border-radius);
 }
 
 .cosmo-modal__title {

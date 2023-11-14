@@ -1,5 +1,5 @@
 .cosmo-progress-bar__top-label {
-	font-size: 16px;
+	font-size: var(--font-size);
 	color: var(--black);
 	display: block;
 }
@@ -24,7 +24,7 @@
 	border: 0;
 	background-color: var(--control-border-color);
 	color: var(--primary-color);
-	border-radius: 0;
+	border-radius: var(--border-radius);
 }
 
 .cosmo-progress-bar::-webkit-progress-bar {
@@ -32,11 +32,25 @@
 }
 
 .cosmo-progress-bar[value]::-webkit-progress-value {
-	background-color: var(--primary-color);
+	border-radius: var(--border-radius);
+	background: repeating-linear-gradient(
+		45deg,
+		var(--primary-color),
+		var(--primary-color) 10px,
+		var(--primary-color-light) 10px,
+		var(--primary-color-light) 20px
+	);
 }
 
 .cosmo-progress-bar::-moz-progress-bar {
-	background-color: var(--primary-color);
+	border-radius: var(--border-radius);
+	background: repeating-linear-gradient(
+		45deg,
+		var(--primary-color),
+		var(--primary-color) 10px,
+		var(--primary-color-light) 10px,
+		var(--primary-color-light) 20px
+	);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -48,11 +62,11 @@
 	}
 
 	.cosmo-progress-bar:indeterminate[value]::-webkit-progress-value {
-		background-color: transparent;
+		background: transparent;
 	}
 
 	.cosmo-progress-bar:indeterminate::-moz-progress-bar {
-		background-color: transparent;
+		background: transparent;
 	}
 }
 

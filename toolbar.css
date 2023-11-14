@@ -6,3 +6,23 @@
 .cosmo-toolbar__group {
 	display: flex;
 }
+
+.cosmo-toolbar__group .cosmo-button {
+	border-radius: 0;
+}
+
+.cosmo-toolbar__group .cosmo-button:first-child {
+	border-top-left-radius: var(--border-radius);
+	border-bottom-left-radius: var(--border-radius);
+}
+
+.cosmo-toolbar__group .cosmo-button:last-child {
+	border-top-right-radius: var(--border-radius);
+	border-bottom-right-radius: var(--border-radius);
+}
+
+.cosmo-toolbar__group .cosmo-button:disabled + .cosmo-button,
+.cosmo-toolbar__group .cosmo-button:disabled + .cosmo-button:disabled,
+.cosmo-toolbar__group .cosmo-button + .cosmo-button {
+	border-left-width: 0;
+}

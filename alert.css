@@ -6,6 +6,7 @@
 	padding: 8px 16px;
 	margin-bottom: 16px;
 	box-sizing: border-box;
+	border-radius: var(--border-radius);
 }
 
 .cosmo-message::selection {
@@ -17,6 +18,7 @@
 	margin: 0;
 	color: var(--black);
 	font-weight: var(--font-weight-light);
+	font-family: var(--font-family-heading);
 	font-size: 24px;
 	display: block;
 }

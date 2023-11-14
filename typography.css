@@ -1,5 +1,6 @@
 .cosmo-title {
-	font-weight: var(--font-weight-light);
+	font-weight: var(--font-weight-heading);
+	font-family: var(--font-family-heading);
 	margin: 0;
 	vertical-align: text-top;
 	font-size: 36px;
@@ -12,39 +13,44 @@
 	box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: var(--font-weight-heading);
+	font-family: var(--font-family-heading);
+	margin-bottom: 0;
+}
+
 h1 {
-	font-weight: var(--font-weight-light);
 	font-size: 32px;
 }
 
 h2 {
-	font-weight: var(--font-weight-light);
 	font-size: 28px;
 }
 
 h3 {
-	font-weight: var(--font-weight-light);
 	font-size: 24px;
 }
 
 h4 {
-	font-weight: var(--font-weight-light);
 	font-size: 22px;
 }
 
 h5 {
-	font-weight: var(--font-weight-light);
 	font-size: 20px;
 }
 
 h6 {
-	font-weight: var(--font-weight-light);
-	font-size: 16px;
+	font-size: var(--font-size);
 }
 
 p {
 	font-family: var(--font-family);
-	font-size: 16px;
+	font-size: var(--font-size);
 }
 
 a {
@@ -52,8 +58,20 @@ a {
 }
 
 code,
+samp,
 pre {
 	color: var(--code-color);
+	font-family: var(--font-family-code);
+	font-size: var(--font-size);
+}
+
+kbd {
+	color: var(--white);
+	font-family: var(--font-family-code);
+	background: var(--black);
+	padding: 2px 4px;
+	border-radius: var(--border-radius);
+	font-size: var(--font-size);
 }
 
 *::selection {

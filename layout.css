@@ -3,11 +3,12 @@ body {
 	padding: 0;
 	background: var(--white);
 	color: var(--black);
+	font-size: var(--font-size);
 }
 
 hr {
 	background: radial-gradient(circle, var(--primary-color) 0%, var(--white) 100%);
-	height: 2px;
+	height: 1px;
 	border: 0;
 	margin: 32px 0;
 }
@@ -24,6 +25,8 @@ hr {
 	background: var(--primary-color);
 	grid-column: profilepicture;
 	object-fit: cover;
+	border-bottom-left-radius: var(--border-radius);
+	border-bottom-right-radius: var(--border-radius);
 }
 
 .cosmo-top-bar {
@@ -40,12 +43,18 @@ hr {
 .cosmo-menu-bar {
 	grid-row: main-menu;
 	display: grid;
-	grid-template-columns: [spacing1] 18px [backbutton] 48px [spacing2] 74px [content] 1fr;
-	border-left: 24px solid var(--primary-color);
+	position: relative;
+	grid-template-columns: [left-touch] 24px [spacing1] 18px [backbutton] 48px [spacing2] 74px [content] 1fr;
 }
 
-.cosmo-menu-bar__touch {
-	grid-column: left-column;
+.cosmo-menu-bar::before {
+	content: '';
+	position: absolute;
+	width: 24px;
+	height: 100%;
+	background: var(--primary-color);
+	border-bottom-right-radius: var(--border-radius);
+	border-top-right-radius: var(--border-radius);
 }
 
 .cosmo-menu-bar__back-button {
@@ -122,8 +131,9 @@ hr {
 
 .cosmo-menu-bar__main-item {
 	text-transform: lowercase;
-	font-size: 48px;
-	font-weight: var(--font-weight-light);
+	font-size: var(--font-size-main-menu);
+	font-weight: var(--font-weight-menu);
+	font-family: var(--font-family-menu);
 	line-height: 48px;
 	vertical-align: text-top;
 	color: var(--menu-text-color);
@@ -137,17 +147,18 @@ hr {
 
 .cosmo-menu-bar__sub-item {
 	text-transform: uppercase;
-	font-size: 16px;
-	font-weight: var(--font-weight-light);
+	font-size: var(--font-size-sub-menu);
+	font-weight: var(--font-weight-menu);
 	line-height: 16px;
 	vertical-align: text-top;
 	margin-right: 16px;
 	text-decoration: none;
 	color: var(--black);
+	font-family: var(--font-family-menu);
 }
 
 .cosmo-menu-bar__sub-item--active {
-	font-weight: var(--font-weight-bold);
+	font-weight: var(--font-weight-menu-active);
 }
 
 .cosmo-page-body {
@@ -170,18 +181,20 @@ hr {
 	padding: 0;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-weight: var(--font-weight-light);
+	font-weight: var(--font-weight-menu);
+	font-family: var(--font-family-menu);
 	color: var(--black);
 	cursor: pointer;
 	margin-right: 16px;
+	font-size: var(--font-size-top-menu);
 }
 
 .cosmo-top-bar__menu-item:after {
 	content: '';
-	height: 16px;
+	height: 14px;
 	width: 1px;
 	background: var(--black);
-	margin-top: 4px;
+	margin-top: 2px;
 	margin-left: 16px;
 }
 
@@ -214,9 +227,6 @@ hr {
 	gap: 1rem;
 	padding-left: 164px;
 	padding-right: 164px;
-}
-
-.cosmo-bottom-bar__item {
 }
 
 .cosmo-bottom-bar__item--left {

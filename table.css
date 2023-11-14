@@ -4,8 +4,10 @@
 
 .cosmo-table thead tr th {
 	font-weight: var(--font-weight-bold);
-	padding: 0 8px 8px;
+	padding: 0 8px;
 	text-transform: capitalize;
+	border-bottom: 2px solid var(--primary-color);
+	font-family: var(--font-family-heading);
 }
 
 .cosmo-table tbody tr td {
