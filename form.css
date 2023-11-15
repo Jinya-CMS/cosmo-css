@@ -17,7 +17,7 @@
 	background: var(--white);
 	color: var(--black);
 	border-radius: var(--border-radius);
-	border-bottom: 2px solid var(--primary-color);
+	border-bottom: 2px solid var(--control-border-color);
 	line-height: 1.15;
 }
 
@@ -25,14 +25,20 @@
 .cosmo-textarea:focus {
 	outline: none;
 	box-shadow: none;
-	border-color: var(--primary-color);
+	border-bottom-color: var(--primary-color);
 }
 
 .cosmo-input:invalid,
 .cosmo-textarea:invalid {
-	border-color: var(--negative-color);
+	border-bottom-color: var(--negative-color);
 	outline: none;
 	box-shadow: none;
+}
+
+.cosmo-input:disabled,
+.cosmo-textarea:disabled {
+	border-bottom-color: var(--disabled-color);
+	cursor: not-allowed;
 }
 
 .cosmo-label {
@@ -90,12 +96,6 @@
 	align-self: baseline;
 }
 
-.cosmo-radio__group {
-	display: grid;
-	grid-template-columns: auto 1fr;
-	grid-template-rows: auto auto;
-}
-
 .cosmo-radio {
 	appearance: none;
 	margin: 0;
@@ -112,9 +112,6 @@
 
 .cosmo-radio::before {
 	background: var(--white);
-}
-
-.cosmo-radio::before {
 	border: 1px solid var(--control-border-color);
 	height: 16px;
 	width: 16px;
@@ -130,15 +127,26 @@
 	top: 4px;
 }
 
+.cosmo-radio:disabled:checked::after {
+	background: var(--disabled-color);
+}
+
 .cosmo-radio:active::before {
 	border-color: var(--primary-color);
 }
 
-.cosmo-checkbox__group {
+.cosmo-radio:disabled:active::before {
+	border-color: var(--control-border-color);
+}
+
+.cosmo-checkbox__group,
+.cosmo-switch__group,
+.cosmo-radio__group {
 	display: grid;
 	grid-template-columns: auto 1fr;
-	grid-template-rows: auto auto;
+	grid-auto-rows: auto;
 	grid-column: 2/3;
+	row-gap: 4px;
 }
 
 .cosmo-checkbox {
@@ -159,6 +167,19 @@
 	background: var(--white);
 }
 
+.cosmo-checkbox:invalid::before {
+	border-color: var(--negative-color);
+}
+
+.cosmo-checkbox:disabled::before {
+	border-color: var(--disabled-color);
+	cursor: not-allowed;
+}
+
+.cosmo-checkbox:disabled + label {
+	cursor: not-allowed;
+}
+
 .cosmo-checkbox:checked::after {
 	content: '';
 	position: absolute;
@@ -177,6 +198,12 @@
 	background: var(--primary-color);
 	color: var(--white);
 	border-color: var(--primary-color);
+}
+
+.cosmo-checkbox:disabled:checked::before {
+	background: var(--disabled-color);
+	color: var(--white);
+	border-color: var(--disabled-color);
 }
 
 .cosmo-select {
@@ -202,6 +229,11 @@
 	box-shadow: none;
 }
 
+.cosmo-select:disabled {
+	border-color: var(--disabled-color);
+	cursor: not-allowed;
+}
+
 .cosmo-input__header {
 	font-size: 24px;
 	height: 24px;
@@ -219,8 +251,6 @@
 	margin: 0;
 	box-sizing: border-box;
 	height: auto;
-	-webkit-appearance: none;
-	-moz-appearance: none;
 	appearance: none;
 	min-width: 240px;
 	background: transparent;
@@ -268,13 +298,6 @@
 	--range-thumb-color: var(--primary-color);
 }
 
-.cosmo-switch__group {
-	display: grid;
-	grid-template-columns: auto 1fr;
-	grid-template-rows: auto auto;
-	grid-column: 2/3;
-}
-
 .cosmo-switch {
 	appearance: none;
 	margin: 0;
@@ -306,7 +329,8 @@
 	border-radius: var(--border-radius);
 }
 
-.cosmo-switch:checked::after {
+.cosmo-switch:checked::after,
+.cosmo-switch:disabled:checked::after {
 	margin-left: 18px;
 	background: var(--white);
 }
@@ -314,4 +338,17 @@
 .cosmo-switch:checked::before {
 	background: var(--primary-color);
 	border-color: var(--primary-color);
+}
+
+.cosmo-switch:disabled:checked::before {
+	background: var(--disabled-color);
+	border-color: var(--disabled-color);
+}
+
+.cosmo-switch:disabled::after {
+	background: var(--disabled-color);
+}
+
+.cosmo-switch:invalid::after {
+	background: var(--negative-color);
 }

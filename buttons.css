@@ -1,176 +1,283 @@
 .cosmo-circular-button {
-	border-radius: 100%;
-	border: 2px solid var(--control-border-color);
-	height: 32px;
-	width: 32px;
-	background: var(--white);
-	color: var(--primary-color);
-	cursor: pointer;
-	text-decoration: none;
-	font-weight: normal;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
+    border-radius: 100%;
+    border: 2px solid var(--control-border-color);
+    height: 32px;
+    width: 32px;
+    background: var(--white);
+    color: var(--primary-color);
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: normal;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cosmo-circular-button:disabled {
-	cursor: not-allowed;
-	border: 1px solid var(--control-border-color);
-	background: var(--white);
-	color: var(--disabled-color);
+    cursor: not-allowed;
+    border: 1px solid var(--control-border-color);
+    background: var(--white);
+    color: var(--disabled-color);
 }
 
 .cosmo-circular-button:hover {
-	background: var(--primary-color);
-	border-color: var(--primary-color);
-	color: var(--white);
-	outline: none;
-	box-shadow: none;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white);
+    outline: none;
+    box-shadow: none;
 }
 
 .cosmo-circular-button:disabled:hover {
-	background: var(--white);
-	color: var(--control-border-color);
-	outline: none;
-	box-shadow: none;
+    background: var(--white);
+    color: var(--control-border-color);
+    outline: none;
+    box-shadow: none;
 }
 
 .cosmo-circular-button:focus {
-	border-color: var(--primary-color);
-	outline: none;
-	box-shadow: none;
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: none;
 }
 
 .cosmo-circular-button .mdi::before {
-	font-size: 24px;
+    font-size: 24px;
 }
 
-.cosmo-circular-button--small {
-	height: 24px;
-	width: 24px;
+.cosmo-circular-button--small,
+.cosmo-circular-button.is--small{
+    height: 24px;
+    width: 24px;
 }
 
-.cosmo-circular-button--small .mdi::before {
-	font-size: var(--font-size);
+.cosmo-circular-button--small .mdi::before,
+.cosmo-circular-button.is--small .mdi::before {
+    font-size: var(--font-size);
 }
 
-.cosmo-circular-button--large {
-	height: 48px;
-	width: 48px;
+.cosmo-circular-button--large,
+.cosmo-circular-button.is--large {
+    height: 48px;
+    width: 48px;
 }
 
-.cosmo-circular-button--large .mdi::before {
-	font-size: 32px;
+.cosmo-circular-button--large .mdi::before,
+.cosmo-circular-button.is--large .mdi::before {
+    font-size: 32px;
 }
 
 .cosmo-button,
 .cosmo-input[type='file']::file-selector-button,
 .cosmo-input[type='file']::-webkit-file-upload-button {
-	cursor: pointer;
-	font-family: var(--font-family);
-	font-size: var(--font-size);
-	padding: 4px 16px;
-	box-sizing: border-box;
-	border: 1px solid var(--control-border-color);
-	background: var(--white);
-	color: var(--black);
-	line-height: 19px;
-	text-decoration: none;
-	font-weight: normal;
-	border-radius: var(--border-radius);
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    padding: 4px 16px;
+    box-sizing: border-box;
+    border: 1px solid var(--button-border-color);
+    background: var(--button-background);
+    color: var(--button-color);
+    line-height: 19px;
+    text-decoration: none;
+    font-weight: normal;
+    border-radius: var(--border-radius);
+    --button-border-color: var(--control-border-color);
+    --button-background: var(--white);
+    --button-color: var(--black);
 }
 
 .cosmo-input[type='file']::file-selector-button,
 .cosmo-input[type='file']::-webkit-file-upload-button {
-	border-radius: 0;
+    border-radius: 0;
 }
 
 .cosmo-button:disabled,
 .cosmo-input[type='file']:disabled::file-selector-button,
 .cosmo-input[type='file']:disabled::-webkit-file-upload-button {
-	cursor: not-allowed;
-	border: 1px solid var(--control-border-color);
-	background: var(--white);
-	color: var(--disabled-color);
+    cursor: not-allowed;
+    filter: contrast(0.5);
+    outline: none;
+    box-shadow: none;
 }
 
-.cosmo-button:hover,
-.cosmo-input[type='file']:hover::file-selector-button,
-.cosmo-input[type='file']:hover::-webkit-file-upload-button {
-	background: var(--control-border-color-dark);
-	color: var(--white);
-	outline: none;
-	box-shadow: none;
-	border-color: var(--control-border-color-dark);
+.cosmo-button:not(:disabled):hover,
+.cosmo-input[type='file']:not(:disabled):hover::file-selector-button,
+.cosmo-input[type='file']:not(:disabled):hover::-webkit-file-upload-button {
+    --button-background: var(--control-border-color-dark);
+    --button-color: var(--white);
+    --button-border-color: var(--control-border-color-dark);
+    outline: none;
+    box-shadow: none;
 }
 
-.cosmo-button:disabled:hover,
-.cosmo-input[type='file']:disabled:hover::file-selector-button,
-.cosmo-input[type='file']:disabled:hover::-webkit-file-upload-button {
-	background: var(--white);
-	color: var(--control-border-color);
-	outline: none;
-	box-shadow: none;
+.cosmo-button:not(:disabled):focus,
+.cosmo-input[type='file']:not(:disabled):focus::file-selector-button,
+.cosmo-input[type='file']:not(:disabled):focus::-webkit-file-upload-button {
+    --button-border-color: var(--control-border-color-dark);
 }
 
-.cosmo-button:focus,
-.cosmo-input[type='file']:focus::file-selector-button,
-.cosmo-input[type='file']:focus::-webkit-file-upload-button {
-	border-color: var(--control-border-color-dark);
-	outline: none;
-	box-shadow: none;
-}
-
-.cosmo-button:active,
-.cosmo-input[type='file']:active::file-selector-button,
-.cosmo-input[type='file']:active::-webkit-file-upload-button {
-	border-color: var(--control-border-color-darker);
-	background: var(--control-border-color-darker);
+.cosmo-button:not(:disabled):active,
+.cosmo-input[type='file']:not(:disabled):active::file-selector-button,
+.cosmo-input[type='file']:not(:disabled):active::-webkit-file-upload-button {
+    --button-border-color: var(--control-border-color-darker);
+    --button-background: var(--control-border-color-darker);
 }
 
 .cosmo-button--full-width {
-	width: 100%;
-	text-align: center;
-	margin-top: auto;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
 }
 
 .cosmo-button__container {
-	display: flex;
-	justify-content: flex-end;
-	margin-top: 10px;
-	gap: 16px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    gap: 16px;
 }
 
 .cosmo-button__container > .cosmo-button + .cosmo-button {
-	border-left-width: 1px;
+    border-left-width: 1px;
 }
 
-.cosmo-button--primary {
-	border-color: var(--primary-color);
-	background: var(--primary-color);
-	color: var(--white);
+.cosmo-button.is--primary,
+.cosmo-button.is--positive,
+.cosmo-button.is--negative,
+.cosmo-button.is--warning,
+.cosmo-button.is--information,
+.cosmo-button.is--primary:hover,
+.cosmo-button.is--primary:focus,
+.cosmo-button.is--primary:active,
+.cosmo-button.is--positive:hover,
+.cosmo-button.is--positive:focus,
+.cosmo-button.is--positive:active,
+.cosmo-button.is--negative:hover,
+.cosmo-button.is--negative:focus,
+.cosmo-button.is--negative:active,
+.cosmo-button.is--warning:hover,
+.cosmo-button.is--warning:focus,
+.cosmo-button.is--warning:active,
+.cosmo-button.is--information:hover,
+.cosmo-button.is--information:focus,
+.cosmo-button.is--information:active {
+    --button-color: var(--white);
 }
 
-.cosmo-button--primary:hover,
-.cosmo-button--primary:focus {
-	border-color: var(--primary-color-light);
-	background: var(--primary-color-light);
-	color: var(--white);
+.cosmo-button.is--primary {
+    --button-border-color: var(--primary-color);
+    --button-background: var(--primary-color);
 }
 
-.cosmo-button--primary:active {
-	border-color: var(--primary-color-lighter);
-	background: var(--primary-color-lighter);
-	color: var(--white);
+.cosmo-button.is--primary:not(:disabled):hover,
+.cosmo-button.is--primary:not(:disabled):focus {
+    --button-border-color: var(--primary-color-light);
+    --button-background: var(--primary-color-light);
+}
+
+.cosmo-button.is--primary:not(:disabled):active {
+    --button-border-color: var(--primary-color-lighter);
+    --button-background: var(--primary-color-lighter);
+}
+
+.cosmo-button.is--negative {
+    --button-border-color: var(--negative-color);
+    --button-background: var(--negative-color);
+}
+
+.cosmo-button.is--negative:not(:disabled):hover,
+.cosmo-button.is--negative:not(:disabled):focus {
+    --button-border-color: var(--negative-color-dark);
+    --button-background: var(--negative-color-dark);
+}
+
+.cosmo-button.is--negative:not(:disabled):active {
+    --button-border-color: var(--negative-color-darker);
+    --button-background: var(--negative-color-darker);
+}
+
+.cosmo-button.is--positive {
+    --button-border-color: var(--positive-color);
+    --button-background: var(--positive-color);
+}
+
+.cosmo-button.is--positive:not(:disabled):hover,
+.cosmo-button.is--positive:not(:disabled):focus {
+    --button-border-color: var(--positive-color-dark);
+    --button-background: var(--positive-color-dark);
+}
+
+.cosmo-button.is--positive:not(:disabled):active {
+    --button-border-color: var(--positive-color-darker);
+    --button-background: var(--positive-color-darker);
+}
+
+.cosmo-button.is--information {
+    --button-border-color: var(--information-color);
+    --button-background: var(--information-color);
+}
+
+.cosmo-button.is--information:not(:disabled):hover,
+.cosmo-button.is--information:not(:disabled):focus {
+    --button-border-color: var(--information-color-dark);
+    --button-background: var(--information-color-dark);
+}
+
+.cosmo-button.is--information:not(:disabled):active {
+    --button-border-color: var(--information-color-darker);
+    --button-background: var(--information-color-darker);
+}
+
+.cosmo-button.is--warning {
+    --button-border-color: var(--warning-color);
+    --button-background: var(--warning-color);
+}
+
+.cosmo-button.is--warning:not(:disabled):hover,
+.cosmo-button.is--warning:not(:disabled):focus {
+    --button-border-color: var(--warning-color-dark);
+    --button-background: var(--warning-color-dark);
+}
+
+.cosmo-button.is--warning:not(:disabled):active {
+    --button-border-color: var(--warning-color-darker);
+    --button-background: var(--warning-color-darker);
 }
 
 .cosmo-input[type='file']::file-selector-button,
 .cosmo-input[type='file']::-webkit-file-upload-button {
-	height: 30px;
+    height: 30px;
 }
 
-.cosmo-input[type='file']:hover::file-selector-button,
-.cosmo-input[type='file']:hover::-webkit-file-upload-button {
-	background: var(--primary-color);
-	color: var(--white);
+.cosmo-input[type='file']:not(:disabled):hover::file-selector-button,
+.cosmo-input[type='file']:not(:disabled):hover::-webkit-file-upload-button {
+    --button-background: var(--primary-color);
+    --button-color: var(--white);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    .cosmo-button.is--primary,
+    .cosmo-button.is--primary:active,
+    .cosmo-button.is--primary:hover,
+    .cosmo-button.is--primary:focus,
+    .cosmo-button.is--negative,
+    .cosmo-button.is--negative:active,
+    .cosmo-button.is--negative:hover,
+    .cosmo-button.is--negative:focus,
+    .cosmo-button.is--positive,
+    .cosmo-button.is--positive:active,
+    .cosmo-button.is--positive:hover,
+    .cosmo-button.is--positive:focus,
+    .cosmo-button.is--warning,
+    .cosmo-button.is--warning:active,
+    .cosmo-button.is--warning:hover,
+    .cosmo-button.is--warning:focus,
+    .cosmo-button.is--information,
+    .cosmo-button.is--information:active,
+    .cosmo-button.is--information:hover,
+    .cosmo-button.is--information:focus,
+    .cosmo-input[type='file']:hover::file-selector-button,
+    .cosmo-input[type='file']:hover::-webkit-file-upload-button {
+        --button-color: var(--black);
+    }
 }

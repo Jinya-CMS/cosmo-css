@@ -37,22 +37,26 @@
 	color: var(--white);
 }
 
-.cosmo-message--positive {
+.cosmo-message--positive,
+.cosmo-message.is--positive {
 	--message-border: var(--positive-color);
-	--message-background: var(--positive-light-color);
+	--message-background: var(--positive-color-light);
 }
 
-.cosmo-message--negative {
+.cosmo-message--negative,
+.cosmo-message.is--negative {
 	--message-border: var(--negative-color);
-	--message-background: var(--negative-light-color);
+	--message-background: var(--negative-color-light);
 }
 
-.cosmo-message--information {
+.cosmo-message--information,
+.cosmo-message.is--information {
 	--message-border: var(--information-color);
-	--message-background: var(--information-light-color);
+	--message-background: var(--information-color-light);
 }
 
-.cosmo-message--warning {
+.cosmo-message--warning,
+.cosmo-message.is--warning {
 	--message-border: var(--warning-color);
-	--message-background: var(--warning-light-color);
+	--message-background: var(--warning-color-light);
 }
