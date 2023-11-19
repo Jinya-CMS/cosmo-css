@@ -2,6 +2,8 @@
 	display: grid;
 	align-items: center;
 	grid-template-columns: [label] auto [input] 1fr;
+	grid-auto-rows: auto;
+	grid-auto-flow: row;
 	grid-row-gap: 10px;
 }
 
@@ -19,13 +21,14 @@
 	border-radius: var(--border-radius);
 	border-bottom: 2px solid var(--control-border-color);
 	line-height: 1.15;
+	transition: border-bottom-color 0.3s;
 }
 
 .cosmo-input:focus,
 .cosmo-textarea:focus {
+	border-bottom-color: var(--primary-color);
 	outline: none;
 	box-shadow: none;
-	border-bottom-color: var(--primary-color);
 }
 
 .cosmo-input:invalid,
@@ -46,35 +49,6 @@
 	margin-right: 10px;
 }
 
-.cosmo-input--picker {
-	display: flex;
-	align-items: center;
-	padding: 0;
-}
-
-.cosmo-picker__name {
-	padding: 4px 8px;
-	text-overflow: ellipsis;
-	white-space: pre;
-	overflow-x: hidden;
-}
-
-.cosmo-picker__button {
-	color: var(--black);
-	justify-self: flex-end;
-	margin-left: auto;
-	cursor: pointer;
-	width: 26px;
-	height: 26px;
-	display: flex;
-	justify-content: center;
-}
-
-.cosmo-picker__button:hover {
-	background: var(--black);
-	color: var(--white);
-}
-
 .cosmo-input[type='file'] {
 	padding: 0;
 }
@@ -92,7 +66,9 @@
 }
 
 .cosmo-label--textarea,
-.cosmo-label--radio {
+.cosmo-label--radio,
+.is--textarea,
+.is--radio {
 	align-self: baseline;
 }
 
@@ -101,6 +77,16 @@
 	margin: 0;
 	display: flex;
 	position: relative;
+	outline: none;
+	border: none;
+	box-shadow: none;
+}
+
+.cosmo-radio:active,
+.cosmo-radio:focus {
+	outline: none;
+	border: none;
+	box-shadow: none;
 }
 
 .cosmo-radio::before,
@@ -108,6 +94,9 @@
 	content: '';
 	border-radius: 50%;
 	display: inline-block;
+	transition:
+		border-color 0.3s,
+		background-color 0.3s;
 }
 
 .cosmo-radio::before {
@@ -154,6 +143,13 @@
 	margin: 0;
 	display: flex;
 	position: relative;
+}
+
+.cosmo-checkbox::after,
+.cosmo-checkbox::before {
+	transition:
+		border-color 0.3s,
+		background-color 0.3s;
 }
 
 .cosmo-checkbox::before {
@@ -221,6 +217,7 @@
 	background-position-y: center;
 	border-radius: var(--border-radius);
 	height: 30px;
+	transition: border-color 0.3s;
 }
 
 .cosmo-select:focus {
@@ -237,15 +234,17 @@
 .cosmo-input__header {
 	font-size: 24px;
 	height: 24px;
-	font-weight: var(--font-weight-bold);
+	font-weight: var(--font-weight-light);
+	font-family: var(--font-family-heading);
 	text-transform: uppercase;
 	grid-column: span 2;
 	margin-top: 10px;
 }
 
 .cosmo-input[type='range'] {
-	--range-border-color: var(--control-border-color);
+	--range-track-background: var(--control-border-color);
 	--range-thumb-color: var(--control-border-color);
+	--range-thumb-border-color: var(--primary-color);
 	padding: 0;
 	border: none;
 	margin: 0;
@@ -260,22 +259,22 @@
 .cosmo-input[type='range']::-moz-range-track {
 	min-width: 100%;
 	height: 4px;
-	background-color: var(--range-border-color);
+	background-color: var(--range-track-background);
 	border-radius: var(--border-radius);
 }
 
 .cosmo-input[type='range']::-webkit-slider-runnable-track {
 	min-width: 100%;
 	height: 4px;
-	background-color: var(--range-border-color);
+	background-color: var(--range-track-background);
 	border-radius: var(--border-radius);
 }
 
 .cosmo-input[type='range']::-moz-range-thumb {
 	-webkit-appearance: none;
-	width: 6px;
-	height: 24px;
-	border: 1px solid var(--primary-color);
+	width: 4px;
+	height: 20px;
+	border: 1px solid var(--range-thumb-border-color);
 	background-color: var(--range-thumb-color);
 	border-radius: var(--border-radius);
 	cursor: pointer;
@@ -283,9 +282,9 @@
 
 .cosmo-input[type='range']::-webkit-slider-thumb {
 	-webkit-appearance: none;
-	width: 6px;
-	height: 24px;
-	border: 1px solid var(--primary-color);
+	width: 4px;
+	height: 20px;
+	border: 1px solid var(--range-thumb-border-color);
 	border-radius: var(--border-radius);
 	background-color: var(--range-thumb-color);
 	cursor: pointer;
@@ -296,6 +295,15 @@
 .cosmo-input[type='range']:focus,
 .cosmo-input[type='range']:active {
 	--range-thumb-color: var(--primary-color);
+}
+
+.cosmo-input[type='range']:disabled,
+.cosmo-input[type='range']:disabled:hover,
+.cosmo-input[type='range']:disabled:focus,
+.cosmo-input[type='range']:disabled:active {
+	--range-thumb-color: var(--disabled-color);
+	--range-thumb-border-color: var(--disabled-color);
+	--range-track-background: var(--disabled-color);
 }
 
 .cosmo-switch {
@@ -351,4 +359,223 @@
 
 .cosmo-switch:invalid::after {
 	background: var(--negative-color);
+}
+
+.cosmo-input[type='file']::file-selector-button,
+.cosmo-input[type='file']::-webkit-file-upload-button {
+	--button-border-color: var(--control-border-color);
+	--button-background: var(--white);
+	--button-color: var(--black);
+	cursor: pointer;
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	padding: 4px 16px;
+	box-sizing: border-box;
+	border: none;
+	border-right: 1px solid var(--button-border-color);
+	background: var(--button-background);
+	color: var(--button-color);
+	line-height: 19px;
+	text-decoration: none;
+	font-weight: normal;
+	border-radius: 0;
+	height: 30px;
+	transition:
+		background-color 0.3s,
+		color 0.3s;
+}
+
+.cosmo-input[type='file']:disabled {
+	cursor: not-allowed;
+}
+
+.cosmo-input[type='file']:disabled::file-selector-button,
+.cosmo-input[type='file']:disabled::-webkit-file-upload-button {
+	--button-background: var(--disabled-color);
+	--button-color: var(--white);
+	cursor: not-allowed;
+}
+
+.cosmo-input[type='file']:not(:disabled):hover::file-selector-button,
+.cosmo-input[type='file']:not(:disabled):hover::-webkit-file-upload-button {
+	--button-background: var(--control-border-color);
+	outline: none;
+	box-shadow: none;
+}
+
+.cosmo-input[type='file']:not(:disabled):hover {
+	border-bottom-color: var(--control-border-color);
+}
+
+.cosmo-input[type='file']:not(:disabled):focus::file-selector-button,
+.cosmo-input[type='file']:not(:disabled):focus::-webkit-file-upload-button {
+	--button-border-color: var(--control-border-color-dark);
+}
+
+.cosmo-input[type='file']:not(:disabled):focus {
+	border-bottom-color: var(--control-border-color-dark);
+}
+
+.cosmo-input[type='file']:not(:disabled):active::file-selector-button,
+.cosmo-input[type='file']:not(:disabled):active::-webkit-file-upload-button {
+	--button-border-color: var(--control-border-color-darker);
+	--button-background: var(--control-border-color-darker);
+	--button-color: var(--white);
+}
+
+.cosmo-input[type='file']:not(:disabled):active {
+	border-bottom-color: var(--control-border-color-darker);
+}
+
+.cosmo-input--picker {
+	display: flex;
+	align-items: center;
+	padding: 0;
+}
+
+.cosmo-picker__name {
+	padding: 4px 8px;
+	text-overflow: ellipsis;
+	white-space: pre;
+	overflow-x: hidden;
+}
+
+.cosmo-picker__button {
+	color: var(--black);
+	justify-self: flex-end;
+	margin-left: auto;
+	cursor: pointer;
+	width: 26px;
+	height: 26px;
+	display: flex;
+	justify-content: center;
+}
+
+.cosmo-picker__button:hover {
+	background: var(--black);
+	color: var(--white);
+}
+
+.cosmo-input.is--picker {
+	text-align: left;
+	gap: 4px;
+	display: flex;
+	align-items: center;
+	padding-left: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.cosmo-input.is--picker::before {
+	content: attr(data-picker);
+	--button-border-color: var(--control-border-color);
+	--button-background: var(--white);
+	--button-color: var(--black);
+	cursor: pointer;
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	box-sizing: border-box;
+	border: none;
+	border-right: 1px solid var(--button-border-color);
+	background: var(--button-background);
+	color: var(--button-color);
+	line-height: 19px;
+	text-decoration: none;
+	font-weight: normal;
+	transition:
+		background-color 0.3s,
+		color 0.3s;
+	height: 27px;
+	display: inline-block;
+	padding: 4px 8px;
+	border-radius: 2px 0 0 2px;
+}
+
+.cosmo-input.is--picker:disabled {
+	cursor: not-allowed;
+}
+
+.cosmo-input.is--picker:disabled::before {
+	--button-background: var(--disabled-color);
+	--button-color: var(--white);
+	cursor: not-allowed;
+}
+
+.cosmo-input.is--picker:not(:disabled):hover::before {
+	--button-background: var(--control-border-color);
+	outline: none;
+	box-shadow: none;
+}
+
+.cosmo-input.is--picker:not(:disabled):hover {
+	border-bottom-color: var(--control-border-color);
+}
+
+.cosmo-input.is--picker:not(:disabled):focus::before {
+	--button-border-color: var(--control-border-color-dark);
+}
+
+.cosmo-input.is--picker:not(:disabled):focus {
+	border-bottom-color: var(--control-border-color-dark);
+}
+
+.cosmo-input.is--picker:not(:disabled):active::before {
+	--button-border-color: var(--control-border-color-darker);
+	--button-background: var(--control-border-color-darker);
+	--button-color: var(--white);
+}
+
+.cosmo-input.is--picker:not(:disabled):active {
+	border-bottom-color: var(--control-border-color-darker);
+}
+
+.cosmo-input.is--small,
+.cosmo-textarea.is--small,
+.cosmo-select.is--small {
+	width: 240px;
+}
+
+.cosmo-input.is--medium,
+.cosmo-textarea.is--medium,
+.cosmo-select.is--medium {
+	width: 480px;
+}
+
+.cosmo-input.is--large,
+.cosmo-textarea.is--large,
+.cosmo-select.is--large {
+	width: 720px;
+}
+
+.cosmo-textarea.is--small {
+	min-width: 240px;
+}
+
+.cosmo-textarea.is--medium {
+	min-width: 480px;
+}
+
+.cosmo-textarea.is--large {
+	min-width: 720px;
+}
+
+.cosmo-input__message {
+	grid-column: 2/3;
+}
+
+:invalid .cosmo-input__message:not(.is--positive):not(.is--warning):not(.is--information),
+.cosmo-input__message.is--negative {
+	color: var(--negative-color);
+}
+
+.cosmo-input__message.is--positive {
+	color: var(--positive-color);
+}
+
+.cosmo-input__message.is--warning {
+	color: var(--warning-color);
+}
+
+.cosmo-input__message.is--information {
+	color: var(--information-color);
 }

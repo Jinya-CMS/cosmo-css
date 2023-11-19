@@ -1,50 +1,36 @@
 :root {
-    --primary-color: #19324c;
-    --primary-color-dark: #102133;
-    --primary-color-light: #264b73;
-    --primary-color-lighter: #326499;
+    --primary-hue: 211;
+    --primary-saturation: 50%;
+    --primary-lightness-base: 20%;
 
-    --negative-color: #db504a;
-    --negative-color-dark: #b53c3c;
-    --negative-color-darker: #8f3431;
-    --negative-color-light: #e6cbca;
+    --negative-hue: 2;
+    --negative-saturation: 67%;
+    --negative-lightness-base: 57%;
 
-    --positive-color: #4c9f70;
-    --positive-color-dark: #3a7855;
-    --positive-color-darker: #27523a;
-    --positive-color-light: #cae6d6;
+    --positive-hue: 146;
+    --positive-saturation: 35%;
+    --positive-lightness-base: 46%;
 
-    --information-color: #2c87c9;
-    --information-color-dark: #246ea3;
-    --information-color-darker: #1b547d;
-    --information-color-light: #cadae6;
+    --information-hue: 205;
+    --information-saturation: 64%;
+    --information-lightness-base: 48%;
 
-    --warning-color: #e6af2e;
-    --warning-color-dark: #bf9126;
-    --warning-color-darker: #99741f;
-    --warning-color-light: #e6deca;
+    --warning-hue: 42;
+    --warning-saturation: 54%;
+    --warning-lightness-base: 54%;
 
-    --gray: #ccc;
-    --gray-light: #eee;
-    --gray-dark: #aaa;
-    --gray-darker: #888;
+    --gray-hue: 0;
+    --gray-saturation: 0%;
+    --gray-lightness-base: 80%;
 
-    --white: #ffffff;
-    --black: #333333;
+    --light-step: 10%;
+    --lighter-step: 20%;
 
-    --menu-text-color: #00000040;
-    --gradient-top-color: #b1cbe6;
-    --modal-backdrop: #ffffff4d;
-    --modal-background: rgba(255, 255, 255, 0.9);
+    --dark-step: -10%;
+    --darker-step: -20%;
 
-    --control-border-color: var(--gray);
-    --control-border-color-dark: var(--gray-dark);
-    --control-border-color-darker: var(--gray-darker);
-    --menu-text-selected-color: var(--black);
-    --disabled-color: var(--gray-darker);
-    --code-color: var(--primary-color-dark);
-    --gradient-bottom-color: var(--white);
-    --table-stripe-color: var(--gray-light);
+    --white-base: 255;
+    --black-base: 51;
 
     --border-radius: 4px;
 
@@ -66,50 +52,212 @@
 
     --font-family-code: 'Oxygen Mono', monospace;
 
-    --dropdown-background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgMC4wMDAzMiA2ZS0wNSI+CiAgICA8Zz4KICAgICAgICA8cGF0aCBzdHlsZT0iZmlsbDojMTkzMjRjO3N0cm9rZS13aWR0aDowLjI2NDk5OTtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1kYXNoYXJyYXk6bm9uZSIKICAgICAgICAgICAgICBkPSJtIDQuODg5MDY2MSw0LjIzNDA1NTQgLTIuNDQ0NTMzLDFlLTcgTCA3Ljg1NTk1NjZlLTgsNC4yMzQwNTU0IDEuMjIyMjY2NSwyLjExNzAyNzcgMi40NDQ1MzMxLDAgMy42NjY3OTk3LDIuMTE3MDI3NiBaIgogICAgICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDIuNDU0NDU2NWUtNSwwLDAsLTEuNDE3MDgxMWUtNSw5Ljk5OTk5OThlLTUsNi4wMDAwMDAxZS01KSIvPgogICAgPC9nPgo8L3N2Zz4=');
+    --dropdown-background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgMC4wMDAzMiA2ZS0wNSI+CiAgICA8Zz4KICAgICAgICA8cGF0aCBzdHlsZT0iZmlsbDojMDAwMDAwO3N0cm9rZS13aWR0aDowLjI2NDk5OTtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1kYXNoYXJyYXk6bm9uZSIKICAgICAgICAgICAgICBkPSJtIDQuODg5MDY2MSw0LjIzNDA1NTQgLTIuNDQ0NTMzLDFlLTcgTCA3Ljg1NTk1NjZlLTgsNC4yMzQwNTU0IDEuMjIyMjY2NSwyLjExNzAyNzcgMi40NDQ1MzMxLDAgMy42NjY3OTk3LDIuMTE3MDI3NiBaIgogICAgICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDIuNDU0NDU2NWUtNSwwLDAsLTEuNDE3MDgxMWUtNSw5Ljk5OTk5OThlLTUsNi4wMDAwMDAxZS01KSIvPgogICAgPC9nPgo8L3N2Zz4=');
+
+    --primary-color: hsl(
+            var(--primary-hue),
+            var(--primary-saturation),
+            var(--primary-lightness-base)
+    );
+    --primary-color-light: hsl(
+            var(--primary-hue),
+            var(--primary-saturation),
+            calc(var(--primary-lightness-base) + var(--light-step))
+    );
+    --primary-color-lighter: hsl(
+            var(--primary-hue),
+            var(--primary-saturation),
+            calc(var(--primary-lightness-base) + var(--lighter-step))
+    );
+    --primary-color-dark: hsl(
+            var(--primary-hue),
+            var(--primary-saturation),
+            calc(var(--primary-lightness-base) + var(--dark-step))
+    );
+    --primary-color-darker: hsl(
+            var(--primary-hue),
+            var(--primary-saturation),
+            calc(var(--primary-lightness-base) + var(--darker-step))
+    );
+
+    --negative-color: hsl(
+            var(--negative-hue),
+            var(--negative-saturation),
+            var(--negative-lightness-base)
+    );
+    --negative-color-light: hsl(
+            var(--negative-hue),
+            var(--negative-saturation),
+            calc(var(--negative-lightness-base) + var(--light-step))
+    );
+    --negative-color-lighter: hsl(
+            var(--negative-hue),
+            var(--negative-saturation),
+            calc(var(--negative-lightness-base) + var(--lighter-step))
+    );
+    --negative-color-dark: hsl(
+            var(--negative-hue),
+            var(--negative-saturation),
+            calc(var(--negative-lightness-base) + var(--dark-step))
+    );
+    --negative-color-darker: hsl(
+            var(--negative-hue),
+            var(--negative-saturation),
+            calc(var(--negative-lightness-base) + var(--darker-step))
+    );
+
+    --positive-color: hsl(
+            var(--positive-hue),
+            var(--positive-saturation),
+            var(--positive-lightness-base)
+    );
+    --positive-color-light: hsl(
+            var(--positive-hue),
+            var(--positive-saturation),
+            calc(var(--positive-lightness-base) + var(--light-step))
+    );
+    --positive-color-lighter: hsl(
+            var(--positive-hue),
+            var(--positive-saturation),
+            calc(var(--positive-lightness-base) + var(--lighter-step))
+    );
+    --positive-color-dark: hsl(
+            var(--positive-hue),
+            var(--positive-saturation),
+            calc(var(--positive-lightness-base) + var(--dark-step))
+    );
+    --positive-color-darker: hsl(
+            var(--positive-hue),
+            var(--positive-saturation),
+            calc(var(--positive-lightness-base) + var(--darker-step))
+    );
+
+    --information-color: hsl(
+            var(--information-hue),
+            var(--information-saturation),
+            var(--information-lightness-base)
+    );
+    --information-color-light: hsl(
+            var(--information-hue),
+            var(--information-saturation),
+            calc(var(--information-lightness-base) + var(--light-step))
+    );
+    --information-color-lighter: hsl(
+            var(--information-hue),
+            var(--information-saturation),
+            calc(var(--information-lightness-base) + var(--lighter-step))
+    );
+    --information-color-dark: hsl(
+            var(--information-hue),
+            var(--information-saturation),
+            calc(var(--information-lightness-base) + var(--dark-step))
+    );
+    --information-color-darker: hsl(
+            var(--information-hue),
+            var(--information-saturation),
+            calc(var(--information-lightness-base) + var(--darker-step))
+    );
+
+    --warning-color: hsl(
+            var(--warning-hue),
+            var(--warning-saturation),
+            var(--warning-lightness-base)
+    );
+    --warning-color-light: hsl(
+            var(--warning-hue),
+            var(--warning-saturation),
+            calc(var(--warning-lightness-base) + var(--light-step))
+    );
+    --warning-color-lighter: hsl(
+            var(--warning-hue),
+            var(--warning-saturation),
+            calc(var(--warning-lightness-base) + var(--lighter-step))
+    );
+    --warning-color-dark: hsl(
+            var(--warning-hue),
+            var(--warning-saturation),
+            calc(var(--warning-lightness-base) + var(--dark-step))
+    );
+    --warning-color-darker: hsl(
+            var(--warning-hue),
+            var(--warning-saturation),
+            calc(var(--warning-lightness-base) + var(--darker-step))
+    );
+
+    --gray: hsl(
+            var(--gray-hue),
+            var(--gray-saturation),
+            var(--gray-lightness-base)
+    );
+    --gray-light: hsl(
+            var(--gray-hue),
+            var(--gray-saturation),
+            calc(var(--gray-lightness-base) + var(--light-step))
+    );
+    --gray-lighter: hsl(
+            var(--gray-hue),
+            var(--gray-saturation),
+            calc(var(--gray-lightness-base) + var(--lighter-step))
+    );
+    --gray-dark: hsl(
+            var(--gray-hue),
+            var(--gray-saturation),
+            calc(var(--gray-lightness-base) + var(--dark-step))
+    );
+    --gray-darker: hsl(
+            var(--gray-hue),
+            var(--gray-saturation),
+            calc(var(--gray-lightness-base) + var(--darker-step))
+    );
+
+    --white: rgb(var(--white-base), var(--white-base), var(--white-base));
+    --black: rgb(var(--black-base), var(--black-base), var(--black-base));
+
+    --menu-text-color: rgba(var(--black-base), var(--black-base), var(--black-base), 0.25);
+    --gradient-top-color: hsl(
+            var(--primary-hue),
+            var(--primary-saturation),
+            calc(var(--primary-lightness-base) * 4)
+    );
+    --modal-backdrop: rgba(var(--white-base), var(--white-base), var(--white-base), 0.3);
+    --modal-background: rgba(var(--white-base), var(--white-base), var(--white-base), 0.9);
+
+    --control-border-color: var(--gray);
+    --control-border-color-dark: var(--gray-dark);
+    --control-border-color-darker: var(--gray-darker);
+    --menu-text-selected-color: var(--black);
+    --disabled-color: var(--gray-darker);
+    --code-color: var(--gray-darker);
+    --gradient-bottom-color: var(--white);
+    --table-stripe-color: var(--gray-light);
 }
 
 @media screen and (prefers-color-scheme: dark) {
     :root {
-        --primary-color: #1a4f75;
-        --primary-color-dark: #091c29;
-        --primary-color-light: #1f689c;
-        --primary-color-lighter: #2b83c2;
+        --primary-hue: 211;
+        --primary-saturation: 51%;
+        --primary-lightness-base: 12%;
 
-        --negative-color: #771b18;
-        --negative-color-dark: #9e2420;
-        --negative-color-darker: #c42d27;
-        --negative-color-light: #531311;
+        --negative-hue: 2;
+        --negative-saturation: 66%;
+        --negative-lightness-base: 28%;
 
-        --positive-color: #2e6044;
-        --positive-color-dark: #1c3b29;
-        --positive-color-darker: #0a140e;
-        --positive-color-light: #204330;
+        --positive-hue: 146;
+        --positive-saturation: 35%;
+        --positive-lightness-base: 28%;
 
-        --information-color: #1a4f75;
-        --information-color-dark: #22699c;
-        --information-color-darker: #2b83c2;
-        --information-color-light: #123752;
+        --information-hue: 205;
+        --information-saturation: 64%;
+        --information-lightness-base: 28%;
 
-        --warning-color: #916b10;
-        --warning-color-dark: #b78615;
-        --warning-color-darker: #dea318;
-        --warning-color-light: #805e0f;
+        --warning-hue: 42;
+        --warning-saturation: 79%;
+        --warning-lightness-base: 40%;
 
-        --gray: #333;
-        --gray-light: #111;
-        --gray-dark: #555;
-        --gray-darker: #777;
+        --gray-lightness-base: 20%;
 
-        --white: #000000;
-        --black: #cccccc;
-
-        --modal-backdrop: #ffffff4d;
-        --menu-text-color: #ffffff40;
-        --gradient-top-color: var(--white);
-        --modal-backdrop: rgba(0, 0, 0, 0.3);
-        --table-stripe-color: #1c1b1b;
-        --modal-background: rgba(0, 0, 0, 0.9);
+        --white-base: 0;
+        --black-base: 204;
 
         background: var(--white);
         color: var(--black);
@@ -118,91 +266,65 @@
     }
 }
 
-.cosmo--light-theme {
-    --primary-color: #19324c;
-    --primary-color-dark: #102133;
-    --primary-color-light: #264b73;
-    --primary-color-lighter: #326499;
+.cosmo--light-theme,
+.is--light {
+    --primary-hue: 211;
+    --primary-saturation: 50%;
+    --primary-lightness-base: 20%;
 
-    --negative-color: #db504a;
-    --negative-color-dark: #b53c3c;
-    --negative-color-darker: #8f3431;
-    --negative-color-light: #e6cbca;
+    --negative-hue: 2;
+    --negative-saturation: 67%;
+    --negative-lightness-base: 57%;
 
-    --positive-color: #4c9f70;
-    --positive-color-dark: #3a7855;
-    --positive-color-darker: #27523a;
-    --positive-color-light: #cae6d6;
+    --positive-hue: 146;
+    --positive-saturation: 35%;
+    --positive-lightness-base: 46%;
 
-    --information-color: #2c87c9;
-    --information-color-dark: #246ea3;
-    --information-color-darker: #1b547d;
-    --information-color-light: #cadae6;
+    --information-hue: 205;
+    --information-saturation: 64%;
+    --information-lightness-base: 48%;
 
-    --warning-color: #e6af2e;
-    --warning-color-dark: #bf9126;
-    --warning-color-darker: #99741f;
-    --warning-color-light: #e6deca;
+    --warning-hue: 42;
+    --warning-saturation: 54%;
+    --warning-lightness-base: 54%;
 
-    --gray: #ccc;
-    --gray-light: #eee;
-    --gray-dark: #aaa;
-    --gray-darker: #888;
+    --gray-lightness-base: 80%;
 
-    --white: #ffffff;
-    --black: #333333;
+    --white-base: 255;
+    --black-base: 51;
 
-    --menu-text-color: #00000040;
-    --gradient-top-color: #b1cbe6;
-    --modal-backdrop: #ffffff4d;
-    --modal-background: rgba(255, 255, 255, 0.9);
-
-    --dropdown-background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgMC4wMDAzMiA2ZS0wNSI+CiAgICA8Zz4KICAgICAgICA8cGF0aCBzdHlsZT0iZmlsbDojMTkzMjRjO3N0cm9rZS13aWR0aDowLjI2NDk5OTtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1kYXNoYXJyYXk6bm9uZSIKICAgICAgICAgICAgICBkPSJtIDQuODg5MDY2MSw0LjIzNDA1NTQgLTIuNDQ0NTMzLDFlLTcgTCA3Ljg1NTk1NjZlLTgsNC4yMzQwNTU0IDEuMjIyMjY2NSwyLjExNzAyNzcgMi40NDQ1MzMxLDAgMy42NjY3OTk3LDIuMTE3MDI3NiBaIgogICAgICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDIuNDU0NDU2NWUtNSwwLDAsLTEuNDE3MDgxMWUtNSw5Ljk5OTk5OThlLTUsNi4wMDAwMDAxZS01KSIvPgogICAgPC9nPgo8L3N2Zz4=');
+    --dropdown-background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgMC4wMDAzMiA2ZS0wNSI+CiAgICA8Zz4KICAgICAgICA8cGF0aCBzdHlsZT0iZmlsbDojMDAwMDAwO3N0cm9rZS13aWR0aDowLjI2NDk5OTtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1kYXNoYXJyYXk6bm9uZSIKICAgICAgICAgICAgICBkPSJtIDQuODg5MDY2MSw0LjIzNDA1NTQgLTIuNDQ0NTMzLDFlLTcgTCA3Ljg1NTk1NjZlLTgsNC4yMzQwNTU0IDEuMjIyMjY2NSwyLjExNzAyNzcgMi40NDQ1MzMxLDAgMy42NjY3OTk3LDIuMTE3MDI3NiBaIgogICAgICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDIuNDU0NDU2NWUtNSwwLDAsLTEuNDE3MDgxMWUtNSw5Ljk5OTk5OThlLTUsNi4wMDAwMDAxZS01KSIvPgogICAgPC9nPgo8L3N2Zz4=');
 
     background: var(--white);
     color: var(--black);
 }
 
-.cosmo--dark-theme {
-    --primary-color: #1a4f75;
-    --primary-color-dark: #091c29;
-    --primary-color-light: #1f689c;
-    --primary-color-lighter: #2b83c2;
+.cosmo--dark-theme,
+.is--dark {
+    --primary-hue: 211;
+    --primary-saturation: 51%;
+    --primary-lightness-base: 12%;
 
-    --negative-color: #771b18;
-    --negative-color-dark: #9e2420;
-    --negative-color-darker: #c42d27;
-    --negative-color-light: #531311;
+    --negative-hue: 2;
+    --negative-saturation: 66%;
+    --negative-lightness-base: 28%;
 
-    --positive-color: #2e6044;
-    --positive-color-dark: #1c3b29;
-    --positive-color-darker: #0a140e;
-    --positive-color-light: #204330;
+    --positive-hue: 146;
+    --positive-saturation: 35%;
+    --positive-lightness-base: 28%;
 
-    --information-color: #1a4f75;
-    --information-color-dark: #22699c;
-    --information-color-darker: #2b83c2;
-    --information-color-light: #123752;
+    --information-hue: 205;
+    --information-saturation: 64%;
+    --information-lightness-base: 28%;
 
-    --warning-color: #916b10;
-    --warning-color-dark: #b78615;
-    --warning-color-darker: #dea318;
-    --warning-color-light: #805e0f;
+    --warning-hue: 42;
+    --warning-saturation: 79%;
+    --warning-lightness-base: 40%;
 
-    --gray: #ccc;
-    --gray-light: #eee;
-    --gray-dark: #aaa;
-    --gray-darker: #888;
+    --gray-lightness-base: 20%;
 
-    --white: #000000;
-    --black: #cccccc;
-
-    --modal-backdrop: #ffffff4d;
-    --menu-text-color: #ffffff40;
-    --gradient-top-color: var(--white);
-    --modal-backdrop: rgba(0, 0, 0, 0.3);
-    --table-stripe-color: #1c1b1b;
-    --modal-background: rgba(0, 0, 0, 0.9);
+    --white-base: 0;
+    --black-base: 204;
 
     background: var(--white);
     color: var(--black);
