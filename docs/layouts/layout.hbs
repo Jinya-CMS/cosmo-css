@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Cosmo CSS – {{title}}</title>
+    <link href="@cosmo/cosmo.scss" rel="stylesheet"/>
+    <link href="@docs-css/docs.scss" rel="stylesheet"/>
+    <link rel="icon" href="@docs-icons/favicon-light.png" type="image/png"/>
+    <link rel="icon" href="@docs-icons/favicon-dark.png" media="(prefers-color-scheme: dark)" type="image/png"/>
+    <link rel="icon" href="@docs-icons/favicon.svg" type="image/svg+xml"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="Cosmo CSS" name="apple-mobile-web-app-title"/>
+    <meta content="Cosmo CSS" name="application-name"/>
+    <meta content="#19324c" name="msapplication-TileColor"/>
+    <meta content="#19324c" name="theme-color"/>
+    <link rel="stylesheet" href="@highlightjs/styles/stackoverflow-dark.min.css"/>
+</head>
+<body {{#if debug}}class="cosmo-debug"{{/if}}>
+<main class="cosmo-page-layout">
+    <div class="cosmo-top-bar">
+        <div class="cosmo-top-bar__menu">
+            <a target="_blank" href="https://github.com/Jinya-CMS/cosmo-css" class="cosmo-top-bar__menu-item">
+                Github
+            </a>
+            <a target="_blank" href="https://gitlab.imanuel.dev/jinya-cms/cosmo-css" class="cosmo-top-bar__menu-item">
+                GitLab
+            </a>
+            <a target="_blank" href="https://www.npmjs.com/package/@jinyacms/cosmo" class="cosmo-top-bar__menu-item">
+                NPM Package
+            </a>
+        </div>
+        <div class="cosmo-profile-picture"></div>
+        <a href="#" class="cosmo-top-bar__menu-item cosmo-top-bar__menu-item--right">Logout</a>
+    </div>
+    <div class="cosmo-menu-bar">
+        <button class="cosmo-menu-bar__back-button" onclick="history.back()" type="button"></button>
+        <nav class="cosmo-menu-bar__menu-collection">
+            <div class="cosmo-menu-bar__main-menu">
+                <a class="cosmo-menu-bar__main-item{{#compare mainActive "==="
+                                                              "cosmo"}} cosmo-menu-bar__main-item--active{{/compare}}"
+                   href="/index.html">
+                    Cosmo
+                </a>
+                <a class="cosmo-menu-bar__main-item{{#compare mainActive "==="
+                                                              "controls"}} cosmo-menu-bar__main-item--active{{/compare}}"
+                   href="/controls/controls.html">
+                    Controls
+                </a>
+                <a class="cosmo-menu-bar__main-item{{#compare mainActive "==="
+                                                              "layout"}} cosmo-menu-bar__main-item--active{{/compare}}"
+                   href="/layout/layout.html">
+                    Layout
+                </a>
+            </div>
+            <div class="cosmo-menu-bar__sub-menu">
+                {{#compare mainActive "===" "cosmo"}}
+                    <a class="cosmo-menu-bar__sub-item{{#compare subActive "==="
+                                                                 "index"}} cosmo-menu-bar__sub-item--active{{/compare}}"
+                       href="/index.html">
+                        About Cosmo
+                    </a>
+                    <a class="cosmo-menu-bar__sub-item{{#compare subActive "==="
+                                                                 "typography"}} cosmo-menu-bar__sub-item--active{{/compare}}"
+                       href="/about/typography.html">
+                        Typography
+                    </a>
+                    <a class="cosmo-menu-bar__sub-item{{#compare subActive "==="
+                                                                 "theme"}} cosmo-menu-bar__sub-item--active{{/compare}}"
+                       href="/about/theme.html">
+                        Theme
+                    </a>
+                    <a class="cosmo-menu-bar__sub-item{{#compare subActive "==="
+                                                                 "customize"}} cosmo-menu-bar__sub-item--active{{/compare}}"
+                       href="/about/customize.html">
+                        Customize
+                    </a>
+                {{else compare mainActive "===" "controls"}}
+                    <a href="/controls/controls.html" class="cosmo-menu-bar__sub-item{{#compare subActive "==="
+                                                                                               "controls"}} cosmo-menu-bar__sub-item--active{{/compare}}">
+                        HTML controls
+                    </a>
+                    <a href="/controls/side-list.html" class="cosmo-menu-bar__sub-item{{#compare subActive "==="
+                                                                                                "side-list"}} cosmo-menu-bar__sub-item--active{{/compare}}">
+                        Master-Detail list
+                    </a>
+                    <a href="/controls/tab-control.html" class="cosmo-menu-bar__sub-item{{#compare subActive "==="
+                                                                                                  "tab-control"}} cosmo-menu-bar__sub-item--active{{/compare}}">
+                        Tab control
+                    </a>
+                    <a href="/controls/toolbar.html" class="cosmo-menu-bar__sub-item{{#compare subActive "==="
+                                                                                              "toolbar"}} cosmo-menu-bar__sub-item--active{{/compare}}">
+                        Toolbar
+                    </a>
+                    <a href="/controls/dialog.html" class="cosmo-menu-bar__sub-item{{#compare subActive "==="
+                                                                                             "dialog"}} cosmo-menu-bar__sub-item--active{{/compare}}">
+                        Dialog
+                    </a>
+                {{else compare mainActive "===" "layout"}}
+                    <a href="/layout/layout.html" class="cosmo-menu-bar__sub-item{{#compare subActive "==="
+                                                                                           "layout"}} cosmo-menu-bar__sub-item--active{{/compare}}">
+                        Base layout and menu
+                    </a>
+                    <a href="/layout/layout-bottom-bar-three-column.html"
+                       class="cosmo-menu-bar__sub-item{{#compare subActive "==="
+                                                                 "layout-bottom-bar-three-column"}} cosmo-menu-bar__sub-item--active{{/compare}}">
+                        Three column bottom bar
+                    </a>
+                    <a href="/layout/layout-showcase.html" class="cosmo-menu-bar__sub-item{{#compare subActive "==="
+                                                                                                    "layout-showcase"}} cosmo-menu-bar__sub-item--active{{/compare}}">
+                        Layout showcase
+                    </a>
+                {{/compare}}
+            </div>
+        </nav>
+    </div>
+    <div class="cosmo-page-body">
+        <div class="cosmo-page-body__content">
+            {{~> @partial-block }}
+        </div>
+    </div>
+    {{#compare mainActive "===" "layout"}}
+        {{#compare subActive "===" "layout"}}
+            <div class="cosmo-bottom-bar">
+                <span class="cosmo-progress-bar__top-label">Top label</span>
+                <progress class="cosmo-progress-bar" value="19" max="100"></progress>
+                <span class="cosmo-progress-bar__bottom-label">Bottom label</span>
+            </div>
+        {{else compare subActive "===" "layout-bottom-bar-three-column"}}
+            <div class="cosmo-bottom-bar cosmo-bottom-bar--three-column">
+                <div class="cosmo-bottom-bar__item cosmo-bottom-bar__item--left">
+                    Welcome and check <a href="https://cosmo.jinya.dev">here</a> for details.
+                </div>
+                <progress class="cosmo-progress-bar cosmo-bottom-bar__item cosmo-bottom-bar__item--center" value="19"
+                          max="100"></progress>
+                <div class="cosmo-bottom-bar__item cosmo-bottom-bar__item--right">
+                    <button class="cosmo-button">Click here for more</button>
+                </div>
+            </div>
+        {{else compare subActive "===" "layout-showcase"}}
+            <div class="cosmo-bottom-bar">
+                <span class="cosmo-progress-bar__top-label">Top label</span>
+                <progress class="cosmo-progress-bar" value="19" max="100"></progress>
+                <span class="cosmo-progress-bar__bottom-label">Bottom label</span>
+            </div>
+        {{/compare}}
+    {{/compare}}
+    <script src="@docs-js/docs.js"></script>
+</main>
+</body>
+</html>

@@ -3,18 +3,21 @@ stages:
   - deploy
 
 lint:
-  image: harbor.ulbricht.casa/proxy/library/node:latest
+  image: library/node:latest
   stage: test
   script:
     - npm install
     - npm run lint
 
 pages:
-  image: harbor.ulbricht.casa/proxy/library/node:latest
+  image: library/node:latest
   stage: deploy
   script:
+    - npm install
+    - npm run compile:cosmo
     - mkdir public
-    - cp *.css public/
+    - cp cosmo.css public/
+    - cp docs.css public/
     - cp *.js public/
     - cp *.html public/
     - cp *.png public/
@@ -28,7 +31,7 @@ pages:
     - if: $CI_COMMIT_TAG
 
 publish:
-  image: harbor.ulbricht.casa/proxy/library/node:latest
+  image: library/node:latest
   stage: deploy
   script:
     - npm install

@@ -39,3 +39,27 @@ pre.cosmo-docs-container::before {
 .cosmo-debug * {
 	outline: 1px dashed var(--primary-color);
 }
+
+.cosmo-docs-details {
+}
+
+.cosmo-docs-details__title {
+	font-size: 125%;
+	cursor: pointer;
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+}
+
+.cosmo-docs-details__title::before {
+	content: '';
+	background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggc3Ryb2tlPSJjdXJyZW50Q29sb3IiIGQ9Ik04LjU5LDE2LjU4TDEzLjE3LDEyTDguNTksNy40MUwxMCw2TDE2LDEyTDEwLDE4TDguNTksMTYuNThaIiAvPjwvc3ZnPg==');
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	transition: transform 0.3s;
+}
+
+.cosmo-docs-details[open] .cosmo-docs-details__title::before {
+	transform: rotate(90deg);
+}

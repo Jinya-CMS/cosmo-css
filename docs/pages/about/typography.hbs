@@ -1,0 +1,196 @@
+{{#> layout title="Typography" mainActive="cosmo" subActive="typography" }}
+    <h1 class="cosmo-title">Typography</h1>
+    <p>
+        Due to Cosmo CSS being targeted for web applications, it only features the basic typographic needs.
+    </p>
+    <h2>Supported tags</h2>
+    <div class="cosmo-docs-container">
+        <h1>Heading level 1</h1>
+        <h2>Heading level 2</h2>
+        <h3>Heading level 3</h3>
+        <h4>Heading level 4</h4>
+        <h5>Heading level 5</h5>
+        <h6>Heading level 6</h6>
+    </div>
+    <details class="cosmo-docs-details">
+        <summary class="cosmo-docs-details__title">Show code sample</summary>
+        <pre class="cosmo-docs-container">
+&lt;h1&gt;Heading level 1&lt;/h1&gt;
+&lt;h2&gt;Heading level 2&lt;/h2&gt;
+&lt;h3&gt;Heading level 3&lt;/h3&gt;
+&lt;h4&gt;Heading level 4&lt;/h4&gt;
+&lt;h5&gt;Heading level 5&lt;/h5&gt;
+&lt;h6&gt;Heading level 6&lt;/h6&gt;</pre
+        >
+    </details>
+    <hr/>
+    <div class="cosmo-docs-container">
+        <p>Paragraph</p>
+    </div>
+    <details class="cosmo-docs-details">
+        <summary class="cosmo-docs-details__title">Show code sample</summary>
+        <pre class="cosmo-docs-container">&lt;p>Paragraph&lt;/p></pre>
+    </details>
+    <hr/>
+    <div class="cosmo-docs-container">
+        <a href="#">Anchor tag</a><br/>
+        <strong>Strong tag</strong><br/>
+        <em>Emphasis tag</em><br/>
+        <code>Code tag</code><br/>
+        <kbd>Kbd tag</kbd>
+    </div>
+    <details class="cosmo-docs-details">
+        <summary class="cosmo-docs-details__title">Show code sample</summary>
+        <pre class="cosmo-docs-container">
+&lt;a href="#">Anchor tag&lt;/a>
+&lt;strong>Strong tag&lt;/strong>
+&lt;em>Emphasis tag&lt;/em>
+&lt;code>Code tag&lt;/code></pre
+        >
+    </details>
+    <h2>Tables</h2>
+    <p>Tables are used to show data that you can display any amount of data.</p>
+    <div class="cosmo-docs-container">
+        <table class="cosmo-table">
+            <thead>
+            <tr>
+                <th>Column name</th>
+                <th>Type</th>
+                <th>Allow null</th>
+                <th>Keys</th>
+                <th>Default value</th>
+                <th>Extra data</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>api_key</td>
+                <td>varchar(255)</td>
+                <td>NO</td>
+                <td>PRI</td>
+                <td>null</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>user_id</td>
+                <td>int</td>
+                <td>YES</td>
+                <td>MUL</td>
+                <td>null</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>valid_since</td>
+                <td>datetime</td>
+                <td>NO</td>
+                <td></td>
+                <td>null</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>user_agent</td>
+                <td>varchar(255)</td>
+                <td>YES</td>
+                <td></td>
+                <td>null</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>remote_address</td>
+                <td>varchar(255)</td>
+                <td>YES</td>
+                <td></td>
+                <td>null</td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <details class="cosmo-docs-details">
+        <summary class="cosmo-docs-details__title">Show code sample</summary>
+        <pre class="cosmo-docs-container">
+&lt;table class="cosmo-table">
+    &lt;thead>
+    &lt;tr>
+        &lt;th>Column name&lt;/th>
+        &lt;th>Type&lt;/th>
+        &lt;th>Allow null&lt;/th>
+        &lt;th>Keys&lt;/th>
+        &lt;th>Default value&lt;/th>
+        &lt;th>Extra data&lt;/th>
+    &lt;/tr>
+    &lt;/thead>
+    &lt;tbody>
+    &lt;tr>
+        &lt;td>api_key&lt;/td>
+        &lt;td>varchar(255)&lt;/td>
+        &lt;td>NO&lt;/td>
+        &lt;td>PRI&lt;/td>
+        &lt;td>null&lt;/td>
+        &lt;td>&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+        &lt;td>user_id&lt;/td>
+        &lt;td>int&lt;/td>
+        &lt;td>YES&lt;/td>
+        &lt;td>MUL&lt;/td>
+        &lt;td>null&lt;/td>
+        &lt;td>&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+        &lt;td>valid_since&lt;/td>
+        &lt;td>datetime&lt;/td>
+        &lt;td>NO&lt;/td>
+        &lt;td>&lt;/td>
+        &lt;td>null&lt;/td>
+        &lt;td>&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+        &lt;td>user_agent&lt;/td>
+        &lt;td>varchar(255)&lt;/td>
+        &lt;td>YES&lt;/td>
+        &lt;td>&lt;/td>
+        &lt;td>null&lt;/td>
+        &lt;td>&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+        &lt;td>remote_address&lt;/td>
+        &lt;td>varchar(255)&lt;/td>
+        &lt;td>YES&lt;/td>
+        &lt;td>&lt;/td>
+        &lt;td>null&lt;/td>
+        &lt;td>&lt;/td>
+    &lt;/tr>
+    &lt;/tbody>
+&lt;/table></pre
+        >
+    </details>
+    <h2>Key value list</h2>
+    <p>A key value list displays information based on a key-value pattern.</p>
+    <div class="cosmo-docs-container">
+        <dl class="cosmo-key-value-list">
+            <dt>Server type</dt>
+            <dd>MySQL Community Server - GPL</dd>
+            <dt>Server version</dt>
+            <dd>8.0.25</dd>
+            <dt>Compile machine</dt>
+            <dd>x86_64</dd>
+            <dt>Compile operating system</dt>
+            <dd>Linux</dd>
+        </dl>
+    </div>
+    <details class="cosmo-docs-details">
+        <summary class="cosmo-docs-details__title">Show code sample</summary>
+        <pre class="cosmo-docs-container">
+&lt;dl class="cosmo-key-value-list">
+    &lt;dt>Server type&lt;/dt>
+    &lt;dd>MySQL Community Server - GPL&lt;/dd>
+    &lt;dt>Server version&lt;/dt>
+    &lt;dd>8.0.25&lt;/dd>
+    &lt;dt>Compile machine&lt;/dt>
+    &lt;dd>x86_64&lt;/dd>
+    &lt;dt>Compile operating system&lt;/dt>
+    &lt;dd>Linux&lt;/dd>
+&lt;/dl></pre>
+    </details>
+{{/layout}}
