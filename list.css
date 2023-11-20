@@ -1,4 +1,4 @@
-.cosmo-list {
+.cosmo-list:not(.is--key-value):not(.is--ordered):not(.is--bullet) {
 	display: grid;
 	grid-template-columns: [items-list] 212px 16px [content] 1fr;
 	height: calc(100vh - 64px - 80px - 32px - 28px - 68px);

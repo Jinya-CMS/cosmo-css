@@ -8,9 +8,6 @@
 	height: 100vh;
 	width: 100vw;
 	backdrop-filter: blur(4px) saturate(90%);
-}
-
-.cosmo-modal__container {
 	display: flex;
 	justify-content: center;
 	align-items: center;

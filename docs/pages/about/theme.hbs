@@ -8,8 +8,8 @@
     </p>
     <h2>Force a theme</h2>
     <p>
-        To force the light theme, apply the <code>cosmo--light-theme</code> to the HTML tag of your document. On the
-        other hand, you need to apply the <code>cosmo--dark-theme</code> class to the HTML tag to force the dark theme.
+        To force the light theme, apply the <code>is--light</code> to the HTML tag of your document. On the other hand,
+        you need to apply the <code>is--dark</code> class to the HTML tag to force the dark theme.
     </p>
     <p>
         <button id="toggleTheme" class="cosmo-button">Toggle theme</button>
@@ -25,7 +25,7 @@
             <button id="darkThemeDialog" class="cosmo-button">Open dark theme dialog</button>
         </div>
     </div>
-    <div class="cosmo-modal__container cosmo--dark-theme" style="display: none">
+    <div class="cosmo-modal__container is--dark" style="display: none">
         <div class="cosmo-modal">
             <h1 class="cosmo-modal__title">Dark themed dialog</h1>
             <div class="cosmo-modal__content">
@@ -53,7 +53,7 @@
             </div>
         </div>
     </div>
-    <div class="cosmo-modal__container cosmo--light-theme" style="display: none">
+    <div class="cosmo-modal__container is--light" style="display: none">
         <div class="cosmo-modal">
             <h1 class="cosmo-modal__title">Light themed dialog</h1>
             <div class="cosmo-modal__content">
@@ -84,42 +84,31 @@
     <script>
         document.getElementById('toggleTheme').addEventListener('click', () => {
             const html = document.querySelector('html');
-            if (html.classList.contains('cosmo--dark-theme')) {
-                html.classList.add('cosmo--light-theme');
-                html.classList.remove('cosmo--dark-theme');
-            } else if (html.classList.contains('cosmo--light-theme')) {
-                html.classList.add('cosmo--dark-theme');
-                html.classList.remove('cosmo--light-theme');
+            if (html.classList.contains('is--dark')) {
+                html.classList.add('is--light');
+                html.classList.remove('is--dark');
+            } else if (html.classList.contains('is--light')) {
+                html.classList.add('is--dark');
+                html.classList.remove('is--light');
             } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                html.classList.add('cosmo--light-theme');
-                html.classList.remove('cosmo--dark-theme');
-            } else if (
-                    window.matchMedia &&
-                    window.matchMedia('(prefers-color-scheme: light)').matches
-            ) {
-                html.classList.add('cosmo--dark-theme');
-                html.classList.remove('cosmo--light-theme');
+                html.classList.add('is--light');
+                html.classList.remove('is--dark');
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                html.classList.add('is--dark');
+                html.classList.remove('is--light');
             }
         });
         document.getElementById('lightThemeDialog').addEventListener('click', () => {
-            document
-                    .querySelector('.cosmo-modal__container.cosmo--light-theme')
-                    .removeAttribute('style');
+            document.querySelector('.cosmo-modal__container.is--light').removeAttribute('style');
         });
         document.getElementById('darkThemeDialog').addEventListener('click', () => {
-            document
-                    .querySelector('.cosmo-modal__container.cosmo--dark-theme')
-                    .removeAttribute('style');
+            document.querySelector('.cosmo-modal__container.is--dark').removeAttribute('style');
         });
-        document.querySelectorAll('[data-close=light]').forEach((item) =>
-                item.addEventListener('click', () => {
-                    document.querySelector('.cosmo-modal__container.cosmo--light-theme').style.display = 'none';
-                })
-        );
-        document.querySelectorAll('[data-close=dark]').forEach((item) =>
-                item.addEventListener('click', () => {
-                    document.querySelector('.cosmo-modal__container.cosmo--dark-theme').style.display = 'none';
-                })
-        );
+        document.querySelectorAll('[data-close=light]').forEach((item) => item.addEventListener('click', () => {
+            document.querySelector('.cosmo-modal__container.is--light').style.display = 'none';
+        }));
+        document.querySelectorAll('[data-close=dark]').forEach((item) => item.addEventListener('click', () => {
+            document.querySelector('.cosmo-modal__container.is--dark').style.display = 'none';
+        }));
     </script>
 {{/layout}}
