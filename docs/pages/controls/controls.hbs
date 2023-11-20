@@ -14,6 +14,8 @@
             <input type="range" id="rangeInput" class="cosmo-input"/>
             <label for="rangeInputDisabled" class="cosmo-label">Range input disabled</label>
             <input type="range" id="rangeInputDisabled" class="cosmo-input" disabled/>
+            <label for="rangeInputDisabled" class="cosmo-label">Range input invalid</label>
+            <input type="range" id="rangeInputDisabled" class="cosmo-input is--invalid"/>
             <label for="select" class="cosmo-label">Select</label>
             <select id="select" class="cosmo-select">
                 <option value="1" selected>Option 1</option>
@@ -28,15 +30,21 @@
                 <option value="3">Option 3</option>
                 <option value="4">Option 4</option>
             </select>
+            <label for="selectInvalid" class="cosmo-label">Select invalid</label>
+            <select id="selectInvalid" class="cosmo-select" required>
+                <option value="" disabled selected>Please choose</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+            </select>
             <label for="textarea" class="cosmo-label is--textarea">Textarea</label>
             <textarea id="textarea" class="cosmo-textarea"></textarea>
-            <label for="textareaDisabled" class="cosmo-label is--textarea"
-            >Textarea disabled</label
-            >
+            <label for="textareaDisabled" class="cosmo-label is--textarea">Textarea disabled</label>
             <textarea id="textareaDisabled" disabled class="cosmo-textarea"></textarea>
             <label for="textareaInvalid" class="cosmo-label is--textarea">Textarea invalid</label>
             <textarea id="textareaInvalid" required class="cosmo-textarea"></textarea>
-            <div class="cosmo-checkbox__group">
+            <div class="cosmo-input__group is--checkbox">
                 <input type="checkbox" id="checkboxInput" class="cosmo-checkbox"/>
                 <label for="checkboxInput">Checkbox input</label>
                 <input type="checkbox" id="checkboxInputDisabled" class="cosmo-checkbox" disabled/>
@@ -46,7 +54,7 @@
                 <input type="checkbox" id="checkboxInputInvalid" class="cosmo-checkbox" required/>
                 <label for="checkboxInputInvalid">Checkbox input invalid</label>
             </div>
-            <div class="cosmo-switch__group">
+            <div class="cosmo-input__group is--switch">
                 <input type="checkbox" id="switchInput" class="cosmo-switch"/>
                 <label for="switchInput">Switch input</label>
                 <input type="checkbox" id="switchInputDisabled" class="cosmo-switch" disabled/>
@@ -57,13 +65,21 @@
                 <label for="switchInputInvalid">Switch input invalid</label>
             </div>
             <label class="cosmo-label is--radio">Radios</label>
-            <div class="cosmo-radio__group">
+            <div class="cosmo-input__group is--radio">
                 <input name="radio" type="radio" id="radioInput1" class="cosmo-radio" required/>
                 <label for="radioInput1">Radio input 1</label>
-                <input disabled checked name="radio" type="radio" id="radioInput2" class="cosmo-radio"/>
+                <input disabled name="radio" type="radio" id="radioInput2" class="cosmo-radio"/>
                 <label for="radioInput2">Radio input 2</label>
                 <input name="radio" type="radio" id="radioInput3" class="cosmo-radio"/>
                 <label for="radioInput3">Radio input 3</label>
+            </div>
+            <div class="cosmo-input__group is--radio">
+                <input name="radio2" type="radio" id="radioInput4" class="cosmo-radio" required/>
+                <label for="radioInput4">Radio input 4</label>
+                <input disabled checked name="radio2" type="radio" id="radioInput5" class="cosmo-radio"/>
+                <label for="radioInput5">Radio input 5</label>
+                <input name="radio2" type="radio" id="radioInput6" class="cosmo-radio"/>
+                <label for="radioInput6">Radio input 6</label>
             </div>
         </div>
     </div>
@@ -71,65 +87,83 @@
         <summary class="cosmo-docs-details__title">Show code sample</summary>
         <pre class="cosmo-docs-container">
 &lt;div class="cosmo-input__group">
-	&lt;label for="textInput" class="cosmo-label">Text input&lt;/label>
-	&lt;input type="text" id="textInput" class="cosmo-input" />
-	&lt;label for="textInputDisabled" class="cosmo-label">Text input disabled&lt;/label>
-	&lt;input type="text" id="textInputDisabled" disabled class="cosmo-input" />
-	&lt;label for="textInputInvalid" class="cosmo-label">Text input invalid&lt;/label>
-	&lt;input type="text" id="textInputInvalid" required class="cosmo-input" />
-	&lt;label for="rangeInput" class="cosmo-label">Range input&lt;/label>
-	&lt;input type="range" id="rangeInput" class="cosmo-input" />
-	&lt;label for="rangeInputDisabled" class="cosmo-label">Range input disabled&lt;/label>
-	&lt;input type="range" id="rangeInputDisabled" class="cosmo-input" disabled />
-	&lt;label for="select" class="cosmo-label">Select&lt;/label>
-	&lt;select id="select" class="cosmo-select">
-		&lt;option value="1" selected>Option 1&lt;/option>
-		&lt;option value="2">Option 2&lt;/option>
-		&lt;option value="3">Option 3&lt;/option>
-		&lt;option value="4">Option 4&lt;/option>
-	&lt;/select>
-	&lt;label for="selectDisabled" class="cosmo-label">Select disabled&lt;/label>
-	&lt;select id="selectDisabled" class="cosmo-select" disabled>
-		&lt;option value="1" selected>Option 1&lt;/option>
-		&lt;option value="2">Option 2&lt;/option>
-		&lt;option value="3">Option 3&lt;/option>
-		&lt;option value="4">Option 4&lt;/option>
-	&lt;/select>
-	&lt;label for="textarea" class="cosmo-label is--textarea">Textarea&lt;/label>
-	&lt;textarea id="textarea" class="cosmo-textarea">&lt;/textarea>
-	&lt;label for="textareaDisabled" class="cosmo-label is--textarea">Textarea disabled&lt;/label>
-	&lt;textarea id="textareaDisabled" disabled class="cosmo-textarea">&lt;/textarea>
-	&lt;label for="textareaInvalid" class="cosmo-label is--textarea">Textarea invalid&lt;/label>
-	&lt;textarea id="textareaInvalid" required class="cosmo-textarea">&lt;/textarea>
-	&lt;div class="cosmo-checkbox__group">
-		&lt;input type="checkbox" id="checkboxInput" class="cosmo-checkbox" />
-		&lt;label for="checkboxInput">Checkbox input&lt;/label>
-		&lt;input type="checkbox" id="checkboxInputDisabled" class="cosmo-checkbox" disabled />
-		&lt;label for="checkboxInputDisabled">Checkbox input disabled&lt;/label>
-		&lt;input type="checkbox" id="checkboxInputDisabledChecked" class="cosmo-checkbox" disabled checked />
-		&lt;label for="checkboxInputDisabledChecked">Checkbox input disabled&lt;/label>
-		&lt;input type="checkbox" id="checkboxInputInvalid" class="cosmo-checkbox" required />
-		&lt;label for="checkboxInputInvalid">Checkbox input invalid&lt;/label>
-	&lt;/div>
-	&lt;div class="cosmo-switch__group">
-		&lt;input type="checkbox" id="switchInput" class="cosmo-switch" />
-		&lt;label for="switchInput">Switch input&lt;/label>
-		&lt;input type="checkbox" id="switchInputDisabled" class="cosmo-switch" disabled />
-		&lt;label for="switchInputDisabled">Switch input disabled&lt;/label>
-		&lt;input type="checkbox" id="switchInputDisabledChecked" class="cosmo-switch" disabled checked />
-		&lt;label for="switchInputDisabledChecked">Switch input disabled&lt;/label>
-		&lt;input type="checkbox" id="switchInputInvalid" class="cosmo-switch" required />
-		&lt;label for="switchInputInvalid">Switch input invalid&lt;/label>
-	&lt;/div>
-	&lt;label class="cosmo-label is--radio">Radios&lt;/label>
-	&lt;div class="cosmo-radio__group">
-		&lt;input name="radio" type="radio" id="radioInput1" class="cosmo-radio" required />
-		&lt;label for="radioInput1">Radio input 1&lt;/label>
-		&lt;input disabled checked name="radio" type="radio" id="radioInput2" class="cosmo-radio" />
-		&lt;label for="radioInput2">Radio input 2&lt;/label>
-		&lt;input name="radio" type="radio" id="radioInput3" class="cosmo-radio" />
-		&lt;label for="radioInput3">Radio input 3&lt;/label>
-	&lt;/div>
+    &lt;label for="textInput" class="cosmo-label">Text input&lt;/label>
+    &lt;input type="text" id="textInput" class="cosmo-input"/>
+    &lt;label for="textInputDisabled" class="cosmo-label">Text input disabled&lt;/label>
+    &lt;input type="text" id="textInputDisabled" disabled class="cosmo-input"/>
+    &lt;label for="textInputInvalid" class="cosmo-label">Text input invalid&lt;/label>
+    &lt;input type="text" id="textInputInvalid" required class="cosmo-input"/>
+    &lt;label for="rangeInput" class="cosmo-label">Range input&lt;/label>
+    &lt;input type="range" id="rangeInput" class="cosmo-input"/>
+    &lt;label for="rangeInputDisabled" class="cosmo-label">Range input disabled&lt;/label>
+    &lt;input type="range" id="rangeInputDisabled" class="cosmo-input" disabled/>
+    &lt;label for="rangeInputDisabled" class="cosmo-label">Range input invalid&lt;/label>
+    &lt;input type="range" id="rangeInputDisabled" class="cosmo-input is--invalid"/>
+    &lt;label for="select" class="cosmo-label">Select&lt;/label>
+    &lt;select id="select" class="cosmo-select">
+        &lt;option value="1" selected>Option 1&lt;/option>
+        &lt;option value="2">Option 2&lt;/option>
+        &lt;option value="3">Option 3&lt;/option>
+        &lt;option value="4">Option 4&lt;/option>
+    &lt;/select>
+    &lt;label for="selectDisabled" class="cosmo-label">Select disabled&lt;/label>
+    &lt;select id="selectDisabled" class="cosmo-select" disabled>
+        &lt;option value="1" selected>Option 1&lt;/option>
+        &lt;option value="2">Option 2&lt;/option>
+        &lt;option value="3">Option 3&lt;/option>
+        &lt;option value="4">Option 4&lt;/option>
+    &lt;/select>
+    &lt;label for="selectInvalid" class="cosmo-label">Select invalid&lt;/label>
+    &lt;select id="selectInvalid" class="cosmo-select" required>
+        &lt;option value="" disabled selected>Please choose&lt;/option>
+        &lt;option value="1">Option 1&lt;/option>
+        &lt;option value="2">Option 2&lt;/option>
+        &lt;option value="3">Option 3&lt;/option>
+        &lt;option value="4">Option 4&lt;/option>
+    &lt;/select>
+    &lt;label for="textarea" class="cosmo-label is--textarea">Textarea&lt;/label>
+    &lt;textarea id="textarea" class="cosmo-textarea">&lt;/textarea>
+    &lt;label for="textareaDisabled" class="cosmo-label is--textarea">Textarea disabled&lt;/label>
+    &lt;textarea id="textareaDisabled" disabled class="cosmo-textarea">&lt;/textarea>
+    &lt;label for="textareaInvalid" class="cosmo-label is--textarea">Textarea invalid&lt;/label>
+    &lt;textarea id="textareaInvalid" required class="cosmo-textarea">&lt;/textarea>
+    &lt;div class="cosmo-input__group is--checkbox">
+        &lt;input type="checkbox" id="checkboxInput" class="cosmo-checkbox"/>
+        &lt;label for="checkboxInput">Checkbox input&lt;/label>
+        &lt;input type="checkbox" id="checkboxInputDisabled" class="cosmo-checkbox" disabled/>
+        &lt;label for="checkboxInputDisabled">Checkbox input disabled&lt;/label>
+        &lt;input type="checkbox" id="checkboxInputDisabledChecked" class="cosmo-checkbox" disabled checked/>
+        &lt;label for="checkboxInputDisabledChecked">Checkbox input disabled&lt;/label>
+        &lt;input type="checkbox" id="checkboxInputInvalid" class="cosmo-checkbox" required/>
+        &lt;label for="checkboxInputInvalid">Checkbox input invalid&lt;/label>
+    &lt;/div>
+    &lt;div class="cosmo-input__group is--switch">
+        &lt;input type="checkbox" id="switchInput" class="cosmo-switch"/>
+        &lt;label for="switchInput">Switch input&lt;/label>
+        &lt;input type="checkbox" id="switchInputDisabled" class="cosmo-switch" disabled/>
+        &lt;label for="switchInputDisabled">Switch input disabled&lt;/label>
+        &lt;input type="checkbox" id="switchInputDisabledChecked" class="cosmo-switch" disabled checked/>
+        &lt;label for="switchInputDisabledChecked">Switch input disabled&lt;/label>
+        &lt;input type="checkbox" id="switchInputInvalid" class="cosmo-switch" required/>
+        &lt;label for="switchInputInvalid">Switch input invalid&lt;/label>
+    &lt;/div>
+    &lt;label class="cosmo-label is--radio">Radios&lt;/label>
+    &lt;div class="cosmo-input__group is--radio">
+        &lt;input name="radio" type="radio" id="radioInput1" class="cosmo-radio" required/>
+        &lt;label for="radioInput1">Radio input 1&lt;/label>
+        &lt;input disabled name="radio" type="radio" id="radioInput2" class="cosmo-radio"/>
+        &lt;label for="radioInput2">Radio input 2&lt;/label>
+        &lt;input name="radio" type="radio" id="radioInput3" class="cosmo-radio"/>
+        &lt;label for="radioInput3">Radio input 3&lt;/label>
+    &lt;/div>
+    &lt;div class="cosmo-input__group is--radio">
+        &lt;input name="radio2" type="radio" id="radioInput4" class="cosmo-radio" required/>
+        &lt;label for="radioInput4">Radio input 4&lt;/label>
+        &lt;input disabled checked name="radio2" type="radio" id="radioInput5" class="cosmo-radio"/>
+        &lt;label for="radioInput5">Radio input 5&lt;/label>
+        &lt;input name="radio2" type="radio" id="radioInput6" class="cosmo-radio"/>
+        &lt;label for="radioInput6">Radio input 6&lt;/label>
+    &lt;/div>
 &lt;/div></pre>
     </details>
     <h3>Size variations</h3>
@@ -307,6 +341,85 @@
         >
     </details>
     <hr/>
+    <h2>Picker</h2>
+    <p>
+        Not all modal pickers you want to show are file pickers. Maybe you have in-app media management and want to give
+        your users the option to pick a file from that collection. Cosmo CSS offers a special picker component that
+        mimics a file input but allows a custom action.
+    </p>
+    <div class="cosmo-docs-container">
+        <div class="cosmo-input__group">
+            <label for="customPicker" class="cosmo-label">Custom picker</label>
+            <button data-picker="Choose image…" id="customPicker" type="button" class="cosmo-input is--picker">
+                No image selected
+            </button>
+            <label for="customPickerDisabled" class="cosmo-label">Custom picker disabled</label>
+            <button disabled data-picker="Choose image…" id="customPickerDisabled" type="button"
+                    class="cosmo-input is--picker">
+                No image selected
+            </button>
+        </div>
+    </div>
+    <details class="cosmo-docs-details">
+        <summary class="cosmo-docs-details__title">Show code sample</summary>
+        <pre class="cosmo-docs-container">
+&lt;div class="cosmo-input__group">
+    &lt;label for="customPicker" class="cosmo-label">Custom picker&lt;/label>
+    &lt;button data-picker="Choose image…" id="customPicker" type="button" class="cosmo-input is--picker">
+        No image selected
+    &lt;/button>
+    &lt;label for="customPickerDisabled" class="cosmo-label">Custom picker disabled&lt;/label>
+    &lt;button disabled data-picker="Choose image…" id="customPickerDisabled" type="button" class="cosmo-input is--picker">
+        No image selected
+    &lt;/button>
+&lt;/div></pre>
+    </details>
+    <h3>Size variations</h3>
+    <div class="cosmo-docs-container">
+        <div class="cosmo-input__group">
+            <label for="fileInputSmall" class="cosmo-label">Custom picker small</label>
+            <button data-picker="Choose image…" id="customPicker" type="button"
+                    class="cosmo-input is--picker is--small">
+                No image selected
+            </button>
+            <label for="fileInputSmall" class="cosmo-label">Custom picker medium</label>
+            <button data-picker="Choose image…" id="customPicker" type="button"
+                    class="cosmo-input is--picker is--medium">
+                No image selected
+            </button>
+            <label for="fileInputSmall" class="cosmo-label">Custom picker large</label>
+            <button data-picker="Choose image…" id="customPicker" type="button"
+                    class="cosmo-input is--picker is--large">
+                No image selected
+            </button>
+            <label for="fileInputSmall" class="cosmo-label">Custom picker default (auto size)</label>
+            <button data-picker="Choose image…" id="customPicker" type="button" class="cosmo-input is--picker">
+                No image selected
+            </button>
+        </div>
+    </div>
+    <details class="cosmo-docs-details">
+        <summary class="cosmo-docs-details__title">Show code sample</summary>
+        <pre class="cosmo-docs-container">
+&lt;div class="cosmo-input__group">
+    &lt;label for="fileInputSmall" class="cosmo-label">File input small&lt;/label>
+    &lt;input id="fileInputSmall" type="file" class="cosmo-input is--small"/>
+    &lt;label for="fileInputMedium" class="cosmo-label">File input medium&lt;/label>
+    &lt;input id="fileInputMedium" type="file" class="cosmo-input is--medium"/>
+    &lt;label for="fileInputLarge" class="cosmo-label">File input large&lt;/label>
+    &lt;input id="fileInputLarge" type="file" class="cosmo-input is--large"/>
+    &lt;label for="fileInputNormal" class="cosmo-label">File input default (auto size)&lt;/label>
+    &lt;input id="fileInputNormal" type="file" class="cosmo-input"/>
+&lt;/div></pre>
+    </details>
+    <hr/>
+    <h2>Validation</h2>
+    <p>
+        Cosmo provides styling for the built-in browser validation. Apart from that you can apply the
+        <code>is--invalid</code> class to any input element to render it invalid. Remember to remove that class when the
+        user types a valid value.
+    </p>
+    <hr/>
     <h2>Buttons</h2>
     <p>
         Cosmo CSS consists of only two types of buttons. The first type is a classical button just like you know it from
@@ -476,39 +589,6 @@
 &lt;/button></pre>
     </details>
     <hr/>
-    <h2>Picker</h2>
-    <p>
-        Not all modal pickers you want to show are file pickers. Maybe you have in-app media management and want to give
-        your users the option to pick a file from that collection. Cosmo CSS offers a special picker component that
-        mimics a file input but allows a custom action.
-    </p>
-    <div class="cosmo-docs-container">
-        <div class="cosmo-input__group">
-            <label for="customPicker" class="cosmo-label">Custom picker</label>
-            <button data-picker="Choose image…" id="customPicker" type="button" class="cosmo-input is--picker">
-                No image selected
-            </button>
-            <label for="customPickerDisabled" class="cosmo-label">Custom picker disabled</label>
-            <button disabled data-picker="Choose image…" id="customPickerDisabled" type="button"
-                    class="cosmo-input is--picker">
-                No image selected
-            </button>
-        </div>
-    </div>
-    <details class="cosmo-docs-details">
-        <summary class="cosmo-docs-details__title">Show code sample</summary>
-        <pre class="cosmo-docs-container">
-&lt;div class="cosmo-input__group">
-    &lt;label for="customPicker" class="cosmo-label">Custom picker&lt;/label>
-    &lt;button data-picker="Choose image…" id="customPicker" type="button" class="cosmo-input is--picker">
-        No image selected
-    &lt;/button>
-    &lt;label for="customPickerDisabled" class="cosmo-label">Custom picker disabled&lt;/label>
-    &lt;button disabled data-picker="Choose image…" id="customPickerDisabled" type="button" class="cosmo-input is--picker">
-        No image selected
-    &lt;/button>
-&lt;/div></pre>
-    </details>
     <h2>Progress</h2>
     <p>The HTML 5 progress tag can be used to display a progress bar on the web.</p>
     <div class="cosmo-docs-container">

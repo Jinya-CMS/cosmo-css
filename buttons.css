@@ -11,10 +11,15 @@
 	text-decoration: none;
 	font-weight: normal;
 	border-radius: var(--border-radius);
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	white-space: nowrap;
 	transition:
 		background-color 0.3s,
 		color 0.3s,
 		border-color 0.3s;
+
 	--button-border-color: var(--control-border-color);
 	--button-background: var(--white);
 	--button-color: var(--black);
@@ -44,7 +49,7 @@
 	--button-background: var(--control-border-color-darker);
 }
 
-.cosmo-button--full-width {
+.cosmo-button.is--full-width {
 	width: 100%;
 	text-align: center;
 	margin-top: auto;
@@ -168,32 +173,26 @@
 	}
 }
 
-.cosmo-circular-button,
 .cosmo-button.is--circle {
-	border-radius: 100%;
-	border: 2px solid var(--button-border-color);
-	height: 32px;
-	width: 32px;
-	cursor: pointer;
-	text-decoration: none;
-	font-weight: normal;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	font-family: var(--font-family);
-	font-size: var(--font-size);
+	--border-radius: calc(var(--size) / 2);
+	--size: 32px;
+	--button-border-color: var(--button-color);
+	border-width: 2px;
+	height: var(--size);
+	min-width: var(--size);
 	padding: 4px;
-	box-sizing: border-box;
-	background: var(--button-background);
-	color: var(--button-color);
-	line-height: 19px;
-	transition:
-		background-color 0.3s,
-		color 0.3s,
-		border-color 0.3s;
+	background: var(--white);
+	color: var(--button-border-color);
 }
 
-.cosmo-circular-button:disabled,
+.cosmo-button.is--circle.is--primary,
+.cosmo-button.is--circle.is--positive,
+.cosmo-button.is--circle.is--negative,
+.cosmo-button.is--circle.is--warning,
+.cosmo-button.is--circle.is--information {
+	--button-border-color: var(--button-background);
+}
+
 .cosmo-button.is--circle:disabled {
 	cursor: not-allowed;
 	border: 1px solid var(--control-border-color);
@@ -201,58 +200,17 @@
 	color: var(--disabled-color);
 }
 
-.cosmo-circular-button .mdi::before {
-	font-size: 24px;
-}
-
-.cosmo-circular-button--small,
-.cosmo-circular-button.is--small,
 .cosmo-button.is--circle.is--small {
-	height: 24px;
-	width: 24px;
+	--size: 24px;
 }
 
-.cosmo-circular-button--small .mdi::before,
-.cosmo-circular-button.is--small .mdi::before {
-	font-size: var(--font-size);
-}
-
-.cosmo-circular-button--large,
-.cosmo-circular-button.is--large,
 .cosmo-button.is--circle.is--large {
-	height: 48px;
-	width: 48px;
+	--size: 48px;
 }
 
-.cosmo-circular-button--large .mdi::before,
-.cosmo-circular-button.is--large .mdi::before {
-	font-size: 32px;
-}
-
-.cosmo-button.is--primary.is--circle,
-.cosmo-button.is--negative.is--circle,
-.cosmo-button.is--positive.is--circle,
-.cosmo-button.is--warning.is--circle,
-.cosmo-button.is--information.is--circle {
-	background: var(--white);
-	color: var(--button-background);
-}
-
-.cosmo-button.is--primary.is--circle:hover,
-.cosmo-button.is--primary.is--circle:focus,
-.cosmo-button.is--primary.is--circle:active,
-.cosmo-button.is--negative.is--circle:hover,
-.cosmo-button.is--negative.is--circle:focus,
-.cosmo-button.is--negative.is--circle:active,
-.cosmo-button.is--positive.is--circle:hover,
-.cosmo-button.is--positive.is--circle:focus,
-.cosmo-button.is--positive.is--circle:active,
-.cosmo-button.is--warning.is--circle:hover,
-.cosmo-button.is--warning.is--circle:focus,
-.cosmo-button.is--warning.is--circle:active,
-.cosmo-button.is--information.is--circle:hover,
-.cosmo-button.is--information.is--circle:focus,
-.cosmo-button.is--information.is--circle:active {
+.cosmo-button.is--circle:hover,
+.cosmo-button.is--circle:focus,
+.cosmo-button.is--circle:active {
 	background: var(--button-background);
 	color: var(--button-color);
 }

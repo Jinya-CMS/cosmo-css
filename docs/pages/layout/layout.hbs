@@ -21,46 +21,51 @@
     <details class="cosmo-docs-details">
         <summary class="cosmo-docs-details__title">Show code sample</summary>
         <pre class="cosmo-docs-container">
-&lt;main class="cosmo-page-layout">
-    &lt;div class="cosmo-top-bar">
-        &lt;div class="cosmo-top-bar__menu">
-            &lt;a href="#" class="cosmo-top-bar__menu-item">Topbar Link 1&lt;/a>
-            &lt;a href="#" class="cosmo-top-bar__menu-item">Topbar Link 2&lt;/a>
-            &lt;a href="#" class="cosmo-top-bar__menu-item">Topbar Link 3&lt;/a>
+&lt;main class="cosmo-page">
+    &lt;div class="cosmo-menu is--top">
+        &lt;div class="cosmo-menu__row is--top">
+            &lt;a target="_blank" href="https://github.com/Jinya-CMS/cosmo-css" class="cosmo-menu__item is--top">
+                Github
+            &lt;/a>
+            &lt;a target="_blank" href="https://gitlab.imanuel.dev/jinya-cms/cosmo-css" class="cosmo-menu__item is--top">
+                GitLab
+            &lt;/a>
+            &lt;a target="_blank" href="https://www.npmjs.com/package/@jinyacms/cosmo" class="cosmo-menu__item is--top">
+                NPM Package
+            &lt;/a>
         &lt;/div>
         &lt;div class="cosmo-profile-picture">&lt;/div>
-        &lt;a href="#" class="cosmo-top-bar__menu-item is--right">Logout&lt;/a>
+        &lt;a href="#" class="cosmo-menu__item is--top is--right">Logout&lt;/a>
     &lt;/div>
-    &lt;div class="cosmo-menu-bar">
-        &lt;button class="cosmo-menu-bar__back-button" onclick="history.back()" type="button">&lt;/button>
-        &lt;nav class="cosmo-menu-bar__menu-collection">
-            &lt;div class="cosmo-menu-bar__main-menu">
-                &lt;a class="cosmo-menu-bar__main-item" href="/index.html">
+    &lt;div class="cosmo-menu">
+        &lt;button class="cosmo-back-button" onclick="history.back()" type="button">&lt;/button>
+        &lt;nav class="cosmo-menu__collection">
+            &lt;div class="cosmo-menu__row is--main">
+                &lt;a class="cosmo-menu__item is--main" href="/index.html">
                     Cosmo
                 &lt;/a>
-                &lt;a class="cosmo-menu-bar__main-item" href="/controls/controls.html">
+                &lt;a class="cosmo-menu__item is--main" href="/controls/controls.html">
                     Controls
                 &lt;/a>
-                &lt;a class="cosmo-menu-bar__main-item is--active" href="/layout/layout.html">
+                &lt;a class="cosmo-menu__item is--main is--active" href="/layout/layout.html">
                     Layout
                 &lt;/a>
             &lt;/div>
-            &lt;div class="cosmo-menu-bar__sub-menu">
-                &lt;a href="/layout/layout.html" class="cosmo-menu-bar__sub-item is--active">
+            &lt;div class="cosmo-menu__row is--sub">
+                &lt;a href="/layout/layout.html" class="cosmo-menu__item is--sub">
                     Base layout and menu
                 &lt;/a>
-                &lt;a href="/layout/layout-bottom-bar-three-column.html" class="cosmo-menu-bar__sub-item">
+                &lt;a href="/layout/layout-bottom-bar-three-column.html" class="cosmo-menu__item is--sub">
                     Three column bottom bar
                 &lt;/a>
-                &lt;a href="/layout/layout-showcase.html" class="cosmo-menu-bar__sub-item">
+                &lt;a href="/layout/layout-showcase.html" class="cosmo-menu__item is--sub is--active">
                     Layout showcase
                 &lt;/a>
             &lt;/div>
         &lt;/nav>
     &lt;/div>
     &lt;div class="cosmo-page-body">
-        &lt;div class="cosmo-page-body__content">
-            &lt;h1 class="cosmo-title">Some title&lt;/h1>
+        &lt;div class="cosmo-page-body__content">    &lt;h1 class="cosmo-title">Some title&lt;/h1>
         &lt;/div>
     &lt;/div>
     &lt;div class="cosmo-bottom-bar">

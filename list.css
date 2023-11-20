@@ -1,10 +1,10 @@
-.cosmo-list:not(.is--key-value):not(.is--ordered):not(.is--bullet) {
+.cosmo-side-list {
 	display: grid;
 	grid-template-columns: [items-list] 212px 16px [content] 1fr;
 	height: calc(100vh - 64px - 80px - 32px - 28px - 68px);
 }
 
-.cosmo-list__items {
+.cosmo-side-list__items {
 	grid-column: items-list;
 	display: flex;
 	flex-flow: column;
@@ -15,8 +15,10 @@
 	overflow-y: auto;
 }
 
-.cosmo-list__item {
-	color: var(--black);
+.cosmo-side-list__item {
+	--list-item-color: var(--black);
+
+	color: var(--list-item-color);
 	padding: 4px 8px;
 	overflow-x: hidden;
 	white-space: pre;
@@ -26,26 +28,30 @@
 	cursor: pointer;
 	min-height: 29px;
 	border-radius: var(--border-radius);
+	background: var(--list-item-background);
+	display: flex;
+	align-items: center;
 }
 
-.cosmo-list__item:hover {
-	background: var(--control-border-color);
+.cosmo-side-list__item:hover {
+	--list-item-background: var(--control-border-color);
 }
 
-.cosmo-list__item--active,
-.cosmo-list__item--active:hover {
-	background: var(--primary-color);
-	color: var(--white);
+.cosmo-side-list__item.is--active,
+.cosmo-side-list__item.is--active:hover {
+	--list-item-background: var(--primary-color);
+	--list-item-color: var(--white);
+
 	font-weight: var(--font-weight-bold);
 }
 
-.cosmo-list__item--active::selection,
-.cosmo-list__item--active:hover::selection {
-	background: var(--white);
-	color: var(--primary-color);
+.cosmo-side-list__item.is--active::selection,
+.cosmo-side-list__item.is--active:hover::selection {
+	--list-item-background: var(--white);
+	--list-item-color: var(--primary-color);
 }
 
-.cosmo-list__content {
+.cosmo-side-list__content {
 	grid-column: content;
 	height: 100%;
 	overflow-y: auto;

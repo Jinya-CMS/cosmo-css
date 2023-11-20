@@ -37,28 +37,24 @@
 	color: var(--white);
 }
 
-.cosmo-message--positive,
 .cosmo-message.is--positive,
 .cosmo-message.is--positive.is--light {
 	--message-border: var(--positive-color);
 	--message-background: var(--positive-color-lighter);
 }
 
-.cosmo-message--negative,
 .cosmo-message.is--negative,
 .cosmo-message.is--negative.is--light {
 	--message-border: var(--negative-color);
 	--message-background: var(--negative-color-lighter);
 }
 
-.cosmo-message--information,
 .cosmo-message.is--information,
 .cosmo-message.is--information.is--light {
 	--message-border: var(--information-color);
 	--message-background: var(--information-color-lighter);
 }
 
-.cosmo-message--warning,
 .cosmo-message.is--warning,
 .cosmo-message.is--warning.is--light {
 	--message-border: var(--warning-color);
@@ -82,22 +78,18 @@
 }
 
 @media screen and (prefers-color-scheme: dark) {
-	.cosmo-message--positive,
 	.cosmo-message.is--positive {
 		--message-background: var(--positive-color-dark);
 	}
 
-	.cosmo-message--negative,
 	.cosmo-message.is--negative {
 		--message-background: var(--negative-color-dark);
 	}
 
-	.cosmo-message--information,
 	.cosmo-message.is--information {
 		--message-background: var(--information-color-dark);
 	}
 
-	.cosmo-message--warning,
 	.cosmo-message.is--warning {
 		--message-background: var(--warning-color-dark);
 	}

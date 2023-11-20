@@ -17,154 +17,10 @@ hr {
 	margin: 32px 0;
 }
 
-.cosmo-page-layout {
+.cosmo-page-layout,
+.cosmo-page {
 	display: grid;
 	grid-template-rows: [top-menu] 64px [main-menu] 80px [top-spacing] 32px [content] 1fr [bottom-spacing] 28px [bottom-bar] 68px;
-}
-
-.cosmo-profile-picture {
-	display: block;
-	width: 64px;
-	height: 64px;
-	background: var(--primary-color);
-	grid-column: profilepicture;
-	object-fit: cover;
-	border-bottom-left-radius: var(--border-radius);
-	border-bottom-right-radius: var(--border-radius);
-}
-
-.cosmo-top-bar {
-	display: grid;
-	grid-template-columns: [left-column] 164px [content] 1fr [profilepicture] 64px [right-column] 164px;
-	grid-row: top-menu;
-	background: linear-gradient(
-		to top,
-		var(--gradient-bottom-color) 0%,
-		var(--gradient-top-color) 100%
-	);
-}
-
-.cosmo-menu-bar {
-	grid-row: main-menu;
-	display: grid;
-	position: relative;
-	grid-template-columns: [left-touch] 24px [spacing1] 18px [backbutton] 48px [spacing2] 74px [content] 1fr;
-}
-
-.cosmo-menu-bar::before {
-	content: '';
-	position: absolute;
-	width: 24px;
-	height: 100%;
-	background: var(--primary-color);
-	border-bottom-right-radius: var(--border-radius);
-	border-top-right-radius: var(--border-radius);
-}
-
-.cosmo-menu-bar__back-button {
-	grid-column: backbutton;
-	border: 4px solid var(--control-border-color);
-	border-radius: 50%;
-	height: 48px;
-	width: 48px;
-	box-sizing: border-box;
-	background: var(--white);
-	position: relative;
-	cursor: pointer;
-}
-
-.cosmo-menu-bar__back-button::before,
-.cosmo-menu-bar__back-button::after {
-	content: '';
-	left: 10px;
-	position: absolute;
-}
-
-.cosmo-menu-bar__back-button::before {
-	border: 4px solid var(--primary-color);
-	box-sizing: border-box;
-	height: 18px;
-	width: 18px;
-	display: block;
-	border-right: 0;
-	border-bottom: 0;
-	transform: translateY(-50%) rotate(-45deg);
-	position: absolute;
-	top: 50%;
-}
-
-.cosmo-menu-bar__back-button::after {
-	display: block;
-	width: 20px;
-	height: 4px;
-	background: var(--primary-color);
-	top: 18px;
-}
-
-.cosmo-menu-bar__back-button:hover {
-	border-color: var(--primary-color);
-}
-
-.cosmo-menu-bar__back-button:disabled {
-	border-color: var(--control-border-color);
-	cursor: not-allowed;
-}
-
-.cosmo-menu-bar__back-button:disabled::after {
-	background: var(--control-border-color);
-}
-
-.cosmo-menu-bar__back-button:disabled::before {
-	border-color: var(--control-border-color);
-}
-
-.cosmo-menu-bar__menu-collection {
-	display: grid;
-	grid-column: content;
-	grid-template-rows: [main-menu] 48px [sub-menu] 16px;
-	grid-row-gap: 16px;
-}
-
-.cosmo-menu-bar__main-menu {
-	grid-row: main-menu;
-}
-
-.cosmo-menu-bar__sub-menu {
-	grid-row: sub-menu;
-}
-
-.cosmo-menu-bar__main-item {
-	text-transform: lowercase;
-	font-size: var(--font-size-main-menu);
-	font-weight: var(--font-weight-menu);
-	font-family: var(--font-family-menu);
-	line-height: 48px;
-	vertical-align: text-top;
-	color: var(--menu-text-color);
-	text-decoration: none;
-	margin-right: 24px;
-}
-
-.cosmo-menu-bar__main-item--active,
-.cosmo-menu-bar__main-item.is--active {
-	color: var(--menu-text-selected-color);
-}
-
-.cosmo-menu-bar__sub-item {
-	text-transform: uppercase;
-	font-size: var(--font-size-sub-menu);
-	font-weight: var(--font-weight-menu);
-	line-height: 16px;
-	vertical-align: text-top;
-	margin-right: 16px;
-	text-decoration: none;
-	color: var(--black);
-	font-family: var(--font-family-menu);
-}
-
-.cosmo-menu-bar__sub-item--active,
-.cosmo-menu-bar__sub-item.is--active {
-	font-weight: var(--font-weight-sub-menu-active);
 }
 
 .cosmo-page-body {
@@ -180,22 +36,71 @@ hr {
 	height: calc(100vh - 64px - 32px - 80px - 28px - 68px);
 }
 
-.cosmo-top-bar__menu-item {
+.cosmo-profile-picture {
+	display: block;
+	width: 64px;
+	height: 64px;
+	background: var(--primary-color);
+	grid-column: profilepicture;
+	object-fit: cover;
+	border-bottom-left-radius: var(--border-radius);
+	border-bottom-right-radius: var(--border-radius);
+}
+
+.cosmo-menu__collection {
+	display: grid;
+	grid-column: content;
+	grid-template-rows: [main-menu] 48px [sub-menu] 16px;
+	grid-row-gap: 16px;
+}
+
+.cosmo-menu:not(.is--top) {
+	grid-row: main-menu;
+	display: grid;
+	position: relative;
+	grid-template-columns: [left-touch] 24px [spacing1] 18px [backbutton] 48px [spacing2] 74px [content] 1fr;
+}
+
+.cosmo-menu:not(.is--top)::before {
+	content: '';
+	position: absolute;
+	width: 24px;
+	height: 100%;
+	background: var(--primary-color);
+	border-bottom-right-radius: var(--border-radius);
+	border-top-right-radius: var(--border-radius);
+}
+
+.cosmo-menu.is--top {
+	display: grid;
+	grid-template-columns: [left-column] 164px [content] 1fr [profilepicture] 64px [right-column] 164px;
+	grid-row: top-menu;
+	background: linear-gradient(
+		to top,
+		var(--gradient-bottom-color) 0%,
+		var(--gradient-top-color) 100%
+	);
+}
+
+.cosmo-menu__item {
+	text-decoration: none;
+	font-weight: var(--font-weight-menu);
+	font-family: var(--font-family-menu);
+}
+
+.cosmo-menu__item.is--top {
 	display: flex;
 	height: 100%;
 	align-items: center;
 	padding: 0;
-	text-decoration: none;
 	text-transform: uppercase;
-	font-weight: var(--font-weight-menu);
-	font-family: var(--font-family-menu);
 	color: var(--black);
 	cursor: pointer;
 	margin-right: 16px;
 	font-size: var(--font-size-top-menu);
 }
 
-.cosmo-top-bar__menu-item:after {
+.cosmo-menu__item.is--top:after {
 	content: '';
 	height: 14px;
 	width: 1px;
@@ -204,20 +109,110 @@ hr {
 	margin-left: 16px;
 }
 
-.cosmo-top-bar__menu-item:last-child:after {
+.cosmo-menu__item.is--top:last-child:after {
 	content: unset;
 }
 
-.cosmo-top-bar__menu-item--right,
-.cosmo-top-bar__menu-item.is--right {
+.cosmo-menu__item.is--top.is--right {
 	margin-left: 16px;
 }
 
-.cosmo-top-bar__menu {
+.cosmo-menu__row.is--top {
 	display: flex;
 	justify-content: flex-end;
 	flex-flow: row nowrap;
 	grid-column: content;
+}
+
+.cosmo-menu__row.is--main {
+	grid-row: main-menu;
+}
+
+.cosmo-menu__row.is--sub {
+	grid-row: sub-menu;
+}
+
+.cosmo-menu__item.is--main {
+	text-transform: lowercase;
+	font-size: var(--font-size-main-menu);
+	line-height: 48px;
+	vertical-align: text-top;
+	color: var(--menu-text-color);
+	margin-right: 24px;
+}
+
+.cosmo-menu__item.is--main.is--active {
+	color: var(--menu-text-selected-color);
+}
+
+.cosmo-menu__item.is--sub {
+	text-transform: uppercase;
+	font-size: var(--font-size-sub-menu);
+	line-height: 16px;
+	vertical-align: text-top;
+	margin-right: 16px;
+	color: var(--black);
+}
+
+.cosmo-menu__item.is--sub.is--active {
+	font-weight: var(--font-weight-sub-menu-active);
+}
+
+.cosmo-back-button {
+	grid-column: backbutton;
+	border: 4px solid var(--control-border-color);
+	border-radius: 50%;
+	height: 48px;
+	width: 48px;
+	box-sizing: border-box;
+	background: var(--white);
+	position: relative;
+	cursor: pointer;
+}
+
+.cosmo-back-button::before,
+.cosmo-back-button::after {
+	content: '';
+	left: 10px;
+	position: absolute;
+}
+
+.cosmo-back-button::before {
+	border: 4px solid var(--primary-color);
+	box-sizing: border-box;
+	height: 18px;
+	width: 18px;
+	display: block;
+	border-right: 0;
+	border-bottom: 0;
+	transform: translateY(-50%) rotate(-45deg);
+	position: absolute;
+	top: 50%;
+}
+
+.cosmo-back-button::after {
+	display: block;
+	width: 20px;
+	height: 4px;
+	background: var(--primary-color);
+	top: 18px;
+}
+
+.cosmo-back-button:hover {
+	border-color: var(--primary-color);
+}
+
+.cosmo-back-button:disabled {
+	border-color: var(--control-border-color);
+	cursor: not-allowed;
+}
+
+.cosmo-back-button:disabled::after {
+	background: var(--control-border-color);
+}
+
+.cosmo-back-button:disabled::before {
+	border-color: var(--control-border-color);
 }
 
 .cosmo-bottom-bar {
@@ -227,7 +222,6 @@ hr {
 	align-items: center;
 }
 
-.cosmo-bottom-bar--three-column,
 .cosmo-bottom-bar.is--three-column {
 	flex-direction: row;
 	display: grid;
@@ -237,19 +231,16 @@ hr {
 	padding-right: 164px;
 }
 
-.cosmo-bottom-bar__item--left,
 .cosmo-bottom-bar__item.is--left {
 	justify-self: left;
 	grid-column: left;
 }
 
-.cosmo-bottom-bar__item--center,
 .cosmo-bottom-bar__item.is--center {
 	justify-self: center;
 	grid-column: center;
 }
 
-.cosmo-bottom-bar__item--right,
 .cosmo-bottom-bar__item.is--right {
 	justify-self: right;
 	grid-column: right;
