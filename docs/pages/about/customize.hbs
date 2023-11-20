@@ -1,65 +1,78 @@
 {{#> layout title="Customize" mainActive="cosmo" subActive="customize" }}
     <h1 class="cosmo-title">Customize</h1>
+    <p>Customizing the colors and fonts of Cosmo is really easy.</p>
+    <h2>Colors</h2>
     <p>
-        Customizing the colors and fonts of cosmo is really easy; you only need to overwrite two CSS variables to get
-        your own color scheme. Apart from the two main colors, there are nine other colors you can change. And one
-        property to change the font family.
+        Cosmo uses the hsl function of CSS to create the color
+        scheme based on the hue, saturation, and lightness you provide. This allows the creation of several lightness
+        steps with just three variables. And the best part is that you can customize the colors without the usage of
+        SASS or LESS.
+    </p>
+    <h2>Fonts</h2>
+    <p>
+        Mainly used are two fonts.
+        The default font is Albert Sans, this font is used in several places in Cosmo and can be seen as the default
+        font.<br>
+        Headings and menus use a font called Urbanist. Changing the fonts is as simple as changing the CSS variables and
+        linking the fonts themselves.<br>
+        The final font used in Cosmo is Oxygen Mono. Oxygen Mono is used for, you guessed it, monospaced use cases. This
+        includes pre, code, and samp tags.
     </p>
     <p>
-        For the customized variables to take effect they need to be applied on the body element in your custom CSS file.
+        For the customized variables to take effect, they need to be applied on the body element in your custom CSS
+        file.
     </p>
     <h2>Cosmo variables</h2>
     <pre class="cosmo-docs-container">
---primary-hue: 211;
---primary-saturation: 50%;
---primary-lightness-base: 20%;
+--primary-hue: 211;                                 /* The hue of the primary colors */
+--primary-saturation: 50%;                          /* The saturation for the primary colors, this must be a percent value */
+--primary-lightness-base: 20%;                      /* The base lightness for the primary colors, this must be a percent value */
 
---negative-hue: 2;
---negative-saturation: 67%;
---negative-lightness-base: 57%;
+--negative-hue: 2;                                  /* The hue of the negative colors */
+--negative-saturation: 67%;                         /* The saturation for the negative colors, this must be a percent value */
+--negative-lightness-base: 57%;                     /* The base lightness for the negative colors, this must be a percent value */
 
---positive-hue: 146;
---positive-saturation: 35%;
---positive-lightness-base: 46%;
+--positive-hue: 146;                                /* The hue of the positive colors */
+--positive-saturation: 35%;                         /* The saturation for the positive colors, this must be a percent value */
+--positive-lightness-base: 46%;                     /* The base lightness for the positive colors, this must be a percent value */
 
---information-hue: 205;
---information-saturation: 64%;
---information-lightness-base: 48%;
+--information-hue: 205;                             /* The hue of the information colors */
+--information-saturation: 64%;                      /* The saturation for the information colors, this must be a percent value */
+--information-lightness-base: 48%;                  /* The base lightness for the information colors, this must be a percent value */
 
---warning-hue: 42;
---warning-saturation: 54%;
---warning-lightness-base: 54%;
+--warning-hue: 42;                                  /* The hue of the warning colors */
+--warning-saturation: 54%;                          /* The saturation for the warning colors, this must be a percent value */
+--warning-lightness-base: 54%;                      /* The base lightness for the warning colors, this must be a percent value */
 
---gray-hue: 0;
---gray-saturation: 0%;
---gray-lightness-base: 80%;
+--gray-lightness-base: 80%;                         /* The base lightness for the gray colors, this must be a percent value */
 
---light-step: 10%;
---lighter-step: 20%;
+--light-step: 10%;                                  /* The percentage step used for the light color variants, this must be a percent value */
+--lighter-step: 20%;                                /* The percentage step used for the lighter color variants, this must be a percent value */
 
---dark-step: -10%;
---darker-step: -20%;
+--dark-step: -10%;                                  /* The percentage step used for the dark color variants, this must be a percent value */
+--darker-step: -20%;                                /* The percentage step used for the darker color variants, this must be a percent value */
 
---white-base: 255;
---black-base: 51;
+--white-base: 255;                                  /* The red, green and blue value for white */
+--black-base: 51;                                   /* The red, green and blue value for black */
 
---border-radius: 4px;
+--border-radius: 4px;                               /* The default border radius for inputs, buttons and other controls */
 
---font-size: 14px;
---font-weight-bold: bold;
---font-weight-normal: normal;
---font-weight-light: 200;
---font-family: 'Albert Sans', sans-serif;
+--font-size: 14px;                                  /* The base font size, all other font sizes, paddings and margins are based on this */
 
---font-family-menu: Urbanist, sans-serif;
---font-weight-menu: 200;
---font-weight-menu-active: 600;
---font-size-main-menu: 48px;
---font-size-sub-menu: 16px;
---font-size-top-menu: 16px;
+--font-weight-bold: bold;                           /* The default bold font weight */
+--font-weight-normal: normal;                       /* The default regular font weight */
+--font-weight-light: 200;                           /* The default light font weight */
 
---font-family-heading: Urbanist, sans-serif;
---font-weight-heading: 200;
+--font-family: 'Albert Sans', sans-serif;           /* The default font family for text */
 
---font-family-code: 'Oxygen Mono', monospace;</pre>
+--font-family-menu: Urbanist, sans-serif;           /* The font family of menu items */
+--font-weight-menu: 200;                            /* The default weight of main and sub menu items */
+
+--font-weight-sub-menu-active: 600;                 /* The weight of active sub menu item */
+
+--font-family-heading: Urbanist, sans-serif;        /* The font for headings */
+--font-weight-heading: 200;                         /* The weight of headings */
+
+--font-family-code: 'Oxygen Mono', monospace;       /* The monospace font used in pre, code, and samp tags */
+</pre>
 {{/layout}}

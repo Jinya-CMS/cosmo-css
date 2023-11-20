@@ -1,3 +1,7 @@
+:root {
+	font-size: var(--font-size);
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -158,7 +162,7 @@ hr {
 }
 
 .cosmo-menu-bar__sub-item--active {
-	font-weight: var(--font-weight-menu-active);
+	font-weight: var(--font-weight-sub-menu-active);
 }
 
 .cosmo-page-body {
