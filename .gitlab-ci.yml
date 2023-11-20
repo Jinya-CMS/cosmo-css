@@ -7,22 +7,14 @@ lint:
   stage: test
   script:
     - npm install
-    - npm run lint
+    - npm run pretty:lint
 
 pages:
   image: library/node:latest
   stage: deploy
   script:
     - npm install
-    - npm run compile:cosmo
-    - mkdir public
-    - cp cosmo.css public/
-    - cp docs.css public/
-    - cp *.js public/
-    - cp *.html public/
-    - cp *.png public/
-    - cp *.svg public/
-    - cp -r fonts public/
+    - npm run docs:compile
     - echo "The site will be deployed to $CI_PAGES_URL"
   artifacts:
     paths:

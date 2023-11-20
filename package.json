@@ -34,10 +34,10 @@
 		"highlight.js": "11.9.0"
 	},
 	"scripts": {
-		"lint": "prettier --check .",
-		"format": "prettier --write .",
-		"compile:cosmo": "sass cosmo.scss cosmo.css",
-		"compile:docs": "webpack",
-		"serve:docs": "webpack serve"
+		"pretty:lint": "prettier --check .",
+		"pretty:format": "prettier --write .",
+		"cosmo:compile": "sass cosmo.scss cosmo.css",
+		"docs:compile": "webpack",
+		"docs:serve": "webpack serve"
 	}
 }
