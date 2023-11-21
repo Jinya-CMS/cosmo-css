@@ -34,7 +34,7 @@
 
 	--border-radius: 4px;
 
-	--font-size: 14px;
+	--font-size: 16px;
 	--font-weight-bold: bold;
 	--font-weight-normal: normal;
 	--font-weight-light: 200;
@@ -46,6 +46,8 @@
 	--font-size-main-menu: 3.4rem;
 	--font-size-sub-menu: 1.15rem;
 	--font-size-top-menu: 1.15rem;
+
+	--font-family-modal-title: Urbanist, sans-serif;
 
 	--font-family-heading: Urbanist, sans-serif;
 	--font-weight-heading: 200;
@@ -209,11 +211,13 @@
 	--white: rgb(var(--white-base), var(--white-base), var(--white-base));
 	--black: rgb(var(--black-base), var(--black-base), var(--black-base));
 
+	--gradient-multiplier: 4;
+
 	--menu-text-color: rgba(var(--black-base), var(--black-base), var(--black-base), 0.25);
 	--gradient-top-color: hsl(
 		var(--primary-hue),
 		var(--primary-saturation),
-		calc(var(--primary-lightness-base) * 4)
+		calc(var(--primary-lightness-base) * var(--gradient-multiplier))
 	);
 	--modal-backdrop: rgba(var(--white-base), var(--white-base), var(--white-base), 0.3);
 	--modal-background: rgba(var(--white-base), var(--white-base), var(--white-base), 0.9);
@@ -252,8 +256,16 @@
 
 		--gray-lightness-base: 20%;
 
+		--light-step: -10%;
+		--lighter-step: -20%;
+
+		--dark-step: 10%;
+		--darker-step: 20%;
+
 		--white-base: 0;
 		--black-base: 204;
+
+		--gradient-multiplier: 0.25;
 
 		background: var(--white);
 		color: var(--black);
@@ -262,7 +274,6 @@
 	}
 }
 
-.cosmo--light-theme,
 .is--light {
 	--primary-hue: 211;
 	--primary-saturation: 50%;
@@ -286,8 +297,16 @@
 
 	--gray-lightness-base: 80%;
 
+	--light-step: 10%;
+	--lighter-step: 20%;
+
+	--dark-step: -10%;
+	--darker-step: -20%;
+
 	--white-base: 255;
 	--black-base: 51;
+
+	--gradient-multiplier: 4;
 
 	--dropdown-background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgMC4wMDAzMiA2ZS0wNSI+CiAgICA8Zz4KICAgICAgICA8cGF0aCBzdHlsZT0iZmlsbDojMDAwMDAwO3N0cm9rZS13aWR0aDowLjI2NDk5OTtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1kYXNoYXJyYXk6bm9uZSIKICAgICAgICAgICAgICBkPSJtIDQuODg5MDY2MSw0LjIzNDA1NTQgLTIuNDQ0NTMzLDFlLTcgTCA3Ljg1NTk1NjZlLTgsNC4yMzQwNTU0IDEuMjIyMjY2NSwyLjExNzAyNzcgMi40NDQ1MzMxLDAgMy42NjY3OTk3LDIuMTE3MDI3NiBaIgogICAgICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDIuNDU0NDU2NWUtNSwwLDAsLTEuNDE3MDgxMWUtNSw5Ljk5OTk5OThlLTUsNi4wMDAwMDAxZS01KSIvPgogICAgPC9nPgo8L3N2Zz4=');
 
@@ -295,7 +314,6 @@
 	color: var(--black);
 }
 
-.cosmo--dark-theme,
 .is--dark {
 	--primary-hue: 211;
 	--primary-saturation: 51%;
@@ -319,8 +337,16 @@
 
 	--gray-lightness-base: 20%;
 
+	--light-step: -10%;
+	--lighter-step: -20%;
+
+	--dark-step: 10%;
+	--darker-step: 20%;
+
 	--white-base: 0;
 	--black-base: 204;
+
+	--gradient-multiplier: 0.25;
 
 	background: var(--white);
 	color: var(--black);

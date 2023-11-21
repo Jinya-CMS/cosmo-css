@@ -67,10 +67,15 @@
 }
 
 .cosmo-button.is--primary,
+.cosmo-button.is--primary:focus,
 .cosmo-button.is--positive,
+.cosmo-button.is--positive:focus,
 .cosmo-button.is--negative,
+.cosmo-button.is--negative:focus,
 .cosmo-button.is--warning,
+.cosmo-button.is--warning:focus,
 .cosmo-button.is--information,
+.cosmo-button.is--information:focus,
 .cosmo-button:hover,
 .cosmo-button:active {
 	--button-color: var(--white);
