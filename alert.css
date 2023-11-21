@@ -9,7 +9,9 @@
 	border-radius: var(--border-radius);
 }
 
-.cosmo-message::selection {
+.cosmo-message::selection,
+.cosmo-message__header::selection,
+.cosmo-message__message::selection {
 	background: var(--message-border);
 	color: var(--white);
 }
@@ -23,18 +25,8 @@
 	display: block;
 }
 
-.cosmo-message__header::selection {
-	background: var(--message-border);
-	color: var(--white);
-}
-
 .cosmo-message__message {
 	margin: 0;
-}
-
-.cosmo-message__message::selection {
-	background: var(--message-border);
-	color: var(--white);
 }
 
 .cosmo-message.is--positive,
