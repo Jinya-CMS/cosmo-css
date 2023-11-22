@@ -2,22 +2,8 @@
     <h1 class="cosmo-title">Dialog</h1>
     <p>The dialog is in Cosmo CSS an option to ask your user for data or confirmation.</p>
     <p>
-        Since Cosmo CSS is a CSS only library, you need to implement the modal functionality yourself. Check the
-        JavaScript below to see an example on how to open and close modals.
+        Since Cosmo CSS is a CSS only library, you need to implement the modal functionality yourself.
     </p>
-    <pre class="cosmo-docs-container">
-document.getElementById('openModal').addEventListener('click', (e) => {
-    e.preventDefault();
-    document.querySelector('.cosmo-modal__container').removeAttribute('style');
-});
-document.getElementById('cancel').addEventListener('click', (e) => {
-    e.preventDefault();
-    document.querySelector('.cosmo-modal__container').style.display = 'none';
-});
-document.getElementById('save').addEventListener('click', (e) => {
-    e.preventDefault();
-    document.querySelector('.cosmo-modal__container').style.display = 'none';
-});</pre>
     <div class="cosmo-docs-container">
         <button class="cosmo-button" id="openModal" type="button">Open modal</button>
     </div>
@@ -79,7 +65,21 @@ document.getElementById('save').addEventListener('click', (e) => {
             &lt;button id="save" class="cosmo-button">Save changes&lt;/button>
         &lt;/div>
     &lt;/div>
-&lt;/div></pre>
+&lt;/div>
+&lt;script>
+    document.getElementById('openModal').addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector('.cosmo-modal__container').removeAttribute('style');
+    });
+    document.getElementById('cancel').addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector('.cosmo-modal__container').style.display = 'none';
+    });
+    document.getElementById('save').addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector('.cosmo-modal__container').style.display = 'none';
+    });
+&lt;/script></pre>
     </details>
     <h2>Type variations</h2>
     <p>

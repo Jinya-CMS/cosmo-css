@@ -1,27 +1,13 @@
 pre.cosmo-docs-container {
-	border: 1px solid var(--primary-color);
-	position: relative;
-	padding: 32px 16px 16px;
-	border-radius: var(--border-radius);
+	margin: unset;
 	overflow: auto;
-}
-
-pre.cosmo-docs-container::before {
-	content: 'Code';
-	background: var(--primary-color);
-	color: #ffffff;
-	position: absolute;
-	left: 0;
-	top: 0;
-	padding: 4px 8px;
-	border-bottom-right-radius: var(--border-radius);
 }
 
 .cosmo-docs-container {
 	border: 1px solid var(--primary-color);
-	padding: 32px 16px 16px;
+	padding: 2rem 1rem 1rem;
 	position: relative;
-	margin: 16px 0;
+	margin: 1rem 0;
 	border-radius: var(--border-radius);
 }
 
@@ -32,15 +18,16 @@ pre.cosmo-docs-container::before {
 	position: absolute;
 	left: 0;
 	top: 0;
-	padding: 4px 8px;
+	padding: 0.25rem 0.5rem;
 	border-bottom-right-radius: var(--border-radius);
+}
+
+pre.cosmo-docs-container::before {
+	content: 'Code';
 }
 
 .cosmo-debug * {
 	outline: 1px dashed var(--primary-color);
-}
-
-.cosmo-docs-details {
 }
 
 .cosmo-docs-details__title {
@@ -57,7 +44,7 @@ pre.cosmo-docs-container::before {
 	display: inline-block;
 	width: 1em;
 	height: 1em;
-	transition: transform 0.3s;
+	transition: transform var(--transition-duration);
 }
 
 .cosmo-docs-details[open] .cosmo-docs-details__title::before {
