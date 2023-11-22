@@ -1,6 +1,10 @@
+:root {
+	--toolbar-gap: 1rem;
+}
+
 .cosmo-toolbar {
 	display: flex;
-	gap: 16px;
+	gap: var(--toolbar-gap);
 }
 
 .cosmo-toolbar__group {

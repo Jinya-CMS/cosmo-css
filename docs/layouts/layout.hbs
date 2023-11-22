@@ -18,87 +18,87 @@
 <body{{#if debug}} class="cosmo-debug"{{/if}}>
 <main class="cosmo-page">
     <div class="cosmo-menu is--top">
-        <div class="cosmo-menu__row is--top">
-            <a target="_blank" href="https://github.com/Jinya-CMS/cosmo-css" class="cosmo-menu__item is--top">
+        <div class="cosmo-menu__row">
+            <a target="_blank" href="https://github.com/Jinya-CMS/cosmo-css" class="cosmo-menu__item">
                 Github
             </a>
-            <a target="_blank" href="https://gitlab.imanuel.dev/jinya-cms/cosmo-css" class="cosmo-menu__item is--top">
+            <a target="_blank" href="https://gitlab.imanuel.dev/jinya-cms/cosmo-css" class="cosmo-menu__item">
                 GitLab
             </a>
-            <a target="_blank" href="https://www.npmjs.com/package/@jinyacms/cosmo" class="cosmo-menu__item is--top">
+            <a target="_blank" href="https://www.npmjs.com/package/@jinyacms/cosmo" class="cosmo-menu__item">
                 NPM Package
             </a>
         </div>
         <div class="cosmo-profile-picture"></div>
-        <a href="#" class="cosmo-menu__item is--top is--right">Logout</a>
+        <a href="#" class="cosmo-menu__item is--right">Logout</a>
     </div>
     <div class="cosmo-menu">
         <button class="cosmo-back-button" onclick="history.back()" type="button"></button>
         <nav class="cosmo-menu__collection">
             <div class="cosmo-menu__row is--main">
-                <a class="cosmo-menu__item is--main{{#compare mainActive "===" "cosmo"}} is--active{{/compare}}"
+                <a class="cosmo-menu__item{{#compare mainActive "===" "cosmo"}} is--active{{/compare}}"
                    href="/index.html">
                     Cosmo
                 </a>
-                <a class="cosmo-menu__item is--main{{#compare mainActive "===" "controls"}} is--active{{/compare}}"
+                <a class="cosmo-menu__item{{#compare mainActive "===" "controls"}} is--active{{/compare}}"
                    href="/controls/controls.html">
                     Controls
                 </a>
-                <a class="cosmo-menu__item is--main{{#compare mainActive "===" "layout"}} is--active{{/compare}}"
+                <a class="cosmo-menu__item{{#compare mainActive "===" "layout"}} is--active{{/compare}}"
                    href="/layout/layout.html">
                     Layout
                 </a>
             </div>
             <div class="cosmo-menu__row is--sub">
                 {{#compare mainActive "===" "cosmo"}}
-                    <a class="cosmo-menu__item is--sub{{#compare subActive "===" "index"}} is--active{{/compare}}"
+                    <a class="cosmo-menu__item{{#compare subActive "===" "index"}} is--active{{/compare}}"
                        href="/index.html">
                         About Cosmo
                     </a>
-                    <a class="cosmo-menu__item is--sub{{#compare subActive "===" "typography"}} is--active{{/compare}}"
+                    <a class="cosmo-menu__item{{#compare subActive "===" "typography"}} is--active{{/compare}}"
                        href="/about/typography.html">
                         Typography
                     </a>
-                    <a class="cosmo-menu__item is--sub{{#compare subActive "===" "theme"}} is--active{{/compare}}"
+                    <a class="cosmo-menu__item{{#compare subActive "===" "theme"}} is--active{{/compare}}"
                        href="/about/theme.html">
                         Theme
                     </a>
-                    <a class="cosmo-menu__item is--sub{{#compare subActive "===" "customize"}} is--active{{/compare}}"
+                    <a class="cosmo-menu__item{{#compare subActive "===" "customize"}} is--active{{/compare}}"
                        href="/about/customize.html">
                         Customize
                     </a>
                 {{else compare mainActive "===" "controls"}}
-                    <a href="/controls/controls.html" class="cosmo-menu__item is--sub{{#compare subActive "==="
+                    <a href="/controls/controls.html" class="cosmo-menu__item{{#compare subActive "==="
                                                                                                 "controls"}} is--active{{/compare}}">
                         HTML controls
                     </a>
-                    <a href="/controls/side-list.html" class="cosmo-menu__item is--sub{{#compare subActive "==="
+                    <a href="/controls/side-list.html" class="cosmo-menu__item{{#compare subActive "==="
                                                                                                  "side-list"}} is--active{{/compare}}">
                         Master-Detail list
                     </a>
-                    <a href="/controls/tab-control.html" class="cosmo-menu__item is--sub{{#compare subActive "==="
+                    <a href="/controls/tab-control.html" class="cosmo-menu__item{{#compare subActive "==="
                                                                                                    "tab-control"}} is--active{{/compare}}">
                         Tab control
                     </a>
-                    <a href="/controls/toolbar.html" class="cosmo-menu__item is--sub{{#compare subActive "==="
+                    <a href="/controls/toolbar.html" class="cosmo-menu__item{{#compare subActive "==="
                                                                                                "toolbar"}} is--active{{/compare}}">
                         Toolbar
                     </a>
-                    <a href="/controls/dialog.html" class="cosmo-menu__item is--sub{{#compare subActive "==="
+                    <a href="/controls/dialog.html" class="cosmo-menu__item{{#compare subActive "==="
                                                                                               "dialog"}} is--active{{/compare}}">
                         Dialog
                     </a>
                 {{else compare mainActive "===" "layout"}}
-                    <a href="/layout/layout.html" class="cosmo-menu__item is--sub{{#compare subActive "==="
+                    <a href="/layout/layout.html" class="cosmo-menu__item{{#compare subActive "==="
                                                                                             "layout"}} is--active{{/compare}}">
                         Base layout and menu
                     </a>
                     <a href="/layout/layout-bottom-bar-three-column.html"
-                       class="cosmo-menu__item is--sub{{#compare subActive "==="
+                       class="cosmo-menu__item{{#compare subActive "==="
                                                                  "layout-bottom-bar-three-column"}} is--active{{/compare}}">
                         Three column bottom bar
                     </a>
-                    <a href="/layout/layout-showcase.html" class="cosmo-menu__item is--sub{{#compare subActive "==="
+                    <a href="/layout/layout-showcase.html" class="cosmo-menu__item{{#compare subActive "==="
                                                                                                      "layout-showcase"}} is--active{{/compare}}">
                         Layout showcase
                     </a>
@@ -106,10 +106,8 @@
             </div>
         </nav>
     </div>
-    <div class="cosmo-page-body">
-        <div class="cosmo-page-body__content">
-            {{~> @partial-block }}
-        </div>
+    <div class="cosmo-page__body">
+        {{~> @partial-block }}
     </div>
     {{#compare mainActive "===" "layout"}}
         {{#compare subActive "===" "layout-bottom-bar-three-column"}}

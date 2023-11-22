@@ -1,11 +1,54 @@
+:root {
+	--input-border-bottom-width: 0.125rem;
+	--input-border-width: 0.0625rem;
+	--input-width-small: var(--width-small);
+	--input-width-medium: var(--width-medium);
+	--input-width-large: var(--width-large);
+	--input-padding-top: 0.25rem;
+	--input-padding-bottom: 0.25rem;
+	--input-padding-left: 0.5rem;
+	--input-padding-right: 0.5rem;
+
+	--input-group-gap: 0.75rem;
+	--input-group-special-gap: 0.25rem;
+
+	--input-header-font-size: 1.5rem;
+
+	--radio-size: 1rem;
+
+	--checkbox-size: 1rem;
+	--checkbox-mark-longarm: 0.5rem;
+	--checkbox-mark-shortarm: 0.125rem;
+	--checkbox-mark-stroke-width: 0.0625rem;
+
+	--switch-thumb-size: 0.75rem;
+	--switch-thumb-margin: calc((var(--switch-rail-height) - var(--switch-thumb-size)) / 2);
+	--switch-rail-height: 1rem;
+	--switch-rail-width: calc(var(--switch-rail-height) * 2);
+	--switch-rail-border-width: 0.0625rem;
+
+	--range-track-background: var(--control-border-color);
+	--range-track-height: 0.25rem;
+	--range-track-min-width: 100%;
+
+	--range-thumb-color: var(--control-border-color);
+	--range-thumb-border-color: var(--primary-color);
+	--range-thumb-width: var(--range-track-height);
+	--range-thumb-height: calc(var(--range-track-height) * 5);
+	--range-thumb-border-size: var(--input-border-width);
+	--range-thumb-border-radius: var(--border-radius);
+	--range-thumb-background-color: var(--range-thumb-color);
+	--range-thumb-cursor: pointer;
+}
+
 .cosmo-input__header {
-	font-size: 24px;
-	height: 24px;
+	font-size: var(--input-header-font-size);
+	height: var(--input-header-font-size);
 	font-weight: var(--font-weight-light);
 	font-family: var(--font-family-heading);
 	text-transform: uppercase;
 	grid-column: span 2;
-	margin-top: 10px;
+	margin-top: var(--input-group-gap);
 }
 
 .cosmo-input__group {
@@ -14,31 +57,35 @@
 	grid-template-columns: [label] auto [input] 1fr;
 	grid-auto-rows: auto;
 	grid-auto-flow: row;
-	row-gap: 10px;
+	gap: var(--input-group-gap);
 }
 
 .cosmo-input__group.is--checkbox,
 .cosmo-input__group.is--switch,
 .cosmo-input__group.is--radio {
 	grid-column: 2/3;
-	row-gap: 4px;
+	row-gap: var(--input-group-special-gap);
+	column-gap: 0;
 }
 
 .cosmo-select,
 .cosmo-input,
 .cosmo-textarea {
-	transition: border-color 0.3s;
-	min-width: 240px;
-	height: 30px;
+	--border-indicator-color: var(--control-border-color);
+
+	transition: border-color var(--transition-duration);
+	min-width: var(--input-width-small);
+	height: var(--control-height);
 	box-sizing: border-box;
 	font-family: var(--font-family);
 	font-size: var(--font-size);
 	background: var(--white);
 	color: var(--black);
 	border-radius: var(--border-radius);
-	line-height: 1.15;
-	border: 1px solid var(--control-border-color);
-	--border-indicator-color: var(--control-border-color);
+	line-height: var(--line-height);
+	border: var(--input-border-width) solid var(--control-border-color);
+	padding: var(--input-padding-top) var(--input-padding-right) var(--input-padding-bottom)
+		var(--input-padding-left);
 }
 
 .cosmo-select {
@@ -48,20 +95,20 @@
 	background-repeat: no-repeat;
 	background-position-x: right;
 	background-position-y: center;
-	padding: 4px 32px 4px 8px;
+	padding-right: calc(var(--input-padding-right) * 4);
 	border-color: var(--border-indicator-color);
 }
 
 .cosmo-input,
 .cosmo-textarea {
-	border-bottom: 2px solid var(--border-indicator-color);
-	padding: 4px 8px;
+	border-bottom: var(--input-border-bottom-width) solid var(--border-indicator-color);
 }
 
 .cosmo-input:focus,
 .cosmo-textarea:focus,
 .cosmo-select:focus {
 	--border-indicator-color: var(--primary-color);
+
 	outline: none;
 	box-shadow: none;
 }
@@ -71,8 +118,17 @@
 .cosmo-select:invalid,
 .cosmo-input.is--invalid,
 .cosmo-textarea.is--invalid,
-.cosmo-select.is--invalid {
+.cosmo-select.is--invalid,
+.cosmo-radio:invalid,
+.cosmo-radio.is--invalid,
+.cosmo-checkbox:invalid,
+.cosmo-checkbox.is--invalid,
+.cosmo-switch:invalid,
+.cosmo-switch.is--invalid,
+.cosmo-switch:not(:checked):invalid::after,
+.cosmo-switch:not(:checked).is--invalid::after {
 	--border-indicator-color: var(--negative-color);
+
 	outline: none;
 	box-shadow: none;
 }
@@ -81,12 +137,12 @@
 .cosmo-textarea:disabled,
 .cosmo-select:disabled {
 	--border-indicator-color: var(--disabled-color);
+
 	cursor: not-allowed;
 }
 
 .cosmo-label {
 	font-size: var(--font-size);
-	margin-right: 10px;
 }
 
 .cosmo-textarea {
@@ -101,6 +157,8 @@
 .cosmo-checkbox,
 .cosmo-switch,
 .cosmo-radio {
+	--border-indicator-color: var(--control-border-color);
+
 	appearance: none;
 	margin: 0;
 	display: flex;
@@ -108,18 +166,6 @@
 	outline: none;
 	border: none;
 	box-shadow: none;
-	--border-indicator-color: var(--control-border-color);
-}
-
-.cosmo-radio:invalid,
-.cosmo-radio.is--invalid,
-.cosmo-checkbox:invalid,
-.cosmo-checkbox.is--invalid,
-.cosmo-switch:invalid,
-.cosmo-switch.is--invalid,
-.cosmo-switch:not(:checked):invalid::after,
-.cosmo-switch:not(:checked).is--invalid::after {
-	--border-indicator-color: var(--negative-color);
 }
 
 .cosmo-radio:active,
@@ -135,25 +181,25 @@
 	border-radius: 50%;
 	display: inline-block;
 	transition:
-		border-color 0.3s,
-		background-color 0.3s;
+		border-color var(--transition-duration),
+		background-color var(--transition-duration);
 }
 
 .cosmo-radio::before {
 	background: var(--white);
 	border: 1px solid var(--border-indicator-color);
-	height: 16px;
-	width: 16px;
-	margin-right: 8px;
+	height: var(--radio-size);
+	width: var(--radio-size);
+	margin-right: calc(var(--radio-size) / 2);
 }
 
 .cosmo-radio:checked::after {
 	position: absolute;
 	background: var(--primary-color);
-	height: 8px;
-	width: 8px;
-	left: 4px;
-	top: 4px;
+	height: calc(var(--radio-size) / 2);
+	width: calc(var(--radio-size) / 2);
+	left: calc(var(--radio-size) / 4);
+	top: calc(var(--radio-size) / 4);
 }
 
 .cosmo-radio:disabled:checked::after {
@@ -165,8 +211,9 @@
 }
 
 .cosmo-radio:disabled:active,
-.cosmo-checkbox:disabled {
-	--border-indicator-color: var(--control-border-color);
+.cosmo-checkbox:disabled,
+.cosmo-switch:disabled:not(:checked)::after {
+	--border-indicator-color: var(--disabled-color);
 }
 
 .cosmo-checkbox:disabled + label,
@@ -178,17 +225,17 @@
 .cosmo-checkbox::after,
 .cosmo-checkbox::before {
 	transition:
-		border-color 0.3s,
-		background-color 0.3s;
+		border-color var(--transition-duration),
+		background-color var(--transition-duration);
 }
 
 .cosmo-checkbox::before {
 	content: '';
 	display: inline-block;
-	border: 1px solid var(--border-indicator-color);
-	height: 16px;
-	width: 16px;
-	margin-right: 8px;
+	border: var(--input-border-width) solid var(--border-indicator-color);
+	height: var(--checkbox-size);
+	width: var(--checkbox-size);
+	margin-right: calc(var(--checkbox-size) / 2);
 	border-radius: var(--border-radius);
 	background: var(--white);
 }
@@ -197,22 +244,23 @@
 	content: '';
 	position: absolute;
 	display: block;
-	height: 2px;
-	width: 8px;
-	border-right: 1px solid var(--white);
-	border-top: 1px solid var(--white);
+	height: var(--checkbox-mark-shortarm);
+	width: var(--checkbox-mark-longarm);
+	border-right: var(--checkbox-mark-stroke-width) solid var(--white);
+	border-top: var(--checkbox-mark-stroke-width) solid var(--white);
 	transform: rotate(135deg);
-	top: 6px;
-	left: 4px;
+	top: calc(var(--checkbox-mark-longarm) - var(--checkbox-mark-shortarm));
+	left: calc(var(--checkbox-mark-longarm) / 2);
 	box-sizing: content-box;
 }
 
 .cosmo-checkbox:checked::before,
 .cosmo-switch:checked::before,
 .cosmo-switch:not(:checked)::after {
+	--border-indicator-color: var(--primary-color);
+
 	background: var(--border-indicator-color);
 	color: var(--white);
-	--border-indicator-color: var(--primary-color);
 }
 
 .cosmo-checkbox:disabled:checked::before,
@@ -225,50 +273,39 @@
 	content: '';
 	display: inline-block;
 	border-radius: var(--border-radius);
-	transition: all 0.1s;
+	transition: all calc(var(--transition-duration) / 3);
 }
 
 .cosmo-switch::after {
 	position: absolute;
-	height: 12px;
-	width: 12px;
+	height: var(--switch-thumb-size);
+	width: var(--switch-thumb-size);
 	background: var(--border-indicator-color);
-	margin-top: 2px;
-	margin-left: 2px;
+	margin-top: var(--switch-thumb-margin);
+	margin-left: var(--switch-thumb-margin);
 }
 
 .cosmo-switch::before {
 	display: inline-block;
-	border: 1px solid var(--border-indicator-color);
-	height: 16px;
-	width: 32px;
-	margin-right: 8px;
+	border: var(--switch-rail-border-width) solid var(--border-indicator-color);
+	height: var(--switch-rail-height);
+	width: var(--switch-rail-width);
+	margin-right: calc(var(--switch-rail-height) / 2);
 }
 
 .cosmo-switch:checked::after,
 .cosmo-switch:disabled:checked::after {
-	margin-left: 18px;
+	margin-left: calc((var(--switch-thumb-margin) * 3) + var(--switch-thumb-size));
 	background: var(--white);
 }
 
 .cosmo-input[type='range'] {
-	--range-track-background: var(--control-border-color);
-	--range-track-height: 4px;
-	--range-track-min-width: 100%;
-
-	--range-thumb-color: var(--control-border-color);
-	--range-thumb-border-color: var(--primary-color);
-	--range-thumb-width: 4px;
-	--range-thumb-height: 20px;
-	--range-thumb-border: 1px solid var(--range-thumb-border-color);
-	--range-thumb-border-radius: var(--border-radius);
-	--range-thumb-background-color: var(--range-thumb-color);
-	--range-thumb-cursor: pointer;
-
 	border: none;
 	padding-left: 0;
 	padding-right: 0;
 	margin: 0;
+	appearance: none;
+	background: transparent;
 }
 
 .cosmo-input[type='range']::-moz-range-track {
@@ -289,27 +326,34 @@
 	appearance: none;
 	width: var(--range-thumb-width);
 	height: var(--range-thumb-height);
-	border: var(--range-thumb-border);
+	border: var(--range-thumb-border-size) solid var(--range-thumb-border-color);
 	border-radius: var(--range-thumb-border-radius);
 	background-color: var(--range-thumb-background-color);
 	cursor: var(--range-thumb-cursor);
+}
+
+.cosmo-input[type='range']::-moz-range-thumb:hover,
+.cosmo-input[type='range']::-moz-range-thumb:focus,
+.cosmo-input[type='range']::-moz-range-thumb:active {
+	--range-thumb-background-color: var(--primary-color);
 }
 
 .cosmo-input[type='range']::-webkit-slider-thumb {
 	appearance: none;
 	width: var(--range-thumb-width);
 	height: var(--range-thumb-height);
-	border: var(--range-thumb-border);
+	border: var(--range-thumb-border-size) solid var(--range-thumb-border-color);
 	border-radius: var(--range-thumb-border-radius);
 	background-color: var(--range-thumb-background-color);
 	cursor: var(--range-thumb-cursor);
-	margin-top: -10px;
+	margin-top: calc(((var(--range-thumb-height) / 2) * -1) + (var(--range-track-height) / 2));
+	box-sizing: content-box;
 }
 
-.cosmo-input[type='range']:hover,
-.cosmo-input[type='range']:focus,
-.cosmo-input[type='range']:active {
-	--range-thumb-color: var(--primary-color);
+.cosmo-input[type='range']::-webkit-slider-thumb:hover,
+.cosmo-input[type='range']::-webkit-slider-thumb:focus,
+.cosmo-input[type='range']::-webkit-slider-thumb:active {
+	--range-thumb-background-color: var(--primary-color);
 }
 
 .cosmo-input[type='range']:invalid,
@@ -321,7 +365,7 @@
 .cosmo-input[type='range']:disabled:hover,
 .cosmo-input[type='range']:disabled:focus,
 .cosmo-input[type='range']:disabled:active {
-	--range-thumb-color: var(--disabled-color);
+	--range-thumb-background-color: var(--disabled-color);
 	--range-thumb-border-color: var(--disabled-color);
 	--range-track-background: var(--disabled-color);
 }
@@ -343,20 +387,21 @@
 	cursor: pointer;
 	font-family: var(--font-family);
 	font-size: var(--font-size);
-	padding: 4px 16px;
+	padding: var(--button-padding-top) var(--button-padding-right) var(--button-padding-bottom)
+		var(--button-padding-left);
 	box-sizing: border-box;
 	border: none;
-	border-right: 1px solid var(--button-border-color);
+	border-right: var(--button-border-width) solid var(--button-border-color);
 	background: var(--button-background);
 	color: var(--button-color);
-	line-height: 19px;
+	line-height: var(--line-height);
 	text-decoration: none;
 	font-weight: normal;
 	border-radius: 0;
-	height: 30px;
+	height: var(--control-height);
 	transition:
-		background-color 0.3s,
-		color 0.3s;
+		background-color var(--transition-duration),
+		color var(--transition-duration);
 }
 
 .cosmo-input[type='file']:disabled {
@@ -368,6 +413,7 @@
 .cosmo-input.is--picker:disabled::before {
 	--button-background: var(--disabled-color);
 	--button-color: var(--white);
+
 	cursor: not-allowed;
 }
 
@@ -375,6 +421,7 @@
 .cosmo-input[type='file']:not(:disabled):hover::-webkit-file-upload-button,
 .cosmo-input.is--picker:not(:disabled):hover::before {
 	--button-background: var(--control-border-color);
+
 	outline: none;
 	box-shadow: none;
 }
@@ -410,39 +457,32 @@
 
 .cosmo-input.is--picker::before {
 	content: attr(data-picker);
-	height: 27px;
+	height: calc(
+		var(--control-height) - var(--button-border-width) - var(--input-border-bottom-width)
+	);
 	display: inline-block;
-	border-radius: 2px 0 0 2px;
+	border-radius: calc(var(--border-radius) / 2) 0 0 calc(var(--border-radius) / 2);
 }
 
 .cosmo-input.is--small,
 .cosmo-textarea.is--small,
 .cosmo-select.is--small {
-	width: 240px;
+	min-width: var(--input-width-small);
+	width: var(--input-width-small);
 }
 
 .cosmo-input.is--medium,
 .cosmo-textarea.is--medium,
 .cosmo-select.is--medium {
-	width: 480px;
+	min-width: var(--input-width-medium);
+	width: var(--input-width-medium);
 }
 
 .cosmo-input.is--large,
 .cosmo-textarea.is--large,
 .cosmo-select.is--large {
-	width: 720px;
-}
-
-.cosmo-textarea.is--small {
-	min-width: 240px;
-}
-
-.cosmo-textarea.is--medium {
-	min-width: 480px;
-}
-
-.cosmo-textarea.is--large {
-	min-width: 720px;
+	min-width: var(--input-width-large);
+	width: var(--input-width-large);
 }
 
 .cosmo-input__message {

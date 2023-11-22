@@ -1,3 +1,14 @@
+:root {
+	--progress-bar-gradient-width-1: 0.5rem;
+	--progress-bar-gradient-width-2: 1rem;
+	--progress-bar-gradient-color: var(--primary-color);
+	--progress-bar-gradient-color-light: var(--primary-color-light);
+	--progress-bar-width-small: var(--width-small);
+	--progress-bar-width-medium: var(--width-medium);
+	--progress-bar-width-large: var(--width-large);
+	--progress-bar-height: 0.5rem;
+}
+
 .cosmo-progress-bar__label,
 .cosmo-progress-bar__top-label,
 .cosmo-progress-bar__bottom-label {
@@ -7,70 +18,71 @@
 }
 
 .cosmo-progress-bar {
+	--progress-bar-background: repeating-linear-gradient(
+		-45deg,
+		var(--primary-color),
+		var(--primary-color) var(--progress-bar-gradient-width-1),
+		var(--primary-color-light) var(--progress-bar-gradient-width-1),
+		var(--primary-color-light) var(--progress-bar-gradient-width-2)
+	);
+
 	display: inline-block;
 	vertical-align: baseline;
 	appearance: none;
-	width: 360px;
-	height: 8px;
+	width: var(--progress-bar-width-medium);
+	height: var(--progress-bar-height);
 	overflow: hidden;
 	border: 0;
 	background-color: var(--control-border-color);
 	color: var(--primary-color);
 	border-radius: var(--border-radius);
-	--progress-background: repeating-linear-gradient(
-		-45deg,
-		var(--primary-color),
-		var(--primary-color) 10px,
-		var(--primary-color-light) 10px,
-		var(--primary-color-light) 20px
-	);
 }
 
 .cosmo-progress-bar.is--small {
-	width: 240px;
+	width: var(--progress-bar-width-small);
 }
 
 .cosmo-progress-bar.is--large {
-	width: 480px;
+	width: var(--progress-bar-width-large);
 }
 
 .cosmo-progress-bar.is--negative {
-	--progress-background: repeating-linear-gradient(
+	--progress-bar-background: repeating-linear-gradient(
 		-45deg,
 		var(--negative-color),
-		var(--negative-color) 10px,
-		var(--negative-color-dark) 10px,
-		var(--negative-color-dark) 20px
+		var(--negative-color) var(--progress-bar-gradient-width-1),
+		var(--negative-color-dark) var(--progress-bar-gradient-width-1),
+		var(--negative-color-dark) var(--progress-bar-gradient-width-2)
 	);
 }
 
 .cosmo-progress-bar.is--positive {
-	--progress-background: repeating-linear-gradient(
+	--progress-bar-background: repeating-linear-gradient(
 		-45deg,
 		var(--positive-color),
-		var(--positive-color) 10px,
-		var(--positive-color-dark) 10px,
-		var(--positive-color-dark) 20px
+		var(--positive-color) var(--progress-bar-gradient-width-1),
+		var(--positive-color-dark) var(--progress-bar-gradient-width-1),
+		var(--positive-color-dark) var(--progress-bar-gradient-width-2)
 	);
 }
 
 .cosmo-progress-bar.is--warning {
-	--progress-background: repeating-linear-gradient(
+	--progress-bar-background: repeating-linear-gradient(
 		-45deg,
 		var(--warning-color),
-		var(--warning-color) 10px,
-		var(--warning-color-dark) 10px,
-		var(--warning-color-dark) 20px
+		var(--warning-color) var(--progress-bar-gradient-width-1),
+		var(--warning-color-dark) var(--progress-bar-gradient-width-1),
+		var(--warning-color-dark) var(--progress-bar-gradient-width-2)
 	);
 }
 
 .cosmo-progress-bar.is--information {
-	--progress-background: repeating-linear-gradient(
+	--progress-bar-background: repeating-linear-gradient(
 		-45deg,
 		var(--information-color),
-		var(--information-color) 10px,
-		var(--information-color-dark) 10px,
-		var(--information-color-dark) 20px
+		var(--information-color) var(--progress-bar-gradient-width-1),
+		var(--information-color-dark) var(--progress-bar-gradient-width-1),
+		var(--information-color-dark) var(--progress-bar-gradient-width-2)
 	);
 }
 
@@ -80,12 +92,12 @@
 
 .cosmo-progress-bar[value]::-webkit-progress-value {
 	border-radius: var(--border-radius);
-	background: var(--progress-background);
+	background: var(--progress-bar-background);
 }
 
 .cosmo-progress-bar::-moz-progress-bar {
 	border-radius: var(--border-radius);
-	background: var(--progress-background);
+	background: var(--progress-bar-background);
 }
 
 @media (prefers-reduced-motion: no-preference) {
