@@ -9,6 +9,8 @@
 	--h5-font-size: 1.25rem;
 	--h6-font-size: 1rem;
 
+	--a-color: var(--primary-color);
+
 	--kbd-padding-top: 2px;
 	--kbd-padding-bottom: 2px;
 	--kbd-padding-right: 4px;
@@ -17,6 +19,12 @@
 	--list-padding-left: 1rem;
 
 	--dd-margin-bottom: 0.5rem;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+	:root {
+		--a-color: var(--primary-color-darker);
+	}
 }
 
 .cosmo-title {
@@ -75,7 +83,7 @@ p {
 }
 
 a {
-	color: var(--primary-color);
+	color: var(--a-color);
 }
 
 code,

@@ -64,6 +64,13 @@
 	font-weight: var(--font-weight-bold);
 }
 
+@media screen and (prefers-color-scheme: dark) {
+	.cosmo-side-list__item.is--active,
+	.cosmo-side-list__item.is--active:hover {
+		--list-item-color: var(--black);
+	}
+}
+
 .cosmo-side-list__item.is--active::selection,
 .cosmo-side-list__item.is--active:hover::selection {
 	--list-item-background: var(--white);

@@ -114,6 +114,19 @@
 	--button-background: var(--primary-color-lighter);
 }
 
+@media screen and (prefers-color-scheme: dark) {
+	.cosmo-button.is--primary:not(:disabled):hover,
+	.cosmo-button.is--primary:not(:disabled):focus {
+		--button-border-color: var(--primary-color-dark);
+		--button-background: var(--primary-color-dark);
+	}
+
+	.cosmo-button.is--primary:not(:disabled):active {
+		--button-border-color: var(--primary-color-darker);
+		--button-background: var(--primary-color-darker);
+	}
+}
+
 .cosmo-button.is--negative {
 	--button-border-color: var(--negative-color);
 	--button-background: var(--negative-color);

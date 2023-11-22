@@ -202,12 +202,24 @@
 	top: calc(var(--radio-size) / 4);
 }
 
+@media screen and (prefers-color-scheme: dark) {
+	.cosmo-radio:checked::after {
+		background: var(--primary-color-dark);
+	}
+}
+
 .cosmo-radio:disabled:checked::after {
 	background: var(--disabled-color);
 }
 
 .cosmo-radio:active {
 	--border-indicator-color: var(--primary-color);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+	.cosmo-radio:active {
+		--border-indicator-color: var(--primary-color-dark);
+	}
 }
 
 .cosmo-radio:disabled:active,
@@ -261,6 +273,14 @@
 
 	background: var(--border-indicator-color);
 	color: var(--white);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+	.cosmo-checkbox:checked::before,
+	.cosmo-switch:checked::before,
+	.cosmo-switch:not(:checked)::after {
+		--border-indicator-color: var(--primary-color-dark);
+	}
 }
 
 .cosmo-checkbox:disabled:checked::before,
