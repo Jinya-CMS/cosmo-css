@@ -43,26 +43,22 @@
 	margin: 0;
 }
 
-.cosmo-message.is--positive,
-.cosmo-message.is--positive.is--light {
+.cosmo-message.is--positive {
 	--message-border: var(--positive-color);
 	--message-background: var(--positive-color-alpha-25);
 }
 
-.cosmo-message.is--negative,
-.cosmo-message.is--negative.is--light {
+.cosmo-message.is--negative {
 	--message-border: var(--negative-color);
 	--message-background: var(--negative-color-alpha-25);
 }
 
-.cosmo-message.is--information,
-.cosmo-message.is--information.is--light {
+.cosmo-message.is--information {
 	--message-border: var(--information-color);
 	--message-background: var(--information-color-alpha-25);
 }
 
-.cosmo-message.is--warning,
-.cosmo-message.is--warning.is--light {
+.cosmo-message.is--warning {
 	--message-border: var(--warning-color);
 	--message-background: var(--warning-color-alpha-25);
 }

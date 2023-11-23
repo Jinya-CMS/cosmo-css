@@ -9,9 +9,7 @@
 	--progress-bar-height: 0.5rem;
 }
 
-.cosmo-progress-bar__label,
-.cosmo-progress-bar__top-label,
-.cosmo-progress-bar__bottom-label {
+.cosmo-progress-bar__label {
 	font-size: var(--font-size);
 	color: var(--black);
 	display: block;

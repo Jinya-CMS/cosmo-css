@@ -18,10 +18,6 @@
 	height: var(--page-height);
 }
 
-.cosmo-side-list .cosmo-button.is--full-width {
-	margin-top: auto;
-}
-
 .cosmo-side-list__items {
 	grid-column: items-list;
 	display: flex;
@@ -31,6 +27,10 @@
 	box-sizing: border-box;
 	height: var(--page-height);
 	overflow-y: auto;
+}
+
+.cosmo-side-list__items .cosmo-button.is--full-width {
+	margin-top: auto;
 }
 
 .cosmo-side-list__item {

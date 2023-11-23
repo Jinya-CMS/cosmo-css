@@ -30,6 +30,7 @@
 			var(--sub-menu-height) - var(--page-top-spacing) - var(--bottom-bar-spacing) -
 			var(--bottom-bar-height)
 	);
+	--page-width: calc(100vw - var(--page-side-spacing) - var(--page-side-spacing));
 
 	--bottom-bar-height: 4.5rem;
 	--bottom-bar-spacing: 2rem;
@@ -52,14 +53,13 @@ hr {
 	margin: var(--hr-margin-side) 0;
 }
 
-.cosmo-page-layout,
 .cosmo-page {
 	display: grid;
 	grid-template-rows:
 		[top-menu] var(--top-menu-height) [main-menu] calc(
 			var(--main-menu-height) + var(--menu-gap) + var(--sub-menu-height)
 		)
-		[top-spacing] var(--page-top-spacing) [content] 1fr [bottom-spacing] var(--bottom-bar-spacing) [bottom-bar] var(
+		[top-spacing] var(--page-top-spacing) [content] var(--page-height) [bottom-spacing] var(--bottom-bar-spacing) [bottom-bar] var(
 			--bottom-bar-height
 		);
 }
@@ -69,7 +69,7 @@ hr {
 	height: var(--page-height);
 	display: grid;
 	overflow-y: auto;
-	grid-template-columns: var(--page-side-spacing) [content] 1fr var(--page-side-spacing);
+	grid-template-columns: var(--page-side-spacing) [content] var(--page-width) var(--page-side-spacing);
 	align-content: start;
 }
 

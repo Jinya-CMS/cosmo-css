@@ -143,6 +143,7 @@
 
 .cosmo-label {
 	font-size: var(--font-size);
+	min-width: 10rem;
 }
 
 .cosmo-textarea {
@@ -507,9 +508,9 @@
 
 .cosmo-input__message {
 	grid-column: 2/3;
+	margin-top: calc(var(--input-group-gap) * -1);
 }
 
-:invalid .cosmo-input__message:not(.is--positive):not(.is--warning):not(.is--information),
 .cosmo-input__message.is--negative {
 	color: var(--negative-color);
 }

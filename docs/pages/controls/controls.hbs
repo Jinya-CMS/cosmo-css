@@ -418,6 +418,44 @@
         <code>is--invalid</code> class to any input element to render it invalid. Remember to remove that class when the
         user types a valid value.
     </p>
+    <p>
+        Apart from simple indication if a field is invalid, you can also display a message to the user. This message
+        automatically aligns below the form control and supports four different states.
+    </p>
+    <div class="cosmo-docs-container">
+        <div class="cosmo-input__group">
+            <label for="textInput" class="cosmo-label">Positive message</label>
+            <input type="text" id="textInput" class="cosmo-input"/>
+            <span class="cosmo-input__message is--positive">This value looks good to me</span>
+            <label for="textInput" class="cosmo-label">Negative message</label>
+            <input type="text" id="textInput" class="cosmo-input"/>
+            <span class="cosmo-input__message is--negative">This value is bad, please provide a different one</span>
+            <label for="textInput" class="cosmo-label">Warning message</label>
+            <input type="text" id="textInput" class="cosmo-input"/>
+            <span class="cosmo-input__message is--warning">Heads up, this value might behave strangely</span>
+            <label for="textInput" class="cosmo-label">Information message</label>
+            <input type="text" id="textInput" class="cosmo-input"/>
+            <span class="cosmo-input__message is--information">This is going to be the way you log in</span>
+        </div>
+    </div>
+    <details class="cosmo-docs-details">
+        <summary class="cosmo-docs-details__title">Show code sample</summary>
+        <pre class="cosmo-docs-container">
+&lt;div class="cosmo-input__group">
+    &lt;label for="textInput" class="cosmo-label">Positive message&lt;/label>
+    &lt;input type="text" id="textInput" class="cosmo-input"/>
+    &lt;span class="cosmo-input__message is--positive">This value looks good to me&lt;/span>
+    &lt;label for="textInput" class="cosmo-label">Negative message&lt;/label>
+    &lt;input type="text" id="textInput" class="cosmo-input"/>
+    &lt;span class="cosmo-input__message is--negative">This value is bad, please provide a different one&lt;/span>
+    &lt;label for="textInput" class="cosmo-label">Warning message&lt;/label>
+    &lt;input type="text" id="textInput" class="cosmo-input"/>
+    &lt;span class="cosmo-input__message is--warning">Heads up, this value might behave strangely&lt;/span>
+    &lt;label for="textInput" class="cosmo-label">Information message&lt;/label>
+    &lt;input type="text" id="textInput" class="cosmo-input"/>
+    &lt;span class="cosmo-input__message is--information">This is going to be the way you log in&lt;/span>
+&lt;/div></pre>
+    </details>
     <hr/>
     <h2>Buttons</h2>
     <p>
