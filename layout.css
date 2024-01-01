@@ -61,7 +61,8 @@ hr {
 		)
 		[top-spacing] var(--page-top-spacing) [content] var(--page-height) [bottom-spacing] var(
 			--bottom-bar-spacing
-		) [bottom-bar] var(--bottom-bar-height);
+		)
+		[bottom-bar] var(--bottom-bar-height);
 }
 
 .cosmo-page__body {
