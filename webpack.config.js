@@ -61,6 +61,8 @@ module.exports = {
 	// enable live reload
 	devServer: {
 		static: path.resolve(__dirname, 'public'),
+		allowedHosts: 'all',
+		port: 3000,
 		watchFiles: {
 			paths: ['*.*'],
 			options: {
