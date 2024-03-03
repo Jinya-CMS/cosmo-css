@@ -50,6 +50,7 @@
 	background: var(--list-item-background);
 	display: flex;
 	align-items: center;
+	text-decoration: none;
 }
 
 .cosmo-side-list__item:hover {

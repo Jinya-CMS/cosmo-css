@@ -35,6 +35,7 @@
 	font-weight: var(--font-weight-bold);
 	height: var(--tab-link-font-size);
 	cursor: pointer;
+	text-decoration: none;
 }
 
 .cosmo-tab__link.is--active {
