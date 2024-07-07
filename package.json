@@ -31,7 +31,7 @@
 		"sass-loader": "14.2.1",
 		"css-loader": "7.1.2",
 		"webpack-dev-server": "5.0.4",
-		"highlight.js": "11.9.0"
+		"highlight.js": "11.10.0"
 	},
 	"scripts": {
 		"pretty:lint": "prettier --check .",
