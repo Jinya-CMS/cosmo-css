@@ -69,44 +69,44 @@
                     </a>
                 {{else compare mainActive "===" "controls"}}
                     <a href="/controls/controls.html" class="cosmo-menu__item{{#compare subActive "==="
-                                                                                                "controls"}} is--active{{/compare}}">
+                                                                                        "controls"}} is--active{{/compare}}">
                         HTML controls
                     </a>
                     <a href="/controls/side-list.html" class="cosmo-menu__item{{#compare subActive "==="
-                                                                                                 "side-list"}} is--active{{/compare}}">
+                                                                                         "side-list"}} is--active{{/compare}}">
                         Side list
                     </a>
                     <a href="/controls/tab-control.html" class="cosmo-menu__item{{#compare subActive "==="
-                                                                                                   "tab-control"}} is--active{{/compare}}">
+                                                                                           "tab-control"}} is--active{{/compare}}">
                         Tab control
                     </a>
                     <a href="/controls/toolbar.html" class="cosmo-menu__item{{#compare subActive "==="
-                                                                                               "toolbar"}} is--active{{/compare}}">
+                                                                                       "toolbar"}} is--active{{/compare}}">
                         Toolbar
                     </a>
                     <a href="/controls/dialog.html" class="cosmo-menu__item{{#compare subActive "==="
-                                                                                              "dialog"}} is--active{{/compare}}">
+                                                                                      "dialog"}} is--active{{/compare}}">
                         Dialog
                     </a>
                 {{else compare mainActive "===" "layout"}}
                     <a href="/layout/layout.html" class="cosmo-menu__item{{#compare subActive "==="
-                                                                                            "layout"}} is--active{{/compare}}">
+                                                                                    "layout"}} is--active{{/compare}}">
                         Base layout and menu
                     </a>
                     <a href="/layout/layout-bottom-bar-three-column.html"
                        class="cosmo-menu__item{{#compare subActive "==="
-                                                                 "layout-bottom-bar-three-column"}} is--active{{/compare}}">
+                                                         "layout-bottom-bar-three-column"}} is--active{{/compare}}">
                         Three column bottom bar
                     </a>
                     <a href="/layout/layout-showcase.html" class="cosmo-menu__item{{#compare subActive "==="
-                                                                                                     "layout-showcase"}} is--active{{/compare}}">
+                                                                                             "layout-showcase"}} is--active{{/compare}}">
                         Layout showcase
                     </a>
                 {{/compare}}
             </div>
         </nav>
     </div>
-    <div class="cosmo-page__body">
+        <div class="cosmo-page__body">
         {{~> @partial-block }}
     </div>
     {{#compare mainActive "===" "layout"}}
