@@ -21,17 +21,17 @@
 		}
 	],
 	"devDependencies": {
-		"prettier": "3.3.3",
-		"sass": "1.80.2",
-		"html-bundler-webpack-plugin": "4.1.1",
-		"webpack": "5.95.0",
-		"webpack-cli": "5.1.4",
+		"prettier": "3.4.2",
+		"sass": "1.83.0",
+		"html-bundler-webpack-plugin": "4.10.4",
+		"webpack": "5.97.1",
+		"webpack-cli": "6.0.1",
 		"handlebars": "4.7.8",
 		"handlebars-helpers": "0.10.0",
-		"sass-loader": "16.0.2",
+		"sass-loader": "16.0.4",
 		"css-loader": "7.1.2",
-		"webpack-dev-server": "5.1.0",
-		"highlight.js": "11.10.0"
+		"webpack-dev-server": "5.2.0",
+		"highlight.js": "11.11.1"
 	},
 	"scripts": {
 		"pretty:lint": "prettier --check .",
