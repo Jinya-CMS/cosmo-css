@@ -46,19 +46,98 @@
 .cosmo-message.is--positive {
 	--message-border: var(--positive-color);
 	--message-background: var(--positive-color-alpha-25);
+	--message-accent-color: var(--positive-color);
+	--message-accent-color-light: var(--positive-color-light);
+	--message-accent-color-lighter: var(--positive-color-lighter);
 }
 
 .cosmo-message.is--negative {
 	--message-border: var(--negative-color);
 	--message-background: var(--negative-color-alpha-25);
+	--message-accent-color: var(--negative-color);
+	--message-accent-color-light: var(--negative-color-light);
+	--message-accent-color-lighter: var(--negative-color-lighter);
 }
 
 .cosmo-message.is--information {
 	--message-border: var(--information-color);
 	--message-background: var(--information-color-alpha-25);
+	--message-accent-color: var(--information-color);
+	--message-accent-color-light: var(--information-color-light);
+	--message-accent-color-lighter: var(--information-color-lighter);
 }
 
 .cosmo-message.is--warning {
 	--message-border: var(--warning-color);
 	--message-background: var(--warning-color-alpha-25);
+	--message-accent-color: var(--warning-color);
+	--message-accent-color-light: var(--warning-color-light);
+	--message-accent-color-lighter: var(--warning-color-lighter);
+}
+
+.cosmo-message__actions {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	margin-top: var(--modal-button-bar-margin-top);
+	gap: var(--button-container-gap);
+
+	&:empty {
+		display: none;
+	}
+
+	> .cosmo-button {
+		border-left-width: var(--button-border-width);
+	}
+
+	.cosmo-button:last-of-type {
+		--button-color: var(--white);
+		--button-background: var(--message-accent-color);
+		--button-border-color: var(--message-accent-color);
+	}
+
+	.cosmo-button:last-of-type:not(:disabled):hover,
+	.cosmo-button:last-of-type:not(:disabled):focus {
+		--button-border-color: var(--message-accent-color-light);
+		--button-background: var(--message-accent-color-light);
+	}
+
+	.cosmo-button:last-of-type:not(:disabled):active {
+		--button-border-color: var(--message-accent-color-lighter);
+		--button-background: var(--message-accent-color-lighter);
+	}
+
+	@media screen and (prefers-color-scheme: dark) {
+		.cosmo-button:last-of-type {
+			--button-color: var(--black);
+		}
+
+		.cosmo-button:last-of-type:not(:disabled):hover,
+		.cosmo-button:last-of-type:not(:disabled):focus {
+			--button-border-color: var(--primary-color-dark);
+			--button-background: var(--primary-color-dark);
+		}
+
+		.cosmo-button:last-of-type:not(:disabled):active {
+			--button-border-color: var(--primary-color-darker);
+			--button-background: var(--primary-color-darker);
+		}
+
+		.is--light {
+			.cosmo-button:last-of-type {
+				--button-color: var(--black);
+			}
+
+			.cosmo-button:last-of-type:not(:disabled):hover,
+			.cosmo-button:last-of-type:not(:disabled):focus {
+				--button-border-color: var(--primary-color-dark);
+				--button-background: var(--primary-color-dark);
+			}
+
+			.cosmo-button:last-of-type:not(:disabled):active {
+				--button-border-color: var(--primary-color-darker);
+				--button-background: var(--primary-color-darker);
+			}
+		}
+	}
 }
