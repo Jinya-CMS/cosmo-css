@@ -202,6 +202,19 @@
 	.cosmo-button:not(:disabled):focus {
 		--button-color: var(--black);
 	}
+
+	.is--light {
+		.cosmo-button.is--primary,
+		.cosmo-button.is--negative,
+		.cosmo-button.is--positive,
+		.cosmo-button.is--warning,
+		.cosmo-button.is--information,
+		.cosmo-button:not(:disabled):active,
+		.cosmo-button:not(:disabled):hover,
+		.cosmo-button:not(:disabled):focus {
+			--button-color: var(--white);
+		}
+	}
 }
 
 .cosmo-button.is--circle {
