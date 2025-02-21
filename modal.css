@@ -107,6 +107,23 @@
     --button-background: var(--modal-accent-color-lighter);
 }
 
+.is--dark {
+    .cosmo-modal__button-bar .cosmo-button:last-of-type {
+        --button-color: var(--black);
+    }
+
+    .cosmo-modal__button-bar .cosmo-button:last-of-type:not(:disabled):hover,
+    .cosmo-modal__button-bar .cosmo-button:last-of-type:not(:disabled):focus {
+        --button-border-color: var(--primary-color-dark);
+        --button-background: var(--primary-color-dark);
+    }
+
+    .cosmo-modal__button-bar .cosmo-button:last-of-type:not(:disabled):active {
+        --button-border-color: var(--primary-color-darker);
+        --button-background: var(--primary-color-darker);
+    }
+}
+
 @media screen and (prefers-color-scheme: dark) {
     .cosmo-modal__button-bar .cosmo-button:last-of-type {
         --button-color: var(--black);

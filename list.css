@@ -64,9 +64,16 @@
     font-weight: var(--font-weight-bold);
 }
 
+.is--dark {
+    .cosmo-side-list__item.is--active,
+    .cosmo-side-list__item.is--active:hover {
+        --list-item-color: var(--black);
+    }
+}
+
 @media screen and (prefers-color-scheme: dark) {
-    .cosmo-side-list__item.is--active:not(.is--light),
-    .cosmo-side-list__item.is--active:not(.is--light):hover {
+    .cosmo-side-list__item.is--active,
+    .cosmo-side-list__item.is--active:hover {
         --list-item-color: var(--black);
     }
 

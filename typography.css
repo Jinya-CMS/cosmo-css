@@ -21,9 +21,17 @@
 	--dd-margin-bottom: 0.5rem;
 }
 
+.is--dark {
+	--a-color: var(--primary-color-darker);
+}
+
 @media screen and (prefers-color-scheme: dark) {
 	:root {
 		--a-color: var(--primary-color-darker);
+	}
+
+	.is--light {
+		--a-color: var(--primary-color);
 	}
 }
 
@@ -98,8 +106,7 @@ kbd {
 	color: var(--white);
 	font-family: var(--font-family-code);
 	background: var(--black);
-	padding: var(--kbd-padding-top) var(--kbd-padding-right) var(--kbd-padding-bottom)
-		var(--kbd-padding-left);
+	padding: var(--kbd-padding-top) var(--kbd-padding-right) var(--kbd-padding-bottom) var(--kbd-padding-left);
 	border-radius: var(--border-radius);
 	font-size: var(--font-size);
 }

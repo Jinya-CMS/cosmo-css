@@ -201,9 +201,21 @@
     top: calc(var(--radio-size) / 4);
 }
 
+.is--dark {
+    .cosmo-radio:checked::after {
+        background: var(--primary-color-dark);
+    }
+}
+
 @media screen and (prefers-color-scheme: dark) {
     .cosmo-radio:checked::after {
         background: var(--primary-color-dark);
+    }
+
+    .is--light {
+        .cosmo-radio:checked::after {
+            background: var(--primary-color);
+        }
     }
 }
 
@@ -213,6 +225,12 @@
 
 .cosmo-radio:active {
     --border-indicator-color: var(--primary-color);
+}
+
+.is--dark {
+    .cosmo-radio:active {
+        --border-indicator-color: var(--primary-color-dark);
+    }
 }
 
 @media screen and (prefers-color-scheme: dark) {
@@ -277,6 +295,14 @@
 
     background: var(--border-indicator-color);
     color: var(--white);
+}
+
+.is--dark {
+    .cosmo-checkbox:checked::before,
+    .cosmo-switch:checked::before,
+    .cosmo-switch:not(:checked)::after {
+        --border-indicator-color: var(--primary-color-dark);
+    }
 }
 
 @media screen and (prefers-color-scheme: dark) {
