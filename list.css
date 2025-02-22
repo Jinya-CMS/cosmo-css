@@ -47,8 +47,7 @@
     min-height: var(--list-item-height);
     border-radius: var(--border-radius);
     background: var(--list-item-background);
-    display: flex;
-    align-items: center;
+    display: block;
     text-decoration: none;
 }
 
