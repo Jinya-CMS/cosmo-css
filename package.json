@@ -1,6 +1,6 @@
 {
 	"name": "@jinyacms/cosmo",
-	"version": "1.0.9",
+	"version": "1.0.10",
 	"license": "MIT",
 	"private": false,
 	"homepage": "https://cosmo.jinya.dev",
@@ -23,8 +23,8 @@
 	"devDependencies": {
 		"prettier": "3.5.3",
 		"sass": "1.86.3",
-		"html-bundler-webpack-plugin": "4.19.2",
-		"webpack": "5.99.0",
+		"html-bundler-webpack-plugin": "4.20.0",
+		"webpack": "5.99.5",
 		"webpack-cli": "6.0.1",
 		"handlebars": "4.7.8",
 		"handlebars-helpers": "0.10.0",

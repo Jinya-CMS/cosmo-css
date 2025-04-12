@@ -116,13 +116,13 @@
 
 	.cosmo-modal__button-bar .cosmo-button:last-of-type:not(:disabled):hover,
 	.cosmo-modal__button-bar .cosmo-button:last-of-type:not(:disabled):focus {
-		--button-border-color: var(--primary-color-dark);
-		--button-background: var(--primary-color-dark);
+		--button-border-color: var(--modal-accent-color-dark);
+		--button-background: var(--modal-accent-color-dark);
 	}
 
 	.cosmo-modal__button-bar .cosmo-button:last-of-type:not(:disabled):active {
-		--button-border-color: var(--primary-color-darker);
-		--button-background: var(--primary-color-darker);
+		--button-border-color: var(--modal-accent-color-darker);
+		--button-background: var(--modal-accent-color-darker);
 	}
 }
 
@@ -133,13 +133,13 @@
 
 	.cosmo-modal__button-bar .cosmo-button:last-of-type:not(:disabled):hover,
 	.cosmo-modal__button-bar .cosmo-button:last-of-type:not(:disabled):focus {
-		--button-border-color: var(--primary-color-dark);
-		--button-background: var(--primary-color-dark);
+		--button-border-color: var(--modal-accent-color-dark);
+		--button-background: var(--modal-accent-color-dark);
 	}
 
 	.cosmo-modal__button-bar .cosmo-button:last-of-type:not(:disabled):active {
-		--button-border-color: var(--primary-color-darker);
-		--button-background: var(--primary-color-darker);
+		--button-border-color: var(--modal-accent-color-darker);
+		--button-background: var(--modal-accent-color-darker);
 	}
 
 	.is--light {
@@ -161,24 +161,32 @@
 }
 
 .cosmo-modal.is--information {
+	--modal-accent-color-darker: var(--information-color-darker);
+	--modal-accent-color-dark: var(--information-color-dark);
 	--modal-accent-color: var(--information-color);
 	--modal-accent-color-light: var(--information-color-light);
 	--modal-accent-color-lighter: var(--information-color-lighter);
 }
 
 .cosmo-modal.is--positive {
+	--modal-accent-color-darker: var(--positive-color-darker);
+	--modal-accent-color-dark: var(--positive-color-dark);
 	--modal-accent-color: var(--positive-color);
 	--modal-accent-color-light: var(--positive-color-light);
 	--modal-accent-color-lighter: var(--positive-color-lighter);
 }
 
 .cosmo-modal.is--negative {
+	--modal-accent-color-darker: var(--negative-color-darker);
+	--modal-accent-color-dark: var(--negative-color-dark);
 	--modal-accent-color: var(--negative-color);
 	--modal-accent-color-light: var(--negative-color-light);
 	--modal-accent-color-lighter: var(--negative-color-lighter);
 }
 
 .cosmo-modal.is--warning {
+	--modal-accent-color-darker: var(--warning-color-darker);
+	--modal-accent-color-dark: var(--warning-color-dark);
 	--modal-accent-color: var(--warning-color);
 	--modal-accent-color-light: var(--warning-color-light);
 	--modal-accent-color-lighter: var(--warning-color-lighter);
