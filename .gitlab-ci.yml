@@ -3,18 +3,18 @@ stages:
   - deploy
 
 lint:
-  image: library/node:latest
+  image: oven/bun:alpine
   stage: test
   script:
-    - npm install
-    - npm run pretty:lint
+    - bun install
+    - bun run pretty:lint
 
 pages:
-  image: library/node:latest
+  image: oven/bun:alpine
   stage: deploy
   script:
-    - npm install
-    - npm run docs:compile
+    - bun install
+    - bun run docs:compile
     - echo "The site will be deployed to $CI_PAGES_URL"
   artifacts:
     paths:
@@ -23,10 +23,10 @@ pages:
     - if: $CI_COMMIT_TAG
 
 publish:
-  image: library/node:latest
+  image: oven/bun:alpine
   stage: deploy
   script:
-    - npm install
-    - npm publish --verbose --access public
+    - bun install
+    - bun publish --verbose --access public
   rules:
     - if: $CI_COMMIT_TAG

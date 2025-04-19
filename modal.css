@@ -37,6 +37,8 @@
 }
 
 .cosmo-modal {
+	--modal-accent-color-darker: var(--primary-color-darker);
+	--modal-accent-color-dark: var(--primary-color-dark);
 	--modal-accent-color: var(--primary-color);
 	--modal-accent-color-light: var(--primary-color-light);
 	--modal-accent-color-lighter: var(--primary-color-lighter);
