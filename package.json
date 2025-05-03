@@ -1,43 +1,43 @@
 {
-	"name": "@jinyacms/cosmo",
-	"version": "1.0.11",
-	"license": "MIT",
-	"private": false,
-	"homepage": "https://cosmo.jinya.dev",
-	"repository": {
-		"url": "https://github.com/Jinya-CMS/cosmo-css/",
-		"type": "git"
-	},
-	"author": {
-		"url": "https://jinya.de",
-		"email": "developers@jinya.de",
-		"name": "Jinya Developers"
-	},
-	"contributors": [
-		{
-			"name": "Imanuel Ulbricht",
-			"email": "imanuel.ulbricht@jinya.de",
-			"url": "https://imanuel.dev"
-		}
-	],
-	"devDependencies": {
-		"prettier": "3.5.3",
-		"sass": "1.87.0",
-		"html-bundler-webpack-plugin": "4.20.2",
-		"webpack": "5.99.7",
-		"webpack-cli": "6.0.1",
-		"handlebars": "4.7.8",
-		"handlebars-helpers": "0.10.0",
-		"sass-loader": "16.0.5",
-		"css-loader": "7.1.2",
-		"webpack-dev-server": "5.2.1",
-		"highlight.js": "11.11.1"
-	},
-	"scripts": {
-		"pretty:lint": "prettier --check .",
-		"pretty:format": "prettier --write .",
-		"cosmo:compile": "sass cosmo.scss cosmo.css",
-		"docs:compile": "webpack",
-		"docs:serve": "webpack serve"
-	}
+  "name": "@jinyacms/cosmo",
+  "version": "1.0.11",
+  "license": "MIT",
+  "private": false,
+  "homepage": "https://cosmo.jinya.dev",
+  "repository": {
+    "url": "https://github.com/Jinya-CMS/cosmo-css/",
+    "type": "git"
+  },
+  "author": {
+    "url": "https://jinya.de",
+    "email": "developers@jinya.de",
+    "name": "Jinya Developers"
+  },
+  "contributors": [
+    {
+      "name": "Imanuel Ulbricht",
+      "email": "imanuel.ulbricht@jinya.de",
+      "url": "https://imanuel.dev"
+    }
+  ],
+  "devDependencies": {
+    "prettier": "3",
+    "sass": "1",
+    "html-bundler-webpack-plugin": "4",
+    "webpack": "5",
+    "webpack-cli": "6",
+    "handlebars": "4",
+    "handlebars-helpers": "0.10",
+    "sass-loader": "16",
+    "css-loader": "7",
+    "webpack-dev-server": "5",
+    "highlight.js": "11"
+  },
+  "scripts": {
+    "pretty:lint": "prettier --check .",
+    "pretty:format": "prettier --write .",
+    "cosmo:compile": "sass cosmo.scss cosmo.css",
+    "docs:compile": "webpack",
+    "docs:serve": "webpack serve"
+  }
 }
