@@ -3,14 +3,14 @@ stages:
   - deploy
 
 lint:
-  image: oven/bun:alpine
+  image: $CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX/oven/bun:alpine
   stage: test
   script:
     - bun install
     - bun run pretty:lint
 
 pages:
-  image: oven/bun:alpine
+  image: $CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX/oven/bun:alpine
   stage: deploy
   script:
     - bun install
@@ -23,7 +23,7 @@ pages:
     - if: $CI_COMMIT_TAG
 
 publish:
-  image: oven/bun:alpine
+  image: $CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX/oven/bun:alpine
   stage: deploy
   script:
     - bun install
