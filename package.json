@@ -24,7 +24,7 @@
 		"prettier": "3.8.1",
 		"sass": "1.97.3",
 		"html-bundler-webpack-plugin": "4.22.0",
-		"webpack": "5.105.2",
+		"webpack": "5.105.3",
 		"webpack-cli": "6.0.1",
 		"handlebars": "4.7.8",
 		"handlebars-helpers": "0.10.0",
