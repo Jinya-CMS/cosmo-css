@@ -26,7 +26,7 @@
 		"html-bundler-webpack-plugin": "4.23.2",
 		"webpack": "5.111.1",
 		"webpack-cli": "7.2.3",
-		"handlebars": "4.7.9",
+		"handlebars": "4.7.10",
 		"handlebars-helpers": "0.10.0",
 		"sass-loader": "17.0.1",
 		"css-loader": "7.1.5",
