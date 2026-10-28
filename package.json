@@ -22,15 +22,15 @@
 	],
 	"devDependencies": {
 		"prettier": "3.9.10",
-		"sass": "1.105.1",
+		"sass": "1.107.0",
 		"html-bundler-webpack-plugin": "4.23.2",
-		"webpack": "5.112.0",
+		"webpack": "5.112.2",
 		"webpack-cli": "7.2.3",
 		"handlebars": "4.7.10",
 		"handlebars-helpers": "0.10.0",
-		"sass-loader": "17.0.1",
+		"sass-loader": "17.1.0",
 		"css-loader": "7.1.5",
-		"webpack-dev-server": "6.0.0",
+		"webpack-dev-server": "6.1.0",
 		"highlight.js": "11.12.0"
 	},
 	"scripts": {
