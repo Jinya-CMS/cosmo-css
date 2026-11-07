@@ -23,7 +23,7 @@
 	"devDependencies": {
 		"prettier": "3.9.10",
 		"sass": "1.107.1",
-		"html-bundler-webpack-plugin": "4.24.0",
+		"html-bundler-webpack-plugin": "4.24.1",
 		"webpack": "5.112.2",
 		"webpack-cli": "7.3.1",
 		"handlebars": "4.7.10",
