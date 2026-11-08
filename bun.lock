@@ -9,7 +9,7 @@
         "handlebars": "4.7.10",
         "handlebars-helpers": "0.10.0",
         "highlight.js": "11.12.0",
-        "html-bundler-webpack-plugin": "4.24.0",
+        "html-bundler-webpack-plugin": "4.24.1",
         "prettier": "3.9.10",
         "sass": "1.107.1",
         "sass-loader": "17.1.0",
@@ -486,7 +486,7 @@
 
     "highlight.js": ["highlight.js@11.12.0", "", {}, "sha512-nbfWpyRMcMrPMmDwJB+dhX/eiaPKtc2RB+0QZskqJ3WjRA/FDS0e9hZrx8EC/lbEv8gXy98FcDbNa/dspAaJMg=="],
 
-    "html-bundler-webpack-plugin": ["html-bundler-webpack-plugin@4.24.0", "", { "dependencies": { "@types/html-minifier-terser": "^7.0.2", "ansis": "4.5.0", "enhanced-resolve": ">=5.7.0", "eta": "^3.5.0", "html-minifier-terser": "^7.2.0" }, "peerDependencies": { "css-loader": ">=6.11.0", "ejs": ">=3.1.10", "favicons": ">=7.2.0", "handlebars": ">=4.7.8", "liquidjs": ">=10.17.0", "markdown-it": ">=12", "mustache": ">=4.2.0", "nunjucks": ">=3.2.3", "parse5": ">=7.1.2", "prismjs": ">=1.29.0", "pug": ">=3.0.3", "twig": ">=1.17.1", "webpack": ">=5.81.0" }, "optionalPeers": ["css-loader", "ejs", "favicons", "handlebars", "liquidjs", "markdown-it", "mustache", "nunjucks", "parse5", "prismjs", "pug", "twig"] }, "sha512-nkDxGi7XUD+iSrYlhFAPEdh3aBZlfSZr4bhB64VUzY7wpyZBgbckWC51SJSYyL6u5DApFRmHtUNTAFKOysLntQ=="],
+    "html-bundler-webpack-plugin": ["html-bundler-webpack-plugin@4.24.1", "", { "dependencies": { "@types/html-minifier-terser": "^7.0.2", "ansis": "4.5.0", "enhanced-resolve": ">=5.7.0", "eta": "^3.5.0", "html-minifier-terser": "^7.2.0" }, "peerDependencies": { "css-loader": ">=6.11.0", "ejs": ">=3.1.10", "favicons": ">=7.2.0", "handlebars": ">=4.7.8", "liquidjs": ">=10.17.0", "markdown-it": ">=12", "mustache": ">=4.2.0", "nunjucks": ">=3.2.3", "parse5": ">=7.1.2", "prismjs": ">=1.29.0", "pug": ">=3.0.3", "twig": ">=1.17.1", "webpack": ">=5.81.0" }, "optionalPeers": ["css-loader", "ejs", "favicons", "handlebars", "liquidjs", "markdown-it", "mustache", "nunjucks", "parse5", "prismjs", "pug", "twig"] }, "sha512-B5Yx0GTK325IILUZjNyPaTc+o3ZrJiRuThde9vX6KywmIBBEp6sUV5O5mGSI4ex/s828KbjBsExV2XAIZG05xw=="],
 
     "html-minifier-terser": ["html-minifier-terser@7.2.0", "", { "dependencies": { "camel-case": "^4.1.2", "clean-css": "~5.3.2", "commander": "^10.0.0", "entities": "^4.4.0", "param-case": "^3.0.4", "relateurl": "^0.2.7", "terser": "^5.15.1" }, "bin": { "html-minifier-terser": "cli.js" } }, "sha512-tXgn3QfqPIpGl9o+K5tpcj3/MN4SfLtsx2GWwBC3SSd0tXQGyF3gsSqad8loJgKZGM3ZxbYDd5yhiBIdWpmvLA=="],
 
