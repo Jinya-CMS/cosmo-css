@@ -21,7 +21,7 @@
 		}
 	],
 	"devDependencies": {
-		"prettier": "3.9.10",
+		"prettier": "3.10.0",
 		"sass": "1.108.1",
 		"html-bundler-webpack-plugin": "4.24.1",
 		"webpack": "5.112.2",
