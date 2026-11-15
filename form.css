@@ -97,6 +97,7 @@
 	background-position-y: center;
 	padding-right: calc(var(--input-padding-right) * 4);
 	border-color: var(--border-indicator-color);
+	cursor: pointer;
 }
 
 .cosmo-input,
@@ -168,6 +169,7 @@
 	border: none;
 	box-shadow: none;
 	background: none;
+	cursor: pointer;
 }
 
 .cosmo-radio:active,
@@ -461,6 +463,7 @@
 	font-weight: normal;
 	border-radius: 0;
 	height: var(--control-height);
+	cursor: pointer;
 	transition:
 		background-color var(--transition-duration),
 		color var(--transition-duration);
