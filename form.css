@@ -167,6 +167,7 @@
 	outline: none;
 	border: none;
 	box-shadow: none;
+	background: none;
 }
 
 .cosmo-radio:active,

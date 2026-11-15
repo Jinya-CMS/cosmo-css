@@ -26,11 +26,11 @@
 	--page-top-spacing: 2rem;
 	--page-side-spacing: 10rem;
 	--page-height: calc(
-		100vh - var(--top-menu-height) - var(--main-menu-height) - var(--menu-gap) -
+		100% - var(--top-menu-height) - var(--main-menu-height) - var(--menu-gap) -
 			var(--sub-menu-height) - var(--page-top-spacing) - var(--bottom-bar-spacing) -
 			var(--bottom-bar-height)
 	);
-	--page-width: calc(100vw - var(--page-side-spacing) - var(--page-side-spacing));
+	--page-width: calc(100% - var(--page-side-spacing) - var(--page-side-spacing));
 
 	--bottom-bar-height: 4.5rem;
 	--bottom-bar-spacing: 2rem;
