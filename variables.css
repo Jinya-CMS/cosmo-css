@@ -232,25 +232,25 @@
 
 @media screen and (prefers-color-scheme: dark) {
 	:root {
-		--primary-hue: 211;
-		--primary-saturation: 51%;
-		--primary-lightness-base: 12%;
+		--primary-hue: 212;
+		--primary-saturation: 50%;
+		--primary-lightness-base: 50%;
 
 		--negative-hue: 2;
-		--negative-saturation: 66%;
-		--negative-lightness-base: 28%;
+		--negative-saturation: 67%;
+		--negative-lightness-base: 43%;
 
 		--positive-hue: 146;
 		--positive-saturation: 35%;
-		--positive-lightness-base: 28%;
+		--positive-lightness-base: 54%;
 
 		--information-hue: 205;
 		--information-saturation: 64%;
-		--information-lightness-base: 28%;
+		--information-lightness-base: 52%;
 
 		--warning-hue: 42;
-		--warning-saturation: 79%;
-		--warning-lightness-base: 40%;
+		--warning-saturation: 54%;
+		--warning-lightness-base: 46%;
 
 		--gray-lightness-base: 20%;
 
@@ -263,7 +263,7 @@
 		--white-base: 0;
 		--black-base: 204;
 
-		--gradient-multiplier: 0.25;
+		--gradient-multiplier: 0.15;
 
 		--dropdown-background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgMC4wMDAzMiA2ZS0wNSI+CiAgICA8Zz4KICAgICAgICA8cGF0aCBzdHlsZT0iZmlsbDojMWE0Zjc1O3N0cm9rZS13aWR0aDowLjI2NDk5OTtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1kYXNoYXJyYXk6bm9uZSIKICAgICAgICAgICAgICBkPSJtIDQuODg5MDY2MSw0LjIzNDA1NTQgLTIuNDQ0NTMzLDFlLTcgTCA3Ljg1NTk1NjZlLTgsNC4yMzQwNTU0IDEuMjIyMjY2NSwyLjExNzAyNzcgMi40NDQ1MzMxLDAgMy42NjY3OTk3LDIuMTE3MDI3NiBaIgogICAgICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDIuNDU0NDU2NWUtNSwwLDAsLTEuNDE3MDgxMWUtNSw5Ljk5OTk5OThlLTUsNi4wMDAwMDAxZS01KSIvPgogICAgPC9nPgo8L3N2Zz4=');
 
@@ -464,25 +464,25 @@
 }
 
 .is--dark {
-	--primary-hue: 211;
-	--primary-saturation: 51%;
-	--primary-lightness-base: 12%;
+	--primary-hue: 212;
+	--primary-saturation: 50%;
+	--primary-lightness-base: 50%;
 
 	--negative-hue: 2;
-	--negative-saturation: 66%;
-	--negative-lightness-base: 28%;
+	--negative-saturation: 67%;
+	--negative-lightness-base: 43%;
 
 	--positive-hue: 146;
 	--positive-saturation: 35%;
-	--positive-lightness-base: 28%;
+	--positive-lightness-base: 54%;
 
 	--information-hue: 205;
 	--information-saturation: 64%;
-	--information-lightness-base: 28%;
+	--information-lightness-base: 52%;
 
 	--warning-hue: 42;
-	--warning-saturation: 79%;
-	--warning-lightness-base: 40%;
+	--warning-saturation: 54%;
+	--warning-lightness-base: 46%;
 
 	--gray-lightness-base: 20%;
 
@@ -495,7 +495,7 @@
 	--white-base: 0;
 	--black-base: 204;
 
-	--gradient-multiplier: 0.25;
+	--gradient-multiplier: 0.15;
 
 	--dropdown-background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgMC4wMDAzMiA2ZS0wNSI+CiAgICA8Zz4KICAgICAgICA8cGF0aCBzdHlsZT0iZmlsbDojMWE0Zjc1O3N0cm9rZS13aWR0aDowLjI2NDk5OTtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1kYXNoYXJyYXk6bm9uZSIKICAgICAgICAgICAgICBkPSJtIDQuODg5MDY2MSw0LjIzNDA1NTQgLTIuNDQ0NTMzLDFlLTcgTCA3Ljg1NTk1NjZlLTgsNC4yMzQwNTU0IDEuMjIyMjY2NSwyLjExNzAyNzcgMi40NDQ1MzMxLDAgMy42NjY3OTk3LDIuMTE3MDI3NiBaIgogICAgICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDIuNDU0NDU2NWUtNSwwLDAsLTEuNDE3MDgxMWUtNSw5Ljk5OTk5OThlLTUsNi4wMDAwMDAxZS01KSIvPgogICAgPC9nPgo8L3N2Zz4=');
 
