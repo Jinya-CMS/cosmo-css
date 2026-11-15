@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="@highlightjs/styles/stackoverflow-dark.min.css"/>
 </head>
 <body{{#if debug}} class="cosmo-debug"{{/if}}>
-<main class="cosmo-page">
-    <div class="cosmo-menu is--top">
+<div class="cosmo-page">
+    <nav class="cosmo-menu is--top">
         <div class="cosmo-menu__row">
             <a target="_blank" href="https://github.com/Jinya-CMS/cosmo-css" class="cosmo-menu__item">
                 Github
@@ -31,8 +31,8 @@
         </div>
         <div class="cosmo-profile-picture"></div>
         <a href="#" class="cosmo-menu__item is--right">Logout</a>
-    </div>
-    <div class="cosmo-menu">
+    </nav>
+    <header class="cosmo-menu">
         <button class="cosmo-back-button" onclick="history.back()" type="button"></button>
         <nav class="cosmo-menu__collection">
             <div class="cosmo-menu__row is--main">
@@ -105,13 +105,13 @@
                 {{/compare}}
             </div>
         </nav>
-    </div>
-        <div class="cosmo-page__body">
+    </header>
+    <main class="cosmo-page__body">
         {{~> @partial-block }}
-    </div>
+    </main>
     {{#compare mainActive "===" "layout"}}
         {{#compare subActive "===" "layout-bottom-bar-three-column"}}
-            <div class="cosmo-bottom-bar is--three-column">
+            <footer class="cosmo-bottom-bar is--three-column">
                 <div class="cosmo-bottom-bar__item is--left">
                     Welcome and check <a href="https://cosmo.jinya.dev">here</a> for details.
                 </div>
@@ -119,16 +119,16 @@
                 <div class="cosmo-bottom-bar__item is--right">
                     <button class="cosmo-button">Click here for more</button>
                 </div>
-            </div>
+            </footer>
         {{else}}
-            <div class="cosmo-bottom-bar">
+            <footer class="cosmo-bottom-bar">
                 <span class="cosmo-progress-bar__label">Top label</span>
                 <progress class="cosmo-progress-bar" value="19" max="100"></progress>
                 <span class="cosmo-progress-bar__label">Bottom label</span>
-            </div>
+            </footer>
         {{/compare}}
     {{/compare}}
     <script src="@docs-js/docs.js"></script>
-</main>
+</div>
 </body>
 </html>
