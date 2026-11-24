@@ -28,7 +28,7 @@
 		"webpack-cli": "7.3.1",
 		"handlebars": "4.7.10",
 		"handlebars-helpers": "0.10.0",
-		"sass-loader": "17.1.0",
+		"sass-loader": "17.1.1",
 		"css-loader": "7.1.5",
 		"webpack-dev-server": "6.1.0",
 		"highlight.js": "11.12.0"
